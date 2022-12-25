@@ -37,27 +37,32 @@ const getApplicableFiltersWithoutBaseCategory = (appliedFilters) => {
 };
 
 const applyFilters = ({ baseCategory, appliedFilters }) => {
+
+  if(!baseCategory || !global.catlogbaseCategories.includes(baseCategory)){
+    if (appliedFilters.length === 0) return []
+    const applicablefilters = getApplicableFiltersWithoutBaseCategory(appliedFilters);
+    const allFilteredProducts = Object.keys(applicablefilters).map(
+      baseCategory => applyFilters({ baseCategory, appliedFilters: applicablefilters[baseCategory] })
+    );
+    return [ ...new Set(allFilteredProducts.flat()) ]
+
+  }
+
+  if (appliedFilters.length === 0) return global.catlogDataSecondary[baseCategory]["all"];
+
   const products = global.catlogDataSecondary[baseCategory];
-
-  //getting all products for all applied filters
   let filteredProducts = [];
-
-  //applying the union filter first
   appliedFilters.forEach((filterArr) =>
-    filteredProducts.push([
-      ...filterArr.map((filter) => products[filter]).flat(),
-    ])
+    filteredProducts.push([ ...filterArr.map((filter) => products[filter]).flat() ])
   );
-
-  // //apllying the intersection filter
+  if(filteredProducts.length === 0) return filteredProducts
   return filteredProducts.reduce((a, b) => a.filter((c) => b.includes(c)));
 };
 
 const getDataFromCatlogDataPrimary = (filteredProducts) => {
+  if(filteredProducts.length === 0) return Object.values(global.catlogDataPrimary)
   // //getting the final products from catlog Primary data
-  return filteredProducts.map(
-    (productId) => global.catlogDataPrimary[productId]
-  );
+  return filteredProducts.map((productId) => global.catlogDataPrimary[productId]);
 };
 
 const sortProducts = (productData, sortByKey = "popularity") => {
@@ -65,11 +70,11 @@ const sortProducts = (productData, sortByKey = "popularity") => {
     let k1 = b.pk;
     let k2 = a.pk;
     let key = sortByKey;
-    if (sortByKey.startsWith("-")) {
-      k1 = a.pk;
-      k2 = b.pk;
-      key = sortByKey.slice(1);
-    }
+    if (sortByKey.startsWith("-")){ 
+      k1 = a.pk; 
+      k2 = b.pk; 
+      key = sortByKey.slice(1)
+    };
     return global.sortDict[k1][key] - global.sortDict[k2][key];
   });
 };
