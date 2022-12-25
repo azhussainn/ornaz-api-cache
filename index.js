@@ -11,6 +11,7 @@ global.catlogDataSecondary = null;
 global.catlogbaseCategories = null;
 global.catlogkeywordsDict = null;
 global.catlogkeywordsDictReverse = null;
+global.sortDict = null;
 
 
 app.use("/jewellery", catlogRoute);
