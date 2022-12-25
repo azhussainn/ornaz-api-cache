@@ -1,10 +1,10 @@
 const router = require("express").Router();
 const {
   getActualFilters,
-  getApplicableFiltersWithoutBaseCategory,
   applyFilters,
   getDataFromCatlogDataPrimary,
   sortProducts,
+  getPaginatedProducts
 } = require("./utils");
 
 router.get("/:baseCategory?", async (req, res) => {
@@ -17,7 +17,8 @@ router.get("/:baseCategory?", async (req, res) => {
   const filteredProducts = applyFilters({ baseCategory, appliedFilters });
   const finalProducts = getDataFromCatlogDataPrimary(filteredProducts);
   const sortedProducts = sortProducts(finalProducts, sortBy);
-  return res.status(200).json(sortedProducts);
+  const paginatedProducts = getPaginatedProducts({ sortedProducts, pageNo });
+  return res.status(200).json(paginatedProducts);
 
 });
 

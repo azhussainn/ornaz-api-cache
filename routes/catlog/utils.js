@@ -79,10 +79,18 @@ const sortProducts = (productData, sortByKey = "popularity") => {
   });
 };
 
+const getPaginatedProducts = ({ sortedProducts, pageNo=1 }) => {
+  let currentPage = Number(pageNo)
+  if(!currentPage || currentPage < 1) currentPage = 1
+  const lastPage = Math.ceil( sortedProducts.length / 30 )
+  if(pageNo >= lastPage) currentPage = lastPage
+  return sortedProducts.slice((currentPage - 1) * 30 , (currentPage * 30))
+}
+
 module.exports = {
   getActualFilters,
-  getApplicableFiltersWithoutBaseCategory,
   applyFilters,
   getDataFromCatlogDataPrimary,
   sortProducts,
+  getPaginatedProducts,
 };
