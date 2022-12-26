@@ -1,3 +1,8 @@
+const { removeStopwords } = require('stopword');
+const { matchSorter } = require('match-sorter');
+const { query } = require('express');
+
+
 const getActualFilters = (allFilters) => {
   const filters = [];
   Object.keys(allFilters).forEach((filterKey) => {
@@ -37,9 +42,8 @@ const getApplicableFiltersWithoutBaseCategory = (appliedFilters) => {
 };
 
 const applyFilters = ({ baseCategory, appliedFilters }) => {
-
   if(!baseCategory || !global.catlogbaseCategories.includes(baseCategory)){
-    if (appliedFilters.length === 0) return []
+    if (!appliedFilters || appliedFilters.length === 0) return []
     const applicablefilters = getApplicableFiltersWithoutBaseCategory(appliedFilters);
     const allFilteredProducts = Object.keys(applicablefilters).map(
       baseCategory => applyFilters({ baseCategory, appliedFilters: applicablefilters[baseCategory] })
@@ -47,14 +51,13 @@ const applyFilters = ({ baseCategory, appliedFilters }) => {
     return [ ...new Set(allFilteredProducts.flat()) ]
 
   }
-
-  if (appliedFilters.length === 0) return global.catlogDataSecondary[baseCategory]["all"];
-
+  if (!appliedFilters || appliedFilters.length === 0) return global.catlogDataSecondary[baseCategory]["all"];
   const products = global.catlogDataSecondary[baseCategory];
   let filteredProducts = [];
-  appliedFilters.forEach((filterArr) =>
-    filteredProducts.push([ ...filterArr.map((filter) => products[filter]).flat() ])
-  );
+  appliedFilters.forEach((filterArr) => {
+    const temp = [ ...filterArr.map((filter) => products[filter] || []).flat() ]
+    if(temp.length > 0) filteredProducts.push(temp);
+  });
   if(filteredProducts.length === 0) return filteredProducts
   return filteredProducts.reduce((a, b) => a.filter((c) => b.includes(c)));
 };
@@ -87,10 +90,79 @@ const getPaginatedProducts = ({ sortedProducts, pageNo=1 }) => {
   return sortedProducts.slice((currentPage - 1) * 30 , (currentPage * 30))
 }
 
+const getBaseCategoryInSearchQuery = (searchQueryArr) => {
+  for(let query of searchQueryArr){
+    const result = matchSorter(global.catlogbaseCategories , query, { 
+      threshold: matchSorter.rankings.STARTS_WITH
+     })
+     if(result.length > 0) return { result: result[0], query }
+  }
+  return { result: null, query: null }
+}
+
+const getAppliedfiltersInSearchQuery = (searchQueryArr) => {
+  const appliedFilters = {}
+  const potentialNamesArr = []
+  searchQueryArr.filter(query => {
+    const result = matchSorter(
+      Object.keys(global.catlogkeywordsDict) , query, 
+      {threshold: matchSorter.rankings.CONTAINS}
+    )
+    if(result.length > 0){
+      const res = result[0].split("=")
+      appliedFilters[res[0]] = [ ...appliedFilters[res[0]] || [], res[1]   ]
+    }else{
+      potentialNamesArr.push(query)
+    }
+  })
+  return {
+    searchFilters : Object.keys(appliedFilters).map(key => 
+      appliedFilters[key].map(ele => `${key}=${ele}`
+    )),
+    potentialNamesArr
+  }
+}
+
+const mergeFilters = ({ appliedFilters, searchFilters }) => {
+  if(!appliedFilters || appliedFilters.length === 0) return searchFilters
+  const mergedFiltersArr =  new Set([ ...appliedFilters.flat(), ...searchFilters.flat() ])
+  const temp = {}
+  mergedFiltersArr.forEach((ele) => {
+    const filter = ele.split("=")
+    temp[filter[0]] = [ ...temp[filter[0]] || [], filter[1]  ]
+  })
+  return Object.keys(temp).map(key => temp[key].map(ele => `${key}=${ele}`))
+}
+
+const getSearchableFilters = ({ appliedFilters, searchQuery }) => {
+  if(!searchQuery) return {
+    finalFilters: appliedFilters,
+    searchBaseCategory: null,
+    potentialNamesArr: []
+  }
+  let searchQueryArr = removeStopwords(searchQuery.toLowerCase().split(" "));
+  const searchBaseCategory = getBaseCategoryInSearchQuery(searchQueryArr) 
+  if(searchBaseCategory.result){
+    searchQueryArr = searchQueryArr.filter(ele => ele != searchBaseCategory.query)
+  }
+  const {
+    searchFilters,
+    potentialNamesArr
+  } = getAppliedfiltersInSearchQuery(searchQueryArr)
+  const finalFilters = mergeFilters({ appliedFilters, searchFilters })
+
+  return {
+    finalFilters,
+    searchBaseCategory: searchBaseCategory?.result,
+    potentialNamesArr
+  }
+}
+
 module.exports = {
   getActualFilters,
   applyFilters,
   getDataFromCatlogDataPrimary,
+  getSearchableFilters,
   sortProducts,
   getPaginatedProducts,
 };
