@@ -22,7 +22,7 @@ router.get("/:baseCategory?", async (req, res) => {
 
   //getting filters, base category, names from search query
   const { finalFilters, searchBaseCategory, potentialNamesArr } =
-    getSearchableFilters({ appliedFilters, searchQuery });
+    getSearchableFilters({ appliedFilters, searchQuery, baseCategory });
 
   //filtering the products using baseCategory and finalFilters
   const filteredProducts = applyFilters({
@@ -53,6 +53,13 @@ router.get("/:baseCategory?", async (req, res) => {
     sortedProducts,
     pageNo,
   });
+
+  // console.log(
+  //   "======================================================\n",
+  //   baseCategory || searchBaseCategory, "<-===base category\n",
+  //   finalFilters, "<====final filters\n",
+  //   "======================================================",
+  // )
 
   //returning all the required data
   return res.status(200).json({

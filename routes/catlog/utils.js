@@ -55,13 +55,15 @@ const applyFilters = ({ baseCategory, appliedFilters }) => {
   }
   if (!appliedFilters || appliedFilters.length === 0)
     return global.catlogDataSecondary[baseCategory]["all"];
+    
   const products = global.catlogDataSecondary[baseCategory];
   const filteredProducts = [];
   appliedFilters.forEach((filterArr) => {
     const temp = [...filterArr.map((filter) => products[filter] || []).flat()];
     if (temp.length > 0) filteredProducts.push(temp);
   });
-  if (filteredProducts.length === 0) return filteredProducts;
+
+  if (filteredProducts.length === 0) return global.catlogDataSecondary[baseCategory]["all"];
   return filteredProducts.reduce((a, b) => a.filter((c) => b.includes(c)));
 };
 
@@ -186,15 +188,15 @@ const searchProductNames = ({ finalProducts, potentialNamesArr }) => {
   return searchedData;
 };
 
-const getSearchableFilters = ({ appliedFilters, searchQuery }) => {
+const getSearchableFilters = ({ appliedFilters, searchQuery, baseCategory }) => {
   if (!searchQuery)
     return {
       finalFilters: appliedFilters,
       searchBaseCategory: null,
       potentialNamesArr: [],
     };
-  let searchQueryArr = removeStopwords(searchQuery.toLowerCase().split(" "));
-  const searchBaseCategory = getBaseCategoryInSearchQuery(searchQueryArr);
+  let searchQueryArr = [...new Set(removeStopwords(searchQuery.toLowerCase().split(" ")))];
+  const searchBaseCategory = !baseCategory ? getBaseCategoryInSearchQuery(searchQueryArr) : baseCategory;
   if (searchBaseCategory.result) {
     searchQueryArr = searchQueryArr.filter(
       (ele) => ele != searchBaseCategory.query
