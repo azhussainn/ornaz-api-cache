@@ -15,7 +15,7 @@ function setCatlogDataInCache({
   sortDict,
   attributes,
   keywordsFinal,
-  attribute_icons
+  attribute_icons,
 }) {
   console.log("===setting catlog data in cache===");
   global.catlogDataPrimary = cachedDataPrimary;
@@ -23,12 +23,12 @@ function setCatlogDataInCache({
   global.catlogbaseCategories = baseCategories;
   global.catlogkeywordsDict = keywordsDict;
   global.catlogkeywordsDictReverse = keywordsDictReverse;
-  global.sortDict = sortDict
+  global.sortDict = sortDict;
   global.attributesData = {
     attributes,
     keywordsFinal,
-    attribute_icons
-  }
+    attribute_icons,
+  };
 }
 
 function restructureCatlogData(catlogData) {
@@ -37,14 +37,14 @@ function restructureCatlogData(catlogData) {
   const baseCategories = [];
   const keywordsDict = {};
   const keywordsDictReverse = {};
-  const sortDict = {}
-  const keywordsFinal = {}
+  const sortDict = {};
+  const keywordsFinal = {};
 
   Object.keys(catlogData.products).forEach((primaryKey) => {
     //adding productId : productData to cachedDataPrimary
     cachedDataPrimary[primaryKey] = catlogData.products[primaryKey].data;
-    sortDict[primaryKey] =  catlogData.products[primaryKey].sorting_info
-    keywordsFinal[primaryKey] = catlogData.products[primaryKey].keywords
+    sortDict[primaryKey] = catlogData.products[primaryKey].sorting_info;
+    keywordsFinal[primaryKey] = catlogData.products[primaryKey].keywords;
 
     //getting the baseCategory
     const baseCategory = catlogData.products[primaryKey].data.category.slug;
@@ -94,7 +94,7 @@ function restructureCatlogData(catlogData) {
     sortDict,
     attributes: catlogData.new_attributes,
     keywordsFinal,
-    attribute_icons: catlogData.attribute_icons
+    attribute_icons: catlogData.attribute_icons,
   });
 }
 

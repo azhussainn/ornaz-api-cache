@@ -1,7 +1,6 @@
 const express = require("express");
-const { initCatlogData } = require('./initialization.js');
+const { initCatlogData } = require("./initialization.js");
 const catlogRoute = require("./routes/catlog");
-
 
 const app = express();
 const port = process.env.PORT || 5000;
@@ -18,7 +17,7 @@ app.use("/jewellery", catlogRoute);
 
 app.listen(port, () => {
   console.log(`App listening on port ${process.env.PORT}`);
-  if(!global.catlogDataPrimary){
-    initCatlogData()
+  if (!global.catlogDataPrimary) {
+    initCatlogData();
   }
 });

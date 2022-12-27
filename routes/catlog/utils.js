@@ -1,6 +1,5 @@
-const { removeStopwords } = require('stopword');
-const { matchSorter } = require('match-sorter');
-
+const { removeStopwords } = require("stopword");
+const { matchSorter } = require("match-sorter");
 
 const getActualFilters = (allFilters) => {
   const filters = [];
@@ -41,30 +40,38 @@ const getApplicableFiltersWithoutBaseCategory = (appliedFilters) => {
 };
 
 const applyFilters = ({ baseCategory, appliedFilters }) => {
-  if(!baseCategory || !global.catlogbaseCategories.includes(baseCategory)){
-    if (!appliedFilters || appliedFilters.length === 0) return []
-    const applicablefilters = getApplicableFiltersWithoutBaseCategory(appliedFilters);
+  if (!baseCategory || !global.catlogbaseCategories.includes(baseCategory)) {
+    if (!appliedFilters || appliedFilters.length === 0) return [];
+    const applicablefilters =
+      getApplicableFiltersWithoutBaseCategory(appliedFilters);
     const allFilteredProducts = Object.keys(applicablefilters).map(
-      baseCategory => applyFilters({ baseCategory, appliedFilters: applicablefilters[baseCategory] })
+      (baseCategory) =>
+        applyFilters({
+          baseCategory,
+          appliedFilters: applicablefilters[baseCategory],
+        })
     );
-    return [ ...new Set(allFilteredProducts.flat()) ]
-
+    return [...new Set(allFilteredProducts.flat())];
   }
-  if (!appliedFilters || appliedFilters.length === 0) return global.catlogDataSecondary[baseCategory]["all"];
+  if (!appliedFilters || appliedFilters.length === 0)
+    return global.catlogDataSecondary[baseCategory]["all"];
   const products = global.catlogDataSecondary[baseCategory];
   const filteredProducts = [];
   appliedFilters.forEach((filterArr) => {
-    const temp = [ ...filterArr.map((filter) => products[filter] || []).flat() ]
-    if(temp.length > 0) filteredProducts.push(temp);
+    const temp = [...filterArr.map((filter) => products[filter] || []).flat()];
+    if (temp.length > 0) filteredProducts.push(temp);
   });
-  if(filteredProducts.length === 0) return filteredProducts
+  if (filteredProducts.length === 0) return filteredProducts;
   return filteredProducts.reduce((a, b) => a.filter((c) => b.includes(c)));
 };
 
 const getDataFromCatlogDataPrimary = (filteredProducts) => {
-  if(filteredProducts.length === 0) return Object.values(global.catlogDataPrimary)
+  if (filteredProducts.length === 0)
+    return Object.values(global.catlogDataPrimary);
   // //getting the final products from catlog Primary data
-  return filteredProducts.map((productId) => global.catlogDataPrimary[productId]);
+  return filteredProducts.map(
+    (productId) => global.catlogDataPrimary[productId]
+  );
 };
 
 const sortProducts = (productData, sortByKey = "popularity") => {
@@ -72,142 +79,156 @@ const sortProducts = (productData, sortByKey = "popularity") => {
     let k1 = b.pk;
     let k2 = a.pk;
     let key = sortByKey;
-    if (sortByKey.startsWith("-")){ 
-      k1 = a.pk; 
-      k2 = b.pk; 
-      key = sortByKey.slice(1)
-    };
+    if (sortByKey.startsWith("-")) {
+      k1 = a.pk;
+      k2 = b.pk;
+      key = sortByKey.slice(1);
+    }
     return global.sortDict[k1][key] - global.sortDict[k2][key];
   });
   return {
     sortedProducts,
     sortingMeta: {
       now_sorted_by: sortByKey,
-      is_descending: sortByKey.startsWith("-") ? false :true,
-    }
-  }
+      is_descending: sortByKey.startsWith("-") ? false : true,
+    },
+  };
 };
 
-const getPaginatedProducts = ({ sortedProducts, pageNo=1 }) => {
-  let currentPage = Number(pageNo)
-  if(!currentPage || currentPage < 1) currentPage = 1
-  const lastPage = Math.ceil( sortedProducts.length / 30 )
-  if(pageNo >= lastPage) currentPage = lastPage
-  const paginatedProducts = sortedProducts.slice((currentPage - 1) * 30 , (currentPage * 30))
+const getPaginatedProducts = ({ sortedProducts, pageNo = 1 }) => {
+  let currentPage = Number(pageNo);
+  if (!currentPage || currentPage < 1) currentPage = 1;
+  const lastPage = Math.ceil(sortedProducts.length / 30);
+  if (pageNo >= lastPage) currentPage = lastPage;
+  const paginatedProducts = sortedProducts.slice(
+    (currentPage - 1) * 30,
+    currentPage * 30
+  );
   return {
     paginatedProducts,
     paginationMeta: {
       lastPage,
       from: (currentPage - 1) * 30,
       total_items: sortedProducts.length,
-      to: ((currentPage - 1) * 30) + paginatedProducts.length
-    }
-  }
-}
+      to: (currentPage - 1) * 30 + paginatedProducts.length,
+    },
+  };
+};
 
 const getBaseCategoryInSearchQuery = (searchQueryArr) => {
-  for(let query of searchQueryArr){
-    const result = matchSorter(global.catlogbaseCategories , query, { 
-      threshold: matchSorter.rankings.STARTS_WITH
-     })
-     if(result.length > 0) return { result: result[0], query }
+  for (let query of searchQueryArr) {
+    const result = matchSorter(global.catlogbaseCategories, query, {
+      threshold: matchSorter.rankings.STARTS_WITH,
+    });
+    if (result.length > 0) return { result: result[0], query };
   }
-  return { result: null, query: null }
-}
+  return { result: null, query: null };
+};
 
 const getAppliedfiltersInSearchQuery = (searchQueryArr) => {
-  const appliedFilters = {}
-  const potentialNamesArr = []
-  searchQueryArr.filter(query => {
-    const result = matchSorter(
-      Object.keys(global.catlogkeywordsDict) , query, 
-      {threshold: matchSorter.rankings.CONTAINS}
-    )
-    if(result.length > 0){
-      const res = result[0].split("=")
-      appliedFilters[res[0]] = [ ...appliedFilters[res[0]] || [], res[1]   ]
-    }else{
-      potentialNamesArr.push(query)
+  const appliedFilters = {};
+  const potentialNamesArr = [];
+  searchQueryArr.filter((query) => {
+    const result = matchSorter(Object.keys(global.catlogkeywordsDict), query, {
+      threshold: matchSorter.rankings.CONTAINS,
+    });
+    if (result.length > 0) {
+      const res = result[0].split("=");
+      appliedFilters[res[0]] = [...(appliedFilters[res[0]] || []), res[1]];
+    } else {
+      potentialNamesArr.push(query);
     }
-  })
+  });
   return {
-    searchFilters : Object.keys(appliedFilters).map(key => 
-      appliedFilters[key].map(ele => `${key}=${ele}`
-    )),
-    potentialNamesArr
-  }
-}
+    searchFilters: Object.keys(appliedFilters).map((key) =>
+      appliedFilters[key].map((ele) => `${key}=${ele}`)
+    ),
+    potentialNamesArr,
+  };
+};
 
 const mergeFilters = ({ appliedFilters, searchFilters }) => {
-  if(!appliedFilters || appliedFilters.length === 0) return searchFilters
-  const mergedFiltersArr =  new Set([ ...appliedFilters.flat(), ...searchFilters.flat() ])
-  const temp = {}
+  if (!appliedFilters || appliedFilters.length === 0) return searchFilters;
+  const mergedFiltersArr = new Set([
+    ...appliedFilters.flat(),
+    ...searchFilters.flat(),
+  ]);
+  const temp = {};
   mergedFiltersArr.forEach((ele) => {
-    const filter = ele.split("=")
-    temp[filter[0]] = [ ...temp[filter[0]] || [], filter[1]  ]
-  })
-  return Object.keys(temp).map(key => temp[key].map(ele => `${key}=${ele}`))
-}
+    const filter = ele.split("=");
+    temp[filter[0]] = [...(temp[filter[0]] || []), filter[1]];
+  });
+  return Object.keys(temp).map((key) =>
+    temp[key].map((ele) => `${key}=${ele}`)
+  );
+};
 
 const searchProductNames = ({ finalProducts, potentialNamesArr }) => {
-  if(!potentialNamesArr || !potentialNamesArr.length === 0) return finalProducts
-  let searchedData = []
-  potentialNamesArr.forEach(name => {
-    searchedData.push( matchSorter( finalProducts, name, {
-        keys: [{threshold: matchSorter.rankings.CONTAINS, key: 'name'}],
+  if (!potentialNamesArr || !potentialNamesArr.length === 0)
+    return finalProducts;
+  let searchedData = [];
+  potentialNamesArr.forEach((name) => {
+    searchedData.push(
+      matchSorter(finalProducts, name, {
+        keys: [{ threshold: matchSorter.rankings.CONTAINS, key: "name" }],
       })
-    )
-  })
-  if(searchedData.length === 0) return finalProducts
-  const tempKeys = {}
-  searchedData = searchedData.flat().filter(product => {
-    if(!tempKeys[product.pk]){
-      tempKeys[product.pk] = true
-      return product
+    );
+  });
+  if (searchedData.length === 0) return finalProducts;
+  const tempKeys = {};
+  searchedData = searchedData.flat().filter((product) => {
+    if (!tempKeys[product.pk]) {
+      tempKeys[product.pk] = true;
+      return product;
     }
-  })
-  if(searchedData.length === 0) return finalProducts
-  return searchedData
-}
+  });
+  if (searchedData.length === 0) return finalProducts;
+  return searchedData;
+};
 
 const getSearchableFilters = ({ appliedFilters, searchQuery }) => {
-  if(!searchQuery) return {
-    finalFilters: appliedFilters,
-    searchBaseCategory: null,
-    potentialNamesArr: []
-  }
+  if (!searchQuery)
+    return {
+      finalFilters: appliedFilters,
+      searchBaseCategory: null,
+      potentialNamesArr: [],
+    };
   let searchQueryArr = removeStopwords(searchQuery.toLowerCase().split(" "));
-  const searchBaseCategory = getBaseCategoryInSearchQuery(searchQueryArr) 
-  if(searchBaseCategory.result){
-    searchQueryArr = searchQueryArr.filter(ele => ele != searchBaseCategory.query)
+  const searchBaseCategory = getBaseCategoryInSearchQuery(searchQueryArr);
+  if (searchBaseCategory.result) {
+    searchQueryArr = searchQueryArr.filter(
+      (ele) => ele != searchBaseCategory.query
+    );
   }
-  const {
-    searchFilters,
-    potentialNamesArr
-  } = getAppliedfiltersInSearchQuery(searchQueryArr)
-  const finalFilters = mergeFilters({ appliedFilters, searchFilters })
+  const { searchFilters, potentialNamesArr } =
+    getAppliedfiltersInSearchQuery(searchQueryArr);
+  const finalFilters = mergeFilters({ appliedFilters, searchFilters });
 
   return {
     finalFilters,
     searchBaseCategory: searchBaseCategory?.result,
-    potentialNamesArr
-  }
-}
+    potentialNamesArr,
+  };
+};
 
 const getProductAttributes = ({ searchedProducts }) => {
-  const data = new Set(searchedProducts.map(product =>global.attributesData.keywordsFinal[product.pk]).flat())
-  const new_attributes = {}
-  data.forEach(ele => {
-    const temp = ele.split("=")
-    new_attributes[ temp[0] ] = []
-    global.attributesData.attributes[temp[0]].forEach(attr => { 
-      if( attr.attrib_value_slug === temp[1] ){
-        new_attributes[ temp[0] ].push( attr )
+  const data = new Set(
+    searchedProducts
+      .map((product) => global.attributesData.keywordsFinal[product.pk])
+      .flat()
+  );
+  const new_attributes = {};
+  data.forEach((ele) => {
+    const temp = ele.split("=");
+    new_attributes[temp[0]] = [];
+    global.attributesData.attributes[temp[0]].forEach((attr) => {
+      if (attr.attrib_value_slug === temp[1]) {
+        new_attributes[temp[0]].push(attr);
       }
-    })
-  })
-  return new_attributes
-}
+    });
+  });
+  return new_attributes;
+};
 
 module.exports = {
   getActualFilters,
