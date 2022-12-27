@@ -220,13 +220,14 @@ const getProductAttributes = ({ searchedProducts }) => {
   const new_attributes = {};
   data.forEach((ele) => {
     const temp = ele.split("=");
-    new_attributes[temp[0]] = [];
+    new_attributes[temp[0]] = [ ...new_attributes[temp[0]] || [] ];
     global.attributesData.attributes[temp[0]].forEach((attr) => {
       if (attr.attrib_value_slug === temp[1]) {
         new_attributes[temp[0]].push(attr);
       }
     });
   });
+  console.log(new_attributes)
   return new_attributes;
 };
 
