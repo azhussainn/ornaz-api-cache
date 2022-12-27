@@ -227,7 +227,6 @@ const getProductAttributes = ({ searchedProducts }) => {
       }
     });
   });
-  console.log(new_attributes)
   return new_attributes;
 };
 
