@@ -1,6 +1,6 @@
 const { removeStopwords } = require('stopword');
 const { matchSorter } = require('match-sorter');
-const { query } = require('express');
+// const { query } = require('express');
 
 
 const getActualFilters = (allFilters) => {
@@ -53,7 +53,7 @@ const applyFilters = ({ baseCategory, appliedFilters }) => {
   }
   if (!appliedFilters || appliedFilters.length === 0) return global.catlogDataSecondary[baseCategory]["all"];
   const products = global.catlogDataSecondary[baseCategory];
-  let filteredProducts = [];
+  const filteredProducts = [];
   appliedFilters.forEach((filterArr) => {
     const temp = [ ...filterArr.map((filter) => products[filter] || []).flat() ]
     if(temp.length > 0) filteredProducts.push(temp);
@@ -69,7 +69,7 @@ const getDataFromCatlogDataPrimary = (filteredProducts) => {
 };
 
 const sortProducts = (productData, sortByKey = "popularity") => {
-  return productData.sort((a, b) => {
+  const sortedProducts = productData.sort((a, b) => {
     let k1 = b.pk;
     let k2 = a.pk;
     let key = sortByKey;
@@ -80,6 +80,13 @@ const sortProducts = (productData, sortByKey = "popularity") => {
     };
     return global.sortDict[k1][key] - global.sortDict[k2][key];
   });
+  return {
+    sortedProducts,
+    sortingMeta: {
+      now_sorted_by: sortByKey,
+      is_descending: sortByKey.startsWith("-") ? false :true,
+    }
+  }
 };
 
 const getPaginatedProducts = ({ sortedProducts, pageNo=1 }) => {
@@ -87,7 +94,16 @@ const getPaginatedProducts = ({ sortedProducts, pageNo=1 }) => {
   if(!currentPage || currentPage < 1) currentPage = 1
   const lastPage = Math.ceil( sortedProducts.length / 30 )
   if(pageNo >= lastPage) currentPage = lastPage
-  return sortedProducts.slice((currentPage - 1) * 30 , (currentPage * 30))
+  const paginatedProducts = sortedProducts.slice((currentPage - 1) * 30 , (currentPage * 30))
+  return {
+    paginatedProducts,
+    paginationMeta: {
+      lastPage,
+      from: (currentPage - 1) * 30,
+      total_items: sortedProducts.length,
+      to: ((currentPage - 1) * 30) + paginatedProducts.length
+    }
+  }
 }
 
 const getBaseCategoryInSearchQuery = (searchQueryArr) => {
@@ -134,6 +150,27 @@ const mergeFilters = ({ appliedFilters, searchFilters }) => {
   return Object.keys(temp).map(key => temp[key].map(ele => `${key}=${ele}`))
 }
 
+const searchProductNames = ({ finalProducts, potentialNamesArr }) => {
+  if(!potentialNamesArr || !potentialNamesArr.length === 0) return finalProducts
+  let searchedData = []
+  potentialNamesArr.forEach(name => {
+    searchedData.push( matchSorter( finalProducts, name, {
+        keys: [{threshold: matchSorter.rankings.CONTAINS, key: 'name'}],
+      })
+    )
+  })
+  if(searchedData.length === 0) return finalProducts
+  const tempKeys = {}
+  searchedData = searchedData.flat().filter(product => {
+    if(!tempKeys[product.pk]){
+      tempKeys[product.pk] = true
+      return product
+    }
+  })
+  if(searchedData.length === 0) return finalProducts
+  return searchedData
+}
+
 const getSearchableFilters = ({ appliedFilters, searchQuery }) => {
   if(!searchQuery) return {
     finalFilters: appliedFilters,
@@ -158,11 +195,28 @@ const getSearchableFilters = ({ appliedFilters, searchQuery }) => {
   }
 }
 
+const getProductAttributes = ({ searchedProducts }) => {
+  const data = new Set(searchedProducts.map(product =>global.attributesData.keywordsFinal[product.pk]).flat())
+  const new_attributes = {}
+  data.forEach(ele => {
+    const temp = ele.split("=")
+    new_attributes[ temp[0] ] = []
+    global.attributesData.attributes[temp[0]].forEach(attr => { 
+      if( attr.attrib_value_slug === temp[1] ){
+        new_attributes[ temp[0] ].push( attr )
+      }
+    })
+  })
+  return new_attributes
+}
+
 module.exports = {
   getActualFilters,
   applyFilters,
   getDataFromCatlogDataPrimary,
   getSearchableFilters,
+  searchProductNames,
   sortProducts,
   getPaginatedProducts,
+  getProductAttributes,
 };
