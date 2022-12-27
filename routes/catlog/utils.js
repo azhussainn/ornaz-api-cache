@@ -1,6 +1,5 @@
 const { removeStopwords } = require('stopword');
 const { matchSorter } = require('match-sorter');
-// const { query } = require('express');
 
 
 const getActualFilters = (allFilters) => {
