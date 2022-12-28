@@ -2,6 +2,7 @@ const { removeStopwords } = require("stopword");
 const { matchSorter } = require("match-sorter");
 
 const getActualFilters = (allFilters) => {
+  //seperating unions and intersection filters
   const filters = [];
   Object.keys(allFilters).forEach((filterKey) => {
     if (typeof allFilters[filterKey] === "string") {
@@ -19,31 +20,47 @@ const getActualFilters = (allFilters) => {
   return filters;
 };
 
-const getApplicableFiltersWithoutBaseCategory = (appliedFilters) => {
+const getFiltersWithoutBase = (appliedFilters) => {
   const applicablefilters = {};
+
   Object.keys(global.catlogkeywordsDictReverse).forEach((baseCategory) => {
     const temp = [];
     appliedFilters.every((filterArr) => {
+
+      //filtering available filters for the current base category
       const availFilter = filterArr.filter((filter) =>
         global.catlogkeywordsDictReverse[baseCategory].has(filter)
       );
+
+      //if base category has given filters save availFilter
       if (availFilter.length > 0) {
         temp.push(availFilter);
         return true;
       }
+      //otherwise break
       return false;
     });
+
+    //if all intersections are fullfilled, save base category with filters
     if (temp.length === appliedFilters.length)
       applicablefilters[baseCategory] = temp;
+
   });
+  // data format if found eg: 
+  // {rings: [ [ 'gender=women' ], [ 'shape=heart' ], [ 'stone_type=diamond' ] ]}
   return applicablefilters;
 };
 
 const applyFilters = ({ baseCategory, appliedFilters }) => {
+
   if (!baseCategory || !global.catlogbaseCategories.includes(baseCategory)) {
+
+    //no filters => []
     if (!appliedFilters || appliedFilters.length === 0) return [];
-    const applicablefilters =
-      getApplicableFiltersWithoutBaseCategory(appliedFilters);
+
+    //getting all filters along with base category
+    const applicablefilters = getFiltersWithoutBase(appliedFilters);
+
     const allFilteredProducts = Object.keys(applicablefilters).map(
       (baseCategory) =>
         applyFilters({
@@ -53,29 +70,36 @@ const applyFilters = ({ baseCategory, appliedFilters }) => {
     );
     return [...new Set(allFilteredProducts.flat())];
   }
+  
   if (!appliedFilters || appliedFilters.length === 0)
     return global.catlogDataSecondary[baseCategory]["all"];
-    
+  
+  //getting product ids for each filter
   const products = global.catlogDataSecondary[baseCategory];
   const filteredProducts = [];
   appliedFilters.forEach((filterArr) => {
+    //handling union filters
     const temp = [...filterArr.map((filter) => products[filter] || []).flat()];
     if (temp.length > 0) filteredProducts.push(temp);
   });
+
   if (filteredProducts.length === 0) return global.catlogDataSecondary[baseCategory]["all"];
+
+  //returning intersection of filteredProducts
   return filteredProducts.reduce((a, b) => a.filter((c) => b.includes(c)));
 };
 
 const getDataFromCatlogDataPrimary = (filteredProducts) => {
   if (filteredProducts.length === 0)
     return Object.values(global.catlogDataPrimary);
-  // //getting the final products from catlog Primary data
+  // getting the final products from catlog Primary data
   return filteredProducts.map(
     (productId) => global.catlogDataPrimary[productId]
   );
 };
 
 const sortProducts = (productData, sortByKey = "popularity") => {
+  //sorting productData using global.sortDict
   const sortedProducts = productData.sort((a, b) => {
     let k1 = b.pk;
     let k2 = a.pk;
@@ -117,6 +141,7 @@ const getPaginatedProducts = ({ sortedProducts, pageNo = 1 }) => {
 };
 
 const getBaseCategoryInSearchQuery = (searchQueryArr) => {
+  //matching searchQueryArr againist global.catlogbaseCategories
   for (let query of searchQueryArr) {
     const result = matchSorter(global.catlogbaseCategories, query, {
       threshold: matchSorter.rankings.STARTS_WITH,
@@ -127,20 +152,27 @@ const getBaseCategoryInSearchQuery = (searchQueryArr) => {
 };
 
 const getAppliedfiltersInSearchQuery = (searchQueryArr) => {
+  //matching searchQueryArr againist global.catlogkeywordsDic
   const appliedFilters = {};
   const potentialNamesArr = [];
   searchQueryArr.filter((query) => {
     const result = matchSorter(Object.keys(global.catlogkeywordsDict), query, {
       threshold: matchSorter.rankings.CONTAINS,
+      keys: [item => item.split("=")[1]]
     });
+
     if (result.length > 0) {
-      const res = result[0].split("=");
-      appliedFilters[res[0]] = [...(appliedFilters[res[0]] || []), res[1]];
+      const resultArr = result[0].split("=");
+      //keeping unions and intersections seperate
+      appliedFilters[resultArr[0]] = [...(appliedFilters[resultArr[0]] || []), resultArr[1]];
     } else {
+      //not found query go in potentialNamesArr
       potentialNamesArr.push(query);
     }
   });
+
   return {
+    //returning filters in [ [ k1=v1, k2=v2 ], [ k3=v3, k4=v4 ] ] format
     searchFilters: Object.keys(appliedFilters).map((key) =>
       appliedFilters[key].map((ele) => `${key}=${ele}`)
     ),
@@ -149,25 +181,31 @@ const getAppliedfiltersInSearchQuery = (searchQueryArr) => {
 };
 
 const mergeFilters = ({ appliedFilters, searchFilters }) => {
+
   if (!appliedFilters || appliedFilters.length === 0) return searchFilters;
+
+  //removing duplicates
   const mergedFiltersArr = new Set([
     ...appliedFilters.flat(),
     ...searchFilters.flat(),
   ]);
+
+  //return filters in [union , union] <= intersection => [ union, union ] format
+  //[  [ k1=v1, k2=v2 ], [k3=v3, k4=v4]  ]
   const temp = {};
   mergedFiltersArr.forEach((ele) => {
     const filter = ele.split("=");
     temp[filter[0]] = [...(temp[filter[0]] || []), filter[1]];
   });
-  return Object.keys(temp).map((key) =>
-    temp[key].map((ele) => `${key}=${ele}`)
-  );
+  return Object.keys(temp).map(
+    (key) => temp[key].map((ele) => `${key}=${ele}`));
 };
 
 const searchProductNames = ({ finalProducts, potentialNamesArr }) => {
   if (!potentialNamesArr || !potentialNamesArr.length === 0)
     return finalProducts;
   let searchedData = [];
+  //matching potentialNamesArr aganist product names 
   potentialNamesArr.forEach((name) => {
     searchedData.push(
       matchSorter(finalProducts, name, {
@@ -175,7 +213,10 @@ const searchProductNames = ({ finalProducts, potentialNamesArr }) => {
       })
     );
   });
+
   if (searchedData.length === 0) return finalProducts;
+
+  //filtering duplicates
   const tempKeys = {};
   searchedData = searchedData.flat().filter((product) => {
     if (!tempKeys[product.pk]) {
@@ -183,6 +224,7 @@ const searchProductNames = ({ finalProducts, potentialNamesArr }) => {
       return product;
     }
   });
+
   if (searchedData.length === 0) return finalProducts;
   return searchedData;
 };
@@ -191,21 +233,30 @@ const getSearchableFilters = ({ appliedFilters, searchQuery, baseCategory }) => 
   if (!searchQuery)
     return {
       finalFilters: appliedFilters,
-      searchBaseCategory: null,
+      searchBaseCategory: baseCategory,
       potentialNamesArr: [],
-    };
+  };
+
+  //removing stop words and removing duplicates from search query
   let searchQueryArr = [...new Set(removeStopwords(searchQuery.toLowerCase().split(" ")))];
   
+  //getting the base category searchQueryArr 
   const searchBaseCategory = !baseCategory ? getBaseCategoryInSearchQuery(
     searchQueryArr) : { result : baseCategory };
 
+  //removing base category from searchQueryArr if found
   if (searchBaseCategory.query) {
     searchQueryArr = searchQueryArr.filter(
       (ele) => ele != searchBaseCategory.query
     );
   }
-  const { searchFilters, potentialNamesArr } =
-    getAppliedfiltersInSearchQuery(searchQueryArr);
+
+  //getting filters and potential names from searchQueryArr
+  const { 
+    searchFilters, potentialNamesArr 
+  } = getAppliedfiltersInSearchQuery(searchQueryArr);
+
+  //merging applied and search filters
   const finalFilters = mergeFilters({ appliedFilters, searchFilters });
 
   return {
@@ -216,12 +267,15 @@ const getSearchableFilters = ({ appliedFilters, searchQuery, baseCategory }) => 
 };
 
 const getProductAttributes = ({ searchedProducts }) => {
+
+  //getting all keywords for searchedProducts
   const data = new Set(
     searchedProducts
       .map((product) => global.attributesData.keywordsFinal[product.pk])
       .flat()
   );
 
+  //for given keywords getting all attrib_data from global.attributesData.attributes
   const new_attributes = {};
   data.forEach((ele) => {
     const temp = ele.split("=");
@@ -233,6 +287,7 @@ const getProductAttributes = ({ searchedProducts }) => {
     });
     if(new_attributes[temp[0]].length === 0) delete new_attributes[temp[0]]
   });
+
   return new_attributes;
 };
 

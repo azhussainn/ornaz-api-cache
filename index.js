@@ -13,6 +13,7 @@ global.catlogkeywordsDict = null;
 global.catlogkeywordsDictReverse = null;
 global.sortDict = null;
 global.attributesData = null;
+global.topBannerDict = null;
 
 app.use(compression());
 app.use("/jewellery", catlogRoute);

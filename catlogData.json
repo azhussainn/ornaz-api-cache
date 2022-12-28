@@ -31,7 +31,8 @@
         "stone_type=solitare",
         "occasion=engagement",
         "shape=princess",
-        "style=halo"
+        "style=halo",
+        "price=100000-200000"
       ]
     },
     "1164": {
@@ -65,7 +66,8 @@
         "stone_type=solitare",
         "occasion=engagement",
         "shape=round",
-        "style=halo"
+        "style=halo",
+        "price=50000.0-100000"
       ]
     },
     "1165": {
@@ -99,7 +101,8 @@
         "stone_type=solitare",
         "occasion=engagement",
         "shape=round",
-        "style=plain-solitaire"
+        "style=plain-solitaire",
+        "price=100000-200000"
       ]
     },
     "1166": {
@@ -133,7 +136,8 @@
         "stone_type=solitare",
         "occasion=engagement",
         "shape=round",
-        "style=halo"
+        "style=halo",
+        "price=50000.0-100000"
       ]
     },
     "1167": {
@@ -167,7 +171,8 @@
         "stone_type=solitare",
         "occasion=engagement",
         "shape=round",
-        "style=solitaire-with-diamond-band"
+        "style=solitaire-with-diamond-band",
+        "price=50000.0-100000"
       ]
     },
     "1168": {
@@ -201,7 +206,8 @@
         "stone_type=solitare",
         "occasion=engagement",
         "shape=round",
-        "style=solitaire-with-diamond-band"
+        "style=solitaire-with-diamond-band",
+        "price=50000.0-100000"
       ]
     },
     "1169": {
@@ -235,7 +241,8 @@
         "stone_type=solitare",
         "occasion=engagement",
         "shape=princess",
-        "style=vintage"
+        "style=vintage",
+        "price=100000-200000"
       ]
     },
     "1170": {
@@ -269,7 +276,8 @@
         "stone_type=solitare",
         "occasion=engagement",
         "shape=round",
-        "style=halo"
+        "style=halo",
+        "price=200000-500000"
       ]
     },
     "1173": {
@@ -303,7 +311,8 @@
         "stone_type=solitare",
         "occasion=engagement",
         "shape=round",
-        "style=side-diamond"
+        "style=side-diamond",
+        "price=100000-200000"
       ]
     },
     "1175": {
@@ -337,8 +346,8 @@
         "stone_type=solitare",
         "occasion=engagement",
         "shape=princess",
-        "topengagement=yes",
-        "style=solitaire-with-diamond-band"
+        "style=solitaire-with-diamond-band",
+        "price=200000-500000"
       ]
     },
     "1176": {
@@ -372,7 +381,8 @@
         "stone_type=solitare",
         "occasion=engagement",
         "shape=round",
-        "style=solitaire-with-diamond-band"
+        "style=solitaire-with-diamond-band",
+        "price=500000-700000"
       ]
     },
     "1177": {
@@ -406,7 +416,8 @@
         "stone_type=solitare",
         "occasion=engagement",
         "shape=heart",
-        "style=halo"
+        "style=halo",
+        "price=100000-200000"
       ]
     },
     "1178": {
@@ -440,7 +451,8 @@
         "stone_type=solitare",
         "occasion=engagement",
         "shape=round",
-        "style=solitaire-with-diamond-band"
+        "style=solitaire-with-diamond-band",
+        "price=500000-700000"
       ]
     },
     "1179": {
@@ -474,7 +486,8 @@
         "stone_type=solitare",
         "occasion=engagement",
         "shape=round",
-        "style=solitaire-with-diamond-band"
+        "style=solitaire-with-diamond-band",
+        "price=500000-700000"
       ]
     },
     "1180": {
@@ -508,7 +521,8 @@
         "stone_type=solitare",
         "occasion=engagement",
         "shape=oval",
-        "style=halo"
+        "style=halo",
+        "price=200000-500000"
       ]
     },
     "1181": {
@@ -542,7 +556,8 @@
         "stone_type=solitare",
         "occasion=engagement",
         "shape=round",
-        "style=vintage"
+        "style=vintage",
+        "price=200000-500000"
       ]
     },
     "1182": {
@@ -576,7 +591,8 @@
         "stone_type=solitare",
         "occasion=engagement",
         "shape=princess",
-        "style=solitaire-with-diamond-band"
+        "style=solitaire-with-diamond-band",
+        "price=100000-200000"
       ]
     },
     "1183": {
@@ -610,7 +626,8 @@
         "stone_type=solitare",
         "occasion=engagement",
         "shape=cushion",
-        "style=halo"
+        "style=halo",
+        "price=200000-500000"
       ]
     },
     "1184": {
@@ -644,7 +661,8 @@
         "stone_type=solitare",
         "occasion=engagement",
         "shape=round",
-        "style=solitaire-with-diamond-band"
+        "style=solitaire-with-diamond-band",
+        "price=100000-200000"
       ]
     },
     "1185": {
@@ -678,7 +696,8 @@
         "stone_type=solitare",
         "occasion=engagement",
         "shape=round",
-        "style=solitaire-with-diamond-band"
+        "style=solitaire-with-diamond-band",
+        "price=100000-200000"
       ]
     },
     "1186": {
@@ -712,7 +731,8 @@
         "stone_type=solitare",
         "occasion=engagement",
         "shape=round",
-        "style=solitaire-with-diamond-band"
+        "style=solitaire-with-diamond-band",
+        "price=100000-200000"
       ]
     },
     "1187": {
@@ -746,7 +766,8 @@
         "stone_type=solitare",
         "occasion=engagement",
         "shape=round",
-        "style=plain-solitaire"
+        "style=plain-solitaire",
+        "price=50000.0-100000"
       ]
     },
     "1188": {
@@ -780,7 +801,8 @@
         "stone_type=solitare",
         "occasion=engagement",
         "shape=round",
-        "style=plain-solitaire"
+        "style=plain-solitaire",
+        "price=50000.0-100000"
       ]
     },
     "1189": {
@@ -814,7 +836,8 @@
         "stone_type=solitare",
         "occasion=engagement",
         "shape=round",
-        "style=three-stone"
+        "style=three-stone",
+        "price=100000-200000"
       ]
     },
     "1190": {
@@ -848,7 +871,8 @@
         "stone_type=solitare",
         "occasion=engagement",
         "shape=round",
-        "style=plain-solitaire"
+        "style=plain-solitaire",
+        "price=100000-200000"
       ]
     },
     "1191": {
@@ -882,7 +906,8 @@
         "stone_type=solitare",
         "occasion=engagement",
         "shape=round",
-        "style=three-stone"
+        "style=three-stone",
+        "price=200000-500000"
       ]
     },
     "1192": {
@@ -916,7 +941,8 @@
         "stone_type=solitare",
         "occasion=engagement",
         "shape=round",
-        "style=plain-solitaire"
+        "style=plain-solitaire",
+        "price=500000-700000"
       ]
     },
     "1193": {
@@ -950,7 +976,8 @@
         "stone_type=solitare",
         "occasion=engagement",
         "shape=round",
-        "style=three-stone"
+        "style=three-stone",
+        "price=100000-200000"
       ]
     },
     "1194": {
@@ -984,7 +1011,8 @@
         "stone_type=solitare",
         "occasion=engagement",
         "shape=round",
-        "style=plain-solitaire"
+        "style=plain-solitaire",
+        "price=200000-500000"
       ]
     },
     "1195": {
@@ -1018,7 +1046,8 @@
         "stone_type=solitare",
         "occasion=engagement",
         "shape=round",
-        "style=plain-solitaire"
+        "style=plain-solitaire",
+        "price=100000-200000"
       ]
     },
     "1196": {
@@ -1052,7 +1081,8 @@
         "stone_type=solitare",
         "occasion=engagement",
         "shape=round",
-        "style=solitaire-with-diamond-band"
+        "style=solitaire-with-diamond-band",
+        "price=50000.0-100000"
       ]
     },
     "1197": {
@@ -1086,7 +1116,8 @@
         "stone_type=solitare",
         "occasion=engagement",
         "shape=round",
-        "style=halo"
+        "style=halo",
+        "price=200000-500000"
       ]
     },
     "1198": {
@@ -1120,7 +1151,8 @@
         "stone_type=solitare",
         "occasion=engagement",
         "shape=pear",
-        "style=halo"
+        "style=halo",
+        "price=50000.0-100000"
       ]
     },
     "1199": {
@@ -1154,7 +1186,8 @@
         "stone_type=solitare",
         "occasion=engagement",
         "shape=emerald",
-        "style=halo"
+        "style=halo",
+        "price=50000.0-100000"
       ]
     },
     "1200": {
@@ -1188,7 +1221,8 @@
         "stone_type=solitare",
         "occasion=engagement",
         "shape=oval",
-        "style=halo"
+        "style=halo",
+        "price=50000.0-100000"
       ]
     },
     "1201": {
@@ -1222,7 +1256,8 @@
         "stone_type=solitare",
         "occasion=engagement",
         "shape=round",
-        "style=halo"
+        "style=halo",
+        "price=50000.0-100000"
       ]
     },
     "1202": {
@@ -1256,7 +1291,8 @@
         "stone_type=solitare",
         "occasion=engagement",
         "shape=round",
-        "style=side-diamond"
+        "style=side-diamond",
+        "price=50000.0-100000"
       ]
     },
     "1204": {
@@ -1290,7 +1326,8 @@
         "stone_type=solitare",
         "occasion=engagement",
         "shape=pear",
-        "style=halo"
+        "style=halo",
+        "price=100000-200000"
       ]
     },
     "1205": {
@@ -1324,7 +1361,8 @@
         "stone_type=solitare",
         "occasion=engagement",
         "shape=princess",
-        "style=halo"
+        "style=halo",
+        "price=50000.0-100000"
       ]
     },
     "1206": {
@@ -1358,7 +1396,8 @@
         "stone_type=solitare",
         "occasion=engagement",
         "shape=cushion",
-        "style=halo"
+        "style=halo",
+        "price=50000.0-100000"
       ]
     },
     "1207": {
@@ -1392,7 +1431,8 @@
         "stone_type=solitare",
         "occasion=engagement",
         "shape=cushion",
-        "style=halo"
+        "style=halo",
+        "price=50000.0-100000"
       ]
     },
     "1208": {
@@ -1426,7 +1466,8 @@
         "stone_type=solitare",
         "occasion=engagement",
         "shape=cushion",
-        "style=halo"
+        "style=halo",
+        "price=100000-200000"
       ]
     },
     "1209": {
@@ -1460,7 +1501,8 @@
         "stone_type=solitare",
         "occasion=engagement",
         "shape=round",
-        "style=halo"
+        "style=halo",
+        "price=100000-200000"
       ]
     },
     "1210": {
@@ -1494,7 +1536,8 @@
         "stone_type=solitare",
         "occasion=engagement",
         "shape=oval",
-        "style=halo"
+        "style=halo",
+        "price=100000-200000"
       ]
     },
     "1211": {
@@ -1528,7 +1571,8 @@
         "stone_type=solitare",
         "occasion=engagement",
         "shape=round",
-        "style=halo"
+        "style=halo",
+        "price=100000-200000"
       ]
     },
     "1212": {
@@ -1562,7 +1606,8 @@
         "stone_type=solitare",
         "occasion=engagement",
         "shape=oval",
-        "style=halo"
+        "style=halo",
+        "price=100000-200000"
       ]
     },
     "1213": {
@@ -1596,7 +1641,8 @@
         "stone_type=solitare",
         "occasion=engagement",
         "shape=heart",
-        "style=halo"
+        "style=halo",
+        "price=50000.0-100000"
       ]
     },
     "1214": {
@@ -1630,7 +1676,8 @@
         "stone_type=solitare",
         "occasion=engagement",
         "shape=round",
-        "style=plain-solitaire"
+        "style=plain-solitaire",
+        "price=50000.0-100000"
       ]
     },
     "1215": {
@@ -1664,7 +1711,8 @@
         "stone_type=solitare",
         "occasion=engagement",
         "shape=heart",
-        "style=halo"
+        "style=halo",
+        "price=50000.0-100000"
       ]
     },
     "1216": {
@@ -1698,7 +1746,8 @@
         "stone_type=solitare",
         "occasion=engagement",
         "shape=round",
-        "style=plain-solitaire"
+        "style=plain-solitaire",
+        "price=0-50000.0"
       ]
     },
     "1217": {
@@ -1732,7 +1781,8 @@
         "stone_type=solitare",
         "occasion=engagement",
         "shape=cushion",
-        "style=halo"
+        "style=halo",
+        "price=50000.0-100000"
       ]
     },
     "1219": {
@@ -1766,7 +1816,8 @@
         "stone_type=solitare",
         "occasion=engagement",
         "shape=emerald",
-        "style=halo"
+        "style=halo",
+        "price=100000-200000"
       ]
     },
     "1220": {
@@ -1800,7 +1851,8 @@
         "stone_type=solitare",
         "occasion=engagement",
         "shape=round",
-        "style=halo"
+        "style=halo",
+        "price=50000.0-100000"
       ]
     },
     "1221": {
@@ -1834,7 +1886,8 @@
         "stone_type=solitare",
         "occasion=engagement",
         "shape=round",
-        "style=solitaire-with-diamond-band"
+        "style=solitaire-with-diamond-band",
+        "price=100000-200000"
       ]
     },
     "1222": {
@@ -1868,7 +1921,8 @@
         "stone_type=solitare",
         "occasion=engagement",
         "shape=princess",
-        "style=solitaire-with-diamond-band"
+        "style=solitaire-with-diamond-band",
+        "price=50000.0-100000"
       ]
     },
     "1223": {
@@ -1902,7 +1956,8 @@
         "stone_type=solitare",
         "occasion=engagement",
         "shape=oval",
-        "style=solitaire-with-diamond-band"
+        "style=solitaire-with-diamond-band",
+        "price=50000.0-100000"
       ]
     },
     "1224": {
@@ -1936,7 +1991,8 @@
         "stone_type=solitare",
         "occasion=engagement",
         "shape=cushion",
-        "style=solitaire-with-diamond-band"
+        "style=solitaire-with-diamond-band",
+        "price=100000-200000"
       ]
     },
     "1225": {
@@ -1970,7 +2026,8 @@
         "stone_type=solitare",
         "occasion=engagement",
         "shape=emerald",
-        "style=solitaire-with-diamond-band"
+        "style=solitaire-with-diamond-band",
+        "price=100000-200000"
       ]
     },
     "1226": {
@@ -2004,7 +2061,8 @@
         "stone_type=solitare",
         "occasion=engagement",
         "shape=round",
-        "style=plain-solitaire"
+        "style=plain-solitaire",
+        "price=100000-200000"
       ]
     },
     "1227": {
@@ -2038,7 +2096,8 @@
         "stone_type=solitare",
         "occasion=engagement",
         "shape=princess",
-        "style=plain-solitaire"
+        "style=plain-solitaire",
+        "price=100000-200000"
       ]
     },
     "1228": {
@@ -2072,7 +2131,8 @@
         "stone_type=solitare",
         "occasion=engagement",
         "shape=round",
-        "style=plain-solitaire"
+        "style=plain-solitaire",
+        "price=100000-200000"
       ]
     },
     "1229": {
@@ -2106,7 +2166,8 @@
         "stone_type=solitare",
         "occasion=engagement",
         "shape=princess",
-        "style=plain-solitaire"
+        "style=plain-solitaire",
+        "price=100000-200000"
       ]
     },
     "1230": {
@@ -2140,7 +2201,8 @@
         "stone_type=solitare",
         "occasion=engagement",
         "style=plain-solitaire",
-        "shape=emerald"
+        "shape=emerald",
+        "price=100000-200000"
       ]
     },
     "1232": {
@@ -2174,7 +2236,8 @@
         "stone_type=solitare",
         "occasion=engagement",
         "shape=cushion",
-        "style=plain-solitaire"
+        "style=plain-solitaire",
+        "price=100000-200000"
       ]
     },
     "1233": {
@@ -2208,7 +2271,8 @@
         "stone_type=solitare",
         "occasion=engagement",
         "shape=round",
-        "style=halo"
+        "style=halo",
+        "price=100000-200000"
       ]
     },
     "1234": {
@@ -2242,7 +2306,8 @@
         "stone_type=solitare",
         "occasion=engagement",
         "shape=round",
-        "style=solitaire-with-diamond-band"
+        "style=solitaire-with-diamond-band",
+        "price=700000-1000000"
       ]
     },
     "1235": {
@@ -2276,7 +2341,8 @@
         "stone_type=solitare",
         "occasion=engagement",
         "shape=round",
-        "style=plain-solitaire"
+        "style=plain-solitaire",
+        "price=50000.0-100000"
       ]
     },
     "1236": {
@@ -2310,7 +2376,8 @@
         "stone_type=solitare",
         "occasion=engagement",
         "shape=round",
-        "style=plain-solitaire"
+        "style=plain-solitaire",
+        "price=50000.0-100000"
       ]
     },
     "1237": {
@@ -2344,7 +2411,8 @@
         "stone_type=solitare",
         "occasion=engagement",
         "shape=princess",
-        "style=plain-solitaire"
+        "style=plain-solitaire",
+        "price=50000.0-100000"
       ]
     },
     "1238": {
@@ -2378,7 +2446,8 @@
         "stone_type=solitare",
         "occasion=engagement",
         "shape=oval",
-        "style=plain-solitaire"
+        "style=plain-solitaire",
+        "price=100000-200000"
       ]
     },
     "1239": {
@@ -2412,7 +2481,8 @@
         "stone_type=solitare",
         "occasion=engagement",
         "shape=cushion",
-        "style=plain-solitaire"
+        "style=plain-solitaire",
+        "price=100000-200000"
       ]
     },
     "1240": {
@@ -2446,7 +2516,8 @@
         "stone_type=solitare",
         "occasion=engagement",
         "shape=princess",
-        "style=plain-solitaire"
+        "style=plain-solitaire",
+        "price=50000.0-100000"
       ]
     },
     "1241": {
@@ -2480,7 +2551,8 @@
         "stone_type=solitare",
         "occasion=engagement",
         "shape=cushion",
-        "style=plain-solitaire"
+        "style=plain-solitaire",
+        "price=50000.0-100000"
       ]
     },
     "1242": {
@@ -2514,7 +2586,8 @@
         "stone_type=solitare",
         "occasion=engagement",
         "shape=round",
-        "style=plain-solitaire"
+        "style=plain-solitaire",
+        "price=100000-200000"
       ]
     },
     "1243": {
@@ -2548,7 +2621,8 @@
         "stone_type=diamond",
         "occasion=engagement",
         "shape=emerald",
-        "style=cluster"
+        "style=cluster",
+        "price=100000-200000"
       ]
     },
     "1245": {
@@ -2582,7 +2656,8 @@
         "stone_type=solitare",
         "occasion=engagement",
         "shape=round",
-        "style=plain-solitaire"
+        "style=plain-solitaire",
+        "price=100000-200000"
       ]
     },
     "1246": {
@@ -2616,7 +2691,8 @@
         "stone_type=solitare",
         "occasion=engagement",
         "shape=oval",
-        "style=plain-solitaire"
+        "style=plain-solitaire",
+        "price=50000.0-100000"
       ]
     },
     "1247": {
@@ -2650,7 +2726,8 @@
         "stone_type=solitare",
         "occasion=engagement",
         "shape=princess",
-        "style=plain-solitaire"
+        "style=plain-solitaire",
+        "price=50000.0-100000"
       ]
     },
     "1248": {
@@ -2684,7 +2761,8 @@
         "stone_type=solitare",
         "occasion=engagement",
         "shape=cushion",
-        "style=plain-solitaire"
+        "style=plain-solitaire",
+        "price=50000.0-100000"
       ]
     },
     "1249": {
@@ -2718,7 +2796,8 @@
         "stone_type=solitare",
         "occasion=engagement",
         "shape=round",
-        "style=vintage"
+        "style=vintage",
+        "price=50000.0-100000"
       ]
     },
     "1250": {
@@ -2752,7 +2831,8 @@
         "stone_type=solitare",
         "occasion=engagement",
         "shape=cushion",
-        "style=vintage"
+        "style=vintage",
+        "price=100000-200000"
       ]
     },
     "1251": {
@@ -2786,7 +2866,8 @@
         "stone_type=solitare",
         "occasion=engagement",
         "shape=princess",
-        "style=vintage"
+        "style=vintage",
+        "price=100000-200000"
       ]
     },
     "1252": {
@@ -2820,7 +2901,8 @@
         "stone_type=solitare",
         "occasion=engagement",
         "shape=oval",
-        "style=vintage"
+        "style=vintage",
+        "price=100000-200000"
       ]
     },
     "1254": {
@@ -2854,7 +2936,8 @@
         "stone_type=solitare",
         "occasion=engagement",
         "shape=round",
-        "style=vintage"
+        "style=vintage",
+        "price=200000-500000"
       ]
     },
     "1255": {
@@ -2888,7 +2971,8 @@
         "stone_type=solitare",
         "occasion=engagement",
         "shape=cushion",
-        "style=halo"
+        "style=halo",
+        "price=200000-500000"
       ]
     },
     "1256": {
@@ -2922,7 +3006,8 @@
         "stone_type=solitare",
         "occasion=engagement",
         "shape=princess",
-        "style=plain-solitaire"
+        "style=plain-solitaire",
+        "price=100000-200000"
       ]
     },
     "1257": {
@@ -2956,7 +3041,8 @@
         "stone_type=solitare",
         "occasion=engagement",
         "shape=round",
-        "style=plain-solitaire"
+        "style=plain-solitaire",
+        "price=100000-200000"
       ]
     },
     "1258": {
@@ -2990,7 +3076,8 @@
         "stone_type=solitare",
         "occasion=engagement",
         "shape=oval",
-        "style=plain-solitaire"
+        "style=plain-solitaire",
+        "price=100000-200000"
       ]
     },
     "1259": {
@@ -3024,7 +3111,8 @@
         "stone_type=solitare",
         "occasion=engagement",
         "shape=cushion",
-        "style=plain-solitaire"
+        "style=plain-solitaire",
+        "price=100000-200000"
       ]
     },
     "1260": {
@@ -3058,7 +3146,8 @@
         "stone_type=solitare",
         "occasion=engagement",
         "shape=round",
-        "style=plain-solitaire"
+        "style=plain-solitaire",
+        "price=100000-200000"
       ]
     },
     "1261": {
@@ -3092,7 +3181,8 @@
         "stone_type=solitare",
         "occasion=engagement",
         "shape=round",
-        "style=plain-solitaire"
+        "style=plain-solitaire",
+        "price=100000-200000"
       ]
     },
     "1262": {
@@ -3126,7 +3216,8 @@
         "stone_type=solitare",
         "occasion=engagement",
         "shape=round",
-        "style=plain-solitaire"
+        "style=plain-solitaire",
+        "price=100000-200000"
       ]
     },
     "1263": {
@@ -3160,7 +3251,8 @@
         "stone_type=solitare",
         "occasion=engagement",
         "shape=cushion",
-        "style=plain-solitaire"
+        "style=plain-solitaire",
+        "price=100000-200000"
       ]
     },
     "1264": {
@@ -3194,7 +3286,8 @@
         "stone_type=solitare",
         "occasion=engagement",
         "shape=princess",
-        "style=plain-solitaire"
+        "style=plain-solitaire",
+        "price=100000-200000"
       ]
     },
     "1265": {
@@ -3228,7 +3321,8 @@
         "stone_type=solitare",
         "occasion=engagement",
         "shape=oval",
-        "style=plain-solitaire"
+        "style=plain-solitaire",
+        "price=100000-200000"
       ]
     },
     "1266": {
@@ -3262,7 +3356,8 @@
         "stone_type=diamond",
         "occasion=everyday",
         "style=bands",
-        "shape=round"
+        "shape=round",
+        "price=50000.0-100000"
       ]
     },
     "1267": {
@@ -3296,7 +3391,8 @@
         "stone_type=solitare",
         "occasion=engagement",
         "shape=round",
-        "style=plain-solitaire"
+        "style=plain-solitaire",
+        "price=50000.0-100000"
       ]
     },
     "1268": {
@@ -3330,7 +3426,8 @@
         "stone_type=solitare",
         "occasion=everyday",
         "style=bands",
-        "shape=round"
+        "shape=round",
+        "price=0-50000.0"
       ]
     },
     "1269": {
@@ -3364,7 +3461,8 @@
         "stone_type=diamond",
         "occasion=everyday",
         "style=bands",
-        "shape=round"
+        "shape=round",
+        "price=100000-200000"
       ]
     },
     "1270": {
@@ -3398,7 +3496,8 @@
         "stone_type=solitare",
         "occasion=everyday",
         "style=bands",
-        "shape=round"
+        "shape=round",
+        "price=50000.0-100000"
       ]
     },
     "1271": {
@@ -3432,7 +3531,8 @@
         "stone_type=diamond",
         "occasion=everyday",
         "style=bands",
-        "shape=round"
+        "shape=round",
+        "price=50000.0-100000"
       ]
     },
     "1272": {
@@ -3466,7 +3566,8 @@
         "stone_type=diamond",
         "occasion=everyday",
         "style=bands",
-        "shape=round"
+        "shape=round",
+        "price=50000.0-100000"
       ]
     },
     "1273": {
@@ -3500,7 +3601,8 @@
         "stone_type=diamond",
         "occasion=everyday",
         "style=bands",
-        "shape=round"
+        "shape=round",
+        "price=0-50000.0"
       ]
     },
     "1275": {
@@ -3533,7 +3635,8 @@
         "gender=men",
         "stone_type=diamond",
         "occasion=everyday",
-        "style=bands"
+        "style=bands",
+        "price=0-50000.0"
       ]
     },
     "1277": {
@@ -3567,7 +3670,8 @@
         "stone_type=diamond",
         "occasion=everyday",
         "style=bands",
-        "shape=round"
+        "shape=round",
+        "price=0-50000.0"
       ]
     },
     "1278": {
@@ -3601,7 +3705,8 @@
         "stone_type=diamond",
         "occasion=everyday",
         "style=bands",
-        "shape=round"
+        "shape=round",
+        "price=0-50000.0"
       ]
     },
     "1279": {
@@ -3635,7 +3740,8 @@
         "stone_type=solitare",
         "occasion=engagement",
         "shape=round",
-        "style=plain-solitaire"
+        "style=plain-solitaire",
+        "price=700000-1000000"
       ]
     },
     "1283": {
@@ -3669,7 +3775,8 @@
         "stone_type=solitare",
         "occasion=engagement",
         "shape=cushion",
-        "style=halo"
+        "style=halo",
+        "price=200000-500000"
       ]
     },
     "1284": {
@@ -3702,7 +3809,8 @@
         "gender=women",
         "stone_type=diamond",
         "occasion=engagement",
-        "shape=round"
+        "shape=round",
+        "price=0-50000.0"
       ]
     },
     "1286": {
@@ -3736,7 +3844,8 @@
         "stone_type=diamond",
         "occasion=everyday",
         "shape=round",
-        "style=eternity"
+        "style=eternity",
+        "price=50000.0-100000"
       ]
     },
     "1291": {
@@ -3770,7 +3879,8 @@
         "stone_type=solitare",
         "occasion=engagement",
         "shape=round",
-        "style=halo"
+        "style=halo",
+        "price=100000-200000"
       ]
     },
     "1292": {
@@ -3804,7 +3914,8 @@
         "stone_type=solitare",
         "occasion=engagement",
         "shape=heart",
-        "style=halo"
+        "style=halo",
+        "price=100000-200000"
       ]
     },
     "1293": {
@@ -3838,7 +3949,8 @@
         "stone_type=solitare",
         "occasion=engagement",
         "style=three-stone",
-        "shape=emerald"
+        "shape=emerald",
+        "price=100000-200000"
       ]
     },
     "1295": {
@@ -3872,7 +3984,8 @@
         "stone_type=solitare",
         "occasion=engagement",
         "shape=round",
-        "style=solitaire-with-diamond-band"
+        "style=solitaire-with-diamond-band",
+        "price=100000-200000"
       ]
     },
     "1296": {
@@ -3906,7 +4019,8 @@
         "stone_type=solitare",
         "occasion=engagement",
         "shape=round",
-        "style=solitaire-with-diamond-band"
+        "style=solitaire-with-diamond-band",
+        "price=200000-500000"
       ]
     },
     "1297": {
@@ -3940,7 +4054,8 @@
         "stone_type=solitare",
         "occasion=engagement",
         "shape=cushion",
-        "style=halo"
+        "style=halo",
+        "price=200000-500000"
       ]
     },
     "1298": {
@@ -3974,7 +4089,8 @@
         "stone_type=solitare",
         "occasion=engagement",
         "shape=princess",
-        "style=halo"
+        "style=halo",
+        "price=50000.0-100000"
       ]
     },
     "1299": {
@@ -4008,7 +4124,8 @@
         "stone_type=solitare",
         "occasion=engagement",
         "shape=round",
-        "style=halo"
+        "style=halo",
+        "price=100000-200000"
       ]
     },
     "1300": {
@@ -4042,7 +4159,8 @@
         "stone_type=solitare",
         "occasion=engagement",
         "shape=round",
-        "style=solitaire-with-diamond-band"
+        "style=solitaire-with-diamond-band",
+        "price=1000000-10000000"
       ]
     },
     "1301": {
@@ -4076,7 +4194,8 @@
         "stone_type=solitare",
         "occasion=engagement",
         "style=three-stone",
-        "shape=emerald"
+        "shape=emerald",
+        "price=200000-500000"
       ]
     },
     "1302": {
@@ -4110,7 +4229,8 @@
         "stone_type=solitare",
         "occasion=engagement",
         "style=solitaire-with-diamond-band",
-        "shape=radiant"
+        "shape=radiant",
+        "price=200000-500000"
       ]
     },
     "1303": {
@@ -4144,7 +4264,8 @@
         "stone_type=solitare",
         "occasion=engagement",
         "shape=round",
-        "style=plain-solitaire"
+        "style=plain-solitaire",
+        "price=100000-200000"
       ]
     },
     "1304": {
@@ -4178,7 +4299,8 @@
         "stone_type=solitare",
         "occasion=engagement",
         "shape=round",
-        "style=plain-solitaire"
+        "style=plain-solitaire",
+        "price=200000-500000"
       ]
     },
     "1305": {
@@ -4212,7 +4334,8 @@
         "stone_type=solitare",
         "occasion=engagement",
         "shape=round",
-        "style=solitaire-with-diamond-band"
+        "style=solitaire-with-diamond-band",
+        "price=100000-200000"
       ]
     },
     "1306": {
@@ -4246,7 +4369,8 @@
         "stone_type=solitare",
         "occasion=engagement",
         "shape=round",
-        "style=solitaire-with-diamond-band"
+        "style=solitaire-with-diamond-band",
+        "price=200000-500000"
       ]
     },
     "1307": {
@@ -4280,7 +4404,8 @@
         "stone_type=solitare",
         "occasion=engagement",
         "shape=princess",
-        "style=solitaire-with-diamond-band"
+        "style=solitaire-with-diamond-band",
+        "price=100000-200000"
       ]
     },
     "1308": {
@@ -4314,7 +4439,8 @@
         "stone_type=solitare",
         "occasion=engagement",
         "shape=cushion",
-        "style=solitaire-with-diamond-band"
+        "style=solitaire-with-diamond-band",
+        "price=100000-200000"
       ]
     },
     "1309": {
@@ -4348,7 +4474,8 @@
         "stone_type=solitare",
         "occasion=engagement",
         "shape=oval",
-        "style=solitaire-with-diamond-band"
+        "style=solitaire-with-diamond-band",
+        "price=100000-200000"
       ]
     },
     "1310": {
@@ -4382,7 +4509,8 @@
         "stone_type=solitare",
         "occasion=engagement",
         "shape=round",
-        "style=solitaire-with-diamond-band"
+        "style=solitaire-with-diamond-band",
+        "price=100000-200000"
       ]
     },
     "1311": {
@@ -4416,7 +4544,8 @@
         "stone_type=solitare",
         "occasion=engagement",
         "shape=round",
-        "style=pave"
+        "style=pave",
+        "price=200000-500000"
       ]
     },
     "1313": {
@@ -4450,7 +4579,8 @@
         "stone_type=solitare",
         "occasion=engagement",
         "shape=round",
-        "style=solitaire-with-diamond-band"
+        "style=solitaire-with-diamond-band",
+        "price=100000-200000"
       ]
     },
     "1314": {
@@ -4484,7 +4614,8 @@
         "stone_type=solitare",
         "occasion=engagement",
         "shape=oval",
-        "style=vintage"
+        "style=vintage",
+        "price=200000-500000"
       ]
     },
     "1315": {
@@ -4518,7 +4649,8 @@
         "stone_type=solitare",
         "occasion=engagement",
         "shape=round",
-        "style=solitaire-with-diamond-band"
+        "style=solitaire-with-diamond-band",
+        "price=100000-200000"
       ]
     },
     "1316": {
@@ -4552,7 +4684,8 @@
         "stone_type=solitare",
         "occasion=engagement",
         "shape=oval",
-        "style=solitaire-with-diamond-band"
+        "style=solitaire-with-diamond-band",
+        "price=200000-500000"
       ]
     },
     "1317": {
@@ -4586,7 +4719,8 @@
         "stone_type=solitare",
         "occasion=engagement",
         "shape=oval",
-        "style=side-diamond"
+        "style=side-diamond",
+        "price=100000-200000"
       ]
     },
     "1320": {
@@ -4620,7 +4754,8 @@
         "stone_type=solitare",
         "occasion=engagement",
         "shape=round",
-        "style=solitaire-with-diamond-band"
+        "style=solitaire-with-diamond-band",
+        "price=200000-500000"
       ]
     },
     "1321": {
@@ -4654,7 +4789,8 @@
         "stone_type=solitare",
         "occasion=engagement",
         "shape=round",
-        "style=halo"
+        "style=halo",
+        "price=100000-200000"
       ]
     },
     "1323": {
@@ -4688,7 +4824,8 @@
         "stone_type=solitare",
         "occasion=engagement",
         "shape=round",
-        "style=solitaire-with-diamond-band"
+        "style=solitaire-with-diamond-band",
+        "price=200000-500000"
       ]
     },
     "1324": {
@@ -4722,7 +4859,8 @@
         "stone_type=solitare",
         "occasion=engagement",
         "shape=cushion",
-        "style=solitaire-with-diamond-band"
+        "style=solitaire-with-diamond-band",
+        "price=100000-200000"
       ]
     },
     "1325": {
@@ -4756,7 +4894,8 @@
         "stone_type=solitare",
         "occasion=engagement",
         "shape=princess",
-        "style=solitaire-with-diamond-band"
+        "style=solitaire-with-diamond-band",
+        "price=100000-200000"
       ]
     },
     "1328": {
@@ -4790,7 +4929,8 @@
         "stone_type=solitare",
         "occasion=engagement",
         "shape=round",
-        "style=side-diamond"
+        "style=side-diamond",
+        "price=100000-200000"
       ]
     },
     "1329": {
@@ -4824,7 +4964,8 @@
         "stone_type=solitare",
         "occasion=engagement",
         "shape=round",
-        "style=vintage"
+        "style=vintage",
+        "price=100000-200000"
       ]
     },
     "1330": {
@@ -4858,7 +4999,8 @@
         "stone_type=solitare",
         "occasion=engagement",
         "shape=princess",
-        "style=side-diamond"
+        "style=side-diamond",
+        "price=100000-200000"
       ]
     },
     "1331": {
@@ -4892,7 +5034,8 @@
         "stone_type=diamond",
         "occasion=everyday",
         "shape=emerald",
-        "style=eternity"
+        "style=eternity",
+        "price=100000-200000"
       ]
     },
     "1332": {
@@ -4926,7 +5069,8 @@
         "stone_type=diamond",
         "occasion=everyday",
         "shape=emerald",
-        "style=eternity"
+        "style=eternity",
+        "price=200000-500000"
       ]
     },
     "1333": {
@@ -4960,7 +5104,8 @@
         "stone_type=diamond",
         "occasion=everyday",
         "shape=round",
-        "style=eternity"
+        "style=eternity",
+        "price=100000-200000"
       ]
     },
     "1334": {
@@ -4994,7 +5139,8 @@
         "stone_type=diamond",
         "occasion=everyday",
         "shape=princess",
-        "style=eternity"
+        "style=eternity",
+        "price=200000-500000"
       ]
     },
     "1335": {
@@ -5028,7 +5174,8 @@
         "stone_type=diamond",
         "occasion=everyday",
         "shape=princess",
-        "style=eternity"
+        "style=eternity",
+        "price=50000.0-100000"
       ]
     },
     "1336": {
@@ -5062,7 +5209,8 @@
         "stone_type=diamond",
         "occasion=everyday",
         "shape=round",
-        "style=eternity"
+        "style=eternity",
+        "price=50000.0-100000"
       ]
     },
     "1337": {
@@ -5096,7 +5244,8 @@
         "stone_type=solitare",
         "occasion=engagement",
         "shape=cushion",
-        "style=side-diamond"
+        "style=side-diamond",
+        "price=100000-200000"
       ]
     },
     "1338": {
@@ -5130,7 +5279,8 @@
         "stone_type=solitare",
         "occasion=engagement",
         "shape=princess",
-        "style=side-diamond"
+        "style=side-diamond",
+        "price=100000-200000"
       ]
     },
     "1339": {
@@ -5164,7 +5314,8 @@
         "stone_type=solitare",
         "occasion=engagement",
         "shape=cushion",
-        "style=vintage"
+        "style=vintage",
+        "price=100000-200000"
       ]
     },
     "1340": {
@@ -5198,7 +5349,8 @@
         "stone_type=solitare",
         "occasion=engagement",
         "shape=princess",
-        "style=solitaire-with-diamond-band"
+        "style=solitaire-with-diamond-band",
+        "price=100000-200000"
       ]
     },
     "1342": {
@@ -5232,7 +5384,8 @@
         "stone_type=solitare",
         "occasion=engagement",
         "shape=round",
-        "style=halo"
+        "style=halo",
+        "price=200000-500000"
       ]
     },
     "1343": {
@@ -5266,7 +5419,8 @@
         "stone_type=solitare",
         "occasion=engagement",
         "shape=cushion",
-        "style=halo"
+        "style=halo",
+        "price=100000-200000"
       ]
     },
     "1344": {
@@ -5300,7 +5454,8 @@
         "stone_type=solitare",
         "occasion=engagement",
         "shape=oval",
-        "style=halo"
+        "style=halo",
+        "price=200000-500000"
       ]
     },
     "1345": {
@@ -5334,7 +5489,8 @@
         "stone_type=solitare",
         "occasion=engagement",
         "shape=emerald",
-        "style=halo"
+        "style=halo",
+        "price=100000-200000"
       ]
     },
     "1346": {
@@ -5367,7 +5523,8 @@
         "stone_type=diamond",
         "occasion=everyday",
         "shape=round",
-        "style=eternity"
+        "style=eternity",
+        "price=50000.0-100000"
       ]
     },
     "1347": {
@@ -5400,7 +5557,8 @@
         "stone_type=diamond",
         "occasion=everyday",
         "shape=cushion",
-        "style=eternity"
+        "style=eternity",
+        "price=100000-200000"
       ]
     },
     "1348": {
@@ -5433,7 +5591,8 @@
         "stone_type=diamond",
         "occasion=everyday",
         "shape=oval",
-        "style=eternity"
+        "style=eternity",
+        "price=50000.0-100000"
       ]
     },
     "1349": {
@@ -5467,7 +5626,8 @@
         "stone_type=solitare",
         "occasion=engagement",
         "shape=oval",
-        "style=vintage"
+        "style=vintage",
+        "price=200000-500000"
       ]
     },
     "1350": {
@@ -5500,7 +5660,8 @@
         "stone_type=diamond",
         "occasion=everyday",
         "shape=round",
-        "style=eternity"
+        "style=eternity",
+        "price=50000.0-100000"
       ]
     },
     "1361": {
@@ -5534,7 +5695,8 @@
         "stone_type=solitare",
         "occasion=engagement",
         "shape=round",
-        "style=vintage"
+        "style=vintage",
+        "price=200000-500000"
       ]
     },
     "1362": {
@@ -5568,7 +5730,8 @@
         "stone_type=solitare",
         "occasion=engagement",
         "shape=cushion",
-        "style=vintage"
+        "style=vintage",
+        "price=200000-500000"
       ]
     },
     "1363": {
@@ -5602,7 +5765,8 @@
         "stone_type=solitare",
         "occasion=engagement",
         "shape=princess",
-        "style=vintage"
+        "style=vintage",
+        "price=200000-500000"
       ]
     },
     "1364": {
@@ -5636,7 +5800,8 @@
         "stone_type=solitare",
         "occasion=engagement",
         "style=three-stone",
-        "shape=emerald"
+        "shape=emerald",
+        "price=200000-500000"
       ]
     },
     "1366": {
@@ -5670,7 +5835,8 @@
         "stone_type=solitare",
         "occasion=engagement",
         "shape=oval",
-        "style=halo"
+        "style=halo",
+        "price=100000-200000"
       ]
     },
     "1367": {
@@ -5704,7 +5870,8 @@
         "stone_type=diamond",
         "occasion=everyday",
         "shape=round",
-        "style=eternity"
+        "style=eternity",
+        "price=0-50000.0"
       ]
     },
     "1368": {
@@ -5738,7 +5905,8 @@
         "stone_type=diamond",
         "occasion=everyday",
         "shape=round",
-        "style=eternity"
+        "style=eternity",
+        "price=0-50000.0"
       ]
     },
     "1369": {
@@ -5772,7 +5940,8 @@
         "stone_type=diamond",
         "occasion=everyday",
         "shape=round",
-        "style=eternity"
+        "style=eternity",
+        "price=50000.0-100000"
       ]
     },
     "1370": {
@@ -5806,7 +5975,8 @@
         "stone_type=solitare",
         "occasion=engagement",
         "shape=round",
-        "style=halo"
+        "style=halo",
+        "price=200000-500000"
       ]
     },
     "1371": {
@@ -5840,7 +6010,8 @@
         "stone_type=solitare",
         "occasion=engagement",
         "shape=princess",
-        "style=halo"
+        "style=halo",
+        "price=200000-500000"
       ]
     },
     "1372": {
@@ -5874,7 +6045,8 @@
         "stone_type=solitare",
         "occasion=engagement",
         "shape=cushion",
-        "style=plain-solitaire"
+        "style=plain-solitaire",
+        "price=100000-200000"
       ]
     },
     "1373": {
@@ -5908,7 +6080,8 @@
         "stone_type=solitare",
         "occasion=engagement",
         "shape=oval",
-        "style=halo"
+        "style=halo",
+        "price=200000-500000"
       ]
     },
     "1374": {
@@ -5942,7 +6115,8 @@
         "stone_type=solitare",
         "occasion=engagement",
         "shape=cushion",
-        "style=halo"
+        "style=halo",
+        "price=200000-500000"
       ]
     },
     "1375": {
@@ -5976,7 +6150,8 @@
         "stone_type=solitare",
         "occasion=engagement",
         "shape=princess",
-        "style=halo"
+        "style=halo",
+        "price=200000-500000"
       ]
     },
     "1376": {
@@ -6010,7 +6185,8 @@
         "stone_type=solitare",
         "occasion=engagement",
         "shape=oval",
-        "style=halo"
+        "style=halo",
+        "price=200000-500000"
       ]
     },
     "1377": {
@@ -6044,7 +6220,8 @@
         "stone_type=solitare",
         "occasion=engagement",
         "shape=pear",
-        "style=halo"
+        "style=halo",
+        "price=200000-500000"
       ]
     },
     "1378": {
@@ -6078,7 +6255,9 @@
         "stone_type=solitare",
         "occasion=engagement",
         "shape=oval",
-        "style=vintage"
+        "style=vintage",
+        "topengagement=yes",
+        "price=200000-500000"
       ]
     },
     "1379": {
@@ -6112,7 +6291,8 @@
         "stone_type=solitare",
         "occasion=engagement",
         "shape=round",
-        "style=plain-solitaire"
+        "style=plain-solitaire",
+        "price=200000-500000"
       ]
     },
     "1380": {
@@ -6146,7 +6326,8 @@
         "stone_type=solitare",
         "occasion=engagement",
         "shape=round",
-        "style=plain-solitaire"
+        "style=plain-solitaire",
+        "price=100000-200000"
       ]
     },
     "1381": {
@@ -6180,7 +6361,8 @@
         "stone_type=solitare",
         "occasion=engagement",
         "shape=round",
-        "style=solitaire-with-diamond-band"
+        "style=solitaire-with-diamond-band",
+        "price=200000-500000"
       ]
     },
     "1382": {
@@ -6214,7 +6396,8 @@
         "stone_type=solitare",
         "occasion=engagement",
         "shape=princess",
-        "style=halo"
+        "style=halo",
+        "price=50000.0-100000"
       ]
     },
     "1383": {
@@ -6248,7 +6431,8 @@
         "stone_type=diamond",
         "occasion=everyday",
         "style=bands",
-        "shape=round"
+        "shape=round",
+        "price=50000.0-100000"
       ]
     },
     "1384": {
@@ -6282,7 +6466,8 @@
         "stone_type=diamond",
         "occasion=everyday",
         "style=bands",
-        "shape=round"
+        "shape=round",
+        "price=0-50000.0"
       ]
     },
     "1413": {
@@ -6316,7 +6501,8 @@
         "stone_type=solitare",
         "occasion=engagement",
         "shape=round",
-        "style=plain-solitaire"
+        "style=plain-solitaire",
+        "price=500000-700000"
       ]
     },
     "1416": {
@@ -6350,7 +6536,8 @@
         "stone_type=solitare",
         "occasion=engagement",
         "shape=cushion",
-        "style=plain-solitaire"
+        "style=plain-solitaire",
+        "price=200000-500000"
       ]
     },
     "1420": {
@@ -6384,8 +6571,8 @@
         "stone_type=solitare",
         "occasion=engagement",
         "shape=cushion",
-        "topengagement=yes",
-        "style=halo"
+        "style=halo",
+        "price=200000-500000"
       ]
     },
     "1422": {
@@ -6419,7 +6606,8 @@
         "stone_type=solitare",
         "occasion=engagement",
         "shape=cushion",
-        "style=halo"
+        "style=halo",
+        "price=200000-500000"
       ]
     },
     "1432": {
@@ -6453,7 +6641,8 @@
         "stone_type=solitare",
         "occasion=engagement",
         "shape=cushion",
-        "style=vintage"
+        "style=vintage",
+        "price=200000-500000"
       ]
     },
     "1434": {
@@ -6487,7 +6676,8 @@
         "stone_type=solitare",
         "occasion=engagement",
         "shape=cushion",
-        "style=halo"
+        "style=halo",
+        "price=1000000-10000000"
       ]
     },
     "1445": {
@@ -6521,7 +6711,8 @@
         "stone_type=solitare",
         "occasion=engagement",
         "shape=round",
-        "style=three-stone"
+        "style=three-stone",
+        "price=1000000-10000000"
       ]
     },
     "1449": {
@@ -6555,7 +6746,8 @@
         "stone_type=solitare",
         "occasion=engagement",
         "shape=princess",
-        "style=plain-solitaire"
+        "style=plain-solitaire",
+        "price=200000-500000"
       ]
     },
     "1450": {
@@ -6589,7 +6781,8 @@
         "stone_type=solitare",
         "occasion=engagement",
         "shape=princess",
-        "style=plain-solitaire"
+        "style=plain-solitaire",
+        "price=200000-500000"
       ]
     },
     "1471": {
@@ -6623,7 +6816,8 @@
         "stone_type=solitare",
         "occasion=engagement",
         "style=plain-solitaire",
-        "shape=emerald"
+        "shape=emerald",
+        "price=100000-200000"
       ]
     },
     "1472": {
@@ -6657,7 +6851,8 @@
         "stone_type=diamond",
         "occasion=everyday",
         "style=bands",
-        "shape=princess"
+        "shape=princess",
+        "price=50000.0-100000"
       ]
     },
     "1473": {
@@ -6691,7 +6886,8 @@
         "stone_type=solitare",
         "occasion=engagement",
         "shape=princess",
-        "style=halo"
+        "style=halo",
+        "price=500000-700000"
       ]
     },
     "1475": {
@@ -6725,7 +6921,8 @@
         "stone_type=solitare",
         "occasion=engagement",
         "shape=emerald",
-        "style=halo"
+        "style=halo",
+        "price=200000-500000"
       ]
     },
     "1476": {
@@ -6759,7 +6956,8 @@
         "stone_type=solitare",
         "occasion=engagement",
         "shape=emerald",
-        "style=halo"
+        "style=halo",
+        "price=200000-500000"
       ]
     },
     "1479": {
@@ -6793,7 +6991,8 @@
         "stone_type=solitare",
         "occasion=engagement",
         "shape=emerald",
-        "style=halo"
+        "style=halo",
+        "price=500000-700000"
       ]
     },
     "1482": {
@@ -6827,7 +7026,8 @@
         "stone_type=diamond",
         "occasion=everyday",
         "shape=round",
-        "style=eternity"
+        "style=eternity",
+        "price=0-50000.0"
       ]
     },
     "1512": {
@@ -6861,7 +7061,8 @@
         "stone_type=diamond",
         "occasion=everyday",
         "style=bands",
-        "shape=round"
+        "shape=round",
+        "price=50000.0-100000"
       ]
     },
     "1724": {
@@ -6895,7 +7096,8 @@
         "occasion=casual",
         "stone_type=diamond",
         "shape=round",
-        "style=side-diamond"
+        "style=side-diamond",
+        "price=100000-200000"
       ]
     },
     "1725": {
@@ -6929,7 +7131,8 @@
         "stone_type=solitare",
         "occasion=everyday",
         "shape=round",
-        "style=vintage"
+        "style=vintage",
+        "price=50000.0-100000"
       ]
     },
     "1731": {
@@ -6963,7 +7166,8 @@
         "stone_type=solitare",
         "occasion=everyday",
         "shape=princess",
-        "style=vintage"
+        "style=vintage",
+        "price=100000-200000"
       ]
     },
     "1732": {
@@ -6997,7 +7201,8 @@
         "occasion=casual",
         "stone_type=solitare",
         "shape=princess",
-        "style=vintage"
+        "style=vintage",
+        "price=100000-200000"
       ]
     },
     "1733": {
@@ -7031,7 +7236,8 @@
         "occasion=casual",
         "stone_type=solitare",
         "shape=round",
-        "style=halo"
+        "style=halo",
+        "price=50000.0-100000"
       ]
     },
     "1734": {
@@ -7065,7 +7271,8 @@
         "occasion=casual",
         "stone_type=solitare",
         "shape=princess",
-        "style=cluster"
+        "style=cluster",
+        "price=50000.0-100000"
       ]
     },
     "1736": {
@@ -7099,7 +7306,8 @@
         "occasion=casual",
         "stone_type=solitare",
         "shape=round",
-        "style=vintage"
+        "style=vintage",
+        "price=100000-200000"
       ]
     },
     "1737": {
@@ -7133,7 +7341,8 @@
         "occasion=casual",
         "stone_type=diamond",
         "shape=round",
-        "style=cluster"
+        "style=cluster",
+        "price=50000.0-100000"
       ]
     },
     "1738": {
@@ -7167,7 +7376,8 @@
         "occasion=casual",
         "stone_type=solitare",
         "shape=round",
-        "style=three-stone"
+        "style=three-stone",
+        "price=50000.0-100000"
       ]
     },
     "1739": {
@@ -7201,7 +7411,8 @@
         "occasion=casual",
         "stone_type=solitare",
         "shape=round",
-        "style=plain-solitaire"
+        "style=plain-solitaire",
+        "price=50000.0-100000"
       ]
     },
     "1741": {
@@ -7235,7 +7446,8 @@
         "stone_type=solitare",
         "occasion=everyday",
         "shape=round",
-        "style=vintage"
+        "style=vintage",
+        "price=50000.0-100000"
       ]
     },
     "1810": {
@@ -7269,7 +7481,8 @@
         "occasion=casual",
         "stone_type=solitare",
         "shape=round",
-        "style=cluster"
+        "style=cluster",
+        "price=50000.0-100000"
       ]
     },
     "1811": {
@@ -7303,7 +7516,8 @@
         "occasion=casual",
         "stone_type=solitare",
         "shape=round",
-        "style=plain-solitaire"
+        "style=plain-solitaire",
+        "price=50000.0-100000"
       ]
     },
     "1813": {
@@ -7337,7 +7551,8 @@
         "occasion=casual",
         "stone_type=solitare",
         "shape=round",
-        "style=halo"
+        "style=halo",
+        "price=50000.0-100000"
       ]
     },
     "1838": {
@@ -7371,7 +7586,8 @@
         "occasion=casual",
         "stone_type=solitare",
         "shape=round",
-        "style=side-diamond"
+        "style=side-diamond",
+        "price=50000.0-100000"
       ]
     },
     "1839": {
@@ -7405,7 +7621,8 @@
         "occasion=casual",
         "stone_type=solitare",
         "shape=round",
-        "style=halo"
+        "style=halo",
+        "price=50000.0-100000"
       ]
     },
     "1843": {
@@ -7439,7 +7656,8 @@
         "occasion=casual",
         "stone_type=solitare",
         "shape=round",
-        "style=vintage"
+        "style=vintage",
+        "price=50000.0-100000"
       ]
     },
     "1844": {
@@ -7473,7 +7691,8 @@
         "occasion=casual",
         "stone_type=solitare",
         "shape=round",
-        "style=halo"
+        "style=halo",
+        "price=100000-200000"
       ]
     },
     "1920": {
@@ -7507,7 +7726,8 @@
         "stone_type=diamond",
         "occasion=everyday",
         "shape=oval",
-        "style=eternity"
+        "style=eternity",
+        "price=200000-500000"
       ]
     },
     "1955": {
@@ -7541,7 +7761,8 @@
         "stone_type=solitare",
         "occasion=engagement",
         "shape=round",
-        "style=plain-solitaire"
+        "style=plain-solitaire",
+        "price=100000-200000"
       ]
     },
     "1968": {
@@ -7575,14 +7796,15 @@
         "stone_type=solitare",
         "occasion=engagement",
         "shape=round",
-        "style=plain-solitaire"
+        "style=plain-solitaire",
+        "price=100000-200000"
       ]
     },
     "1974": {
       "data": {
         "pk": 1974,
-        "mrp": 1619349,
-        "price": 1369564,
+        "mrp": 1624009,
+        "price": 1374224,
         "name": "Olivia",
         "first_image": "https://d3d5st4bexye3p.cloudfront.net/__sized__/products/PRA1974/PRA1974-1-crop-c0-74__0-62-540x540-70.jpg",
         "first_image_srcset": "https://d3d5st4bexye3p.cloudfront.net/__sized__/products/PRA1974/PRA1974-1-crop-c0-74__0-62-540x540-70.jpg 1x ,https://d3d5st4bexye3p.cloudfront.net/__sized__/products/PRA1974/PRA1974-1-crop-c0-74__0-62-1080x1080-70.jpg 2x ",
@@ -7600,7 +7822,7 @@
       "sorting_info": {
         "popularity": 855,
         "discount": 50,
-        "price": 1369564,
+        "price": 1374224,
         "new": 1974
       },
       "keywords": [
@@ -7609,8 +7831,8 @@
         "stone_type=diamond",
         "occasion=engagement",
         "shape=princess",
-        "topengagement=yes",
-        "style=halo"
+        "style=halo",
+        "price=1000000-10000000"
       ]
     },
     "1981": {
@@ -7644,7 +7866,8 @@
         "stone_type=solitare",
         "occasion=engagement",
         "shape=cushion",
-        "style=pave"
+        "style=pave",
+        "price=200000-500000"
       ]
     },
     "1982": {
@@ -7678,7 +7901,8 @@
         "stone_type=solitare",
         "occasion=engagement",
         "shape=princess",
-        "style=side-diamond"
+        "style=side-diamond",
+        "price=200000-500000"
       ]
     },
     "1995": {
@@ -7712,7 +7936,8 @@
         "stone_type=solitare",
         "occasion=everyday",
         "shape=round",
-        "style=halo"
+        "style=halo",
+        "price=500000-700000"
       ]
     },
     "1997": {
@@ -7746,7 +7971,8 @@
         "stone_type=solitare",
         "occasion=engagement",
         "shape=round",
-        "style=halo"
+        "style=halo",
+        "price=100000-200000"
       ]
     },
     "2012": {
@@ -7780,7 +8006,8 @@
         "occasion=casual",
         "stone_type=solitare",
         "shape=emerald",
-        "style=solitaire-with-diamond-band"
+        "style=solitaire-with-diamond-band",
+        "price=100000-200000"
       ]
     },
     "2013": {
@@ -7814,7 +8041,8 @@
         "stone_type=solitare",
         "occasion=engagement",
         "shape=oval",
-        "style=halo"
+        "style=halo",
+        "price=1000000-10000000"
       ]
     },
     "2015": {
@@ -7849,7 +8077,8 @@
         "occasion=engagement",
         "style=plain-solitaire",
         "shape=emerald",
-        "topengagement=no"
+        "topengagement=no",
+        "price=100000-200000"
       ]
     },
     "2016": {
@@ -7883,7 +8112,8 @@
         "stone_type=solitare",
         "occasion=engagement",
         "shape=oval",
-        "style=halo"
+        "style=halo",
+        "price=200000-500000"
       ]
     },
     "2060": {
@@ -7917,7 +8147,8 @@
         "occasion=casual",
         "stone_type=diamond",
         "shape=round",
-        "style=cluster"
+        "style=cluster",
+        "price=50000.0-100000"
       ]
     },
     "2135": {
@@ -7951,7 +8182,8 @@
         "occasion=casual",
         "stone_type=diamond",
         "shape=round",
-        "style=cluster"
+        "style=cluster",
+        "price=100000-200000"
       ]
     },
     "2139": {
@@ -7985,7 +8217,8 @@
         "stone_type=diamond",
         "occasion=engagement",
         "shape=round",
-        "style=cluster"
+        "style=cluster",
+        "price=50000.0-100000"
       ]
     },
     "2145": {
@@ -8013,7 +8246,7 @@
         "price": 83747,
         "new": 2145
       },
-      "keywords": []
+      "keywords": ["price=50000.0-100000"]
     },
     "2173": {
       "data": {
@@ -8047,7 +8280,7 @@
         "occasion=engagement",
         "shape=princess",
         "style=plain-solitaire",
-        "topengagement=yes"
+        "price=100000-200000"
       ]
     },
     "2221": {
@@ -8081,7 +8314,8 @@
         "stone_type=solitare",
         "occasion=engagement",
         "shape=princess",
-        "style=plain-solitaire"
+        "style=plain-solitaire",
+        "price=100000-200000"
       ]
     },
     "2223": {
@@ -8115,7 +8349,8 @@
         "occasion=casual",
         "stone_type=solitare",
         "shape=cushion",
-        "style=side-diamond"
+        "style=side-diamond",
+        "price=50000.0-100000"
       ]
     },
     "2250": {
@@ -8149,7 +8384,8 @@
         "stone_type=solitare",
         "occasion=engagement",
         "shape=round",
-        "style=halo"
+        "style=halo",
+        "price=200000-500000"
       ]
     },
     "2303": {
@@ -8182,7 +8418,8 @@
         "gender=women",
         "stone_type=solitare",
         "occasion=engagement",
-        "style=solitaire-with-diamond-band"
+        "style=solitaire-with-diamond-band",
+        "price=100000-200000"
       ]
     },
     "2394": {
@@ -8216,7 +8453,8 @@
         "stone_type=diamond",
         "occasion=engagement",
         "shape=round",
-        "style=solitaire-with-diamond-band"
+        "style=solitaire-with-diamond-band",
+        "price=200000-500000"
       ]
     },
     "2400": {
@@ -8250,7 +8488,8 @@
         "occasion=casual",
         "stone_type=diamond",
         "style=bands",
-        "shape=round"
+        "shape=round",
+        "price=50000.0-100000"
       ]
     },
     "2531": {
@@ -8284,7 +8523,9 @@
         "stone_type=solitare",
         "occasion=engagement",
         "shape=round",
-        "style=halo"
+        "topengagement=yes",
+        "style=halo",
+        "price=200000-500000"
       ]
     },
     "2650": {
@@ -8318,7 +8559,8 @@
         "occasion=casual",
         "stone_type=solitare",
         "shape=round",
-        "style=halo"
+        "style=halo",
+        "price=100000-200000"
       ]
     },
     "2863": {
@@ -8352,8 +8594,8 @@
         "stone_type=solitare",
         "occasion=everyday",
         "shape=cushion",
-        "topengagement=yes",
-        "style=halo"
+        "style=halo",
+        "price=200000-500000"
       ]
     },
     "3098": {
@@ -8387,7 +8629,8 @@
         "stone_type=solitare",
         "occasion=engagement",
         "shape=round",
-        "style=solitaire-with-diamond-band"
+        "style=solitaire-with-diamond-band",
+        "price=1000000-10000000"
       ]
     },
     "3102": {
@@ -8421,7 +8664,8 @@
         "stone_type=solitare",
         "occasion=engagement",
         "shape=princess",
-        "style=three-stone"
+        "style=three-stone",
+        "price=1000000-10000000"
       ]
     },
     "3103": {
@@ -8455,7 +8699,8 @@
         "stone_type=solitare",
         "occasion=engagement",
         "style=halo",
-        "shape=radiant"
+        "shape=radiant",
+        "price=1000000-10000000"
       ]
     },
     "3104": {
@@ -8489,7 +8734,8 @@
         "stone_type=solitare",
         "occasion=engagement",
         "shape=oval",
-        "style=halo"
+        "style=halo",
+        "price=1000000-10000000"
       ]
     },
     "3106": {
@@ -8523,7 +8769,8 @@
         "stone_type=solitare",
         "occasion=engagement",
         "shape=emerald",
-        "style=solitaire-with-diamond-band"
+        "style=solitaire-with-diamond-band",
+        "price=1000000-10000000"
       ]
     },
     "3127": {
@@ -8557,7 +8804,8 @@
         "occasion=casual",
         "stone_type=diamond",
         "shape=round",
-        "style=eternity"
+        "style=eternity",
+        "price=200000-500000"
       ]
     },
     "3128": {
@@ -8591,7 +8839,8 @@
         "stone_type=solitare",
         "occasion=engagement",
         "shape=round",
-        "style=plain-solitaire"
+        "style=plain-solitaire",
+        "price=1000000-10000000"
       ]
     },
     "3148": {
@@ -8625,7 +8874,8 @@
         "stone_type=solitare",
         "occasion=engagement",
         "shape=round",
-        "style=plain-solitaire"
+        "style=plain-solitaire",
+        "price=200000-500000"
       ]
     },
     "3285": {
@@ -8659,7 +8909,8 @@
         "occasion=casual",
         "stone_type=diamond",
         "shape=cushion",
-        "style=eternity"
+        "style=eternity",
+        "price=200000-500000"
       ]
     },
     "3304": {
@@ -8693,7 +8944,8 @@
         "occasion=casual",
         "stone_type=solitare",
         "shape=pear",
-        "style=halo"
+        "style=halo",
+        "price=1000000-10000000"
       ]
     },
     "3500": {
@@ -8727,7 +8979,8 @@
         "stone_type=solitare",
         "occasion=engagement",
         "shape=round",
-        "style=halo"
+        "style=halo",
+        "price=100000-200000"
       ]
     },
     "3520": {
@@ -8760,8 +9013,10 @@
         "gender=women",
         "occasion=casual",
         "stone_type=solitare",
+        "topengagement=yes",
         "shape=emerald",
-        "style=halo"
+        "style=halo",
+        "price=200000-500000"
       ]
     },
     "3969": {
@@ -8795,7 +9050,8 @@
         "occasion=casual",
         "stone_type=diamond",
         "style=bands",
-        "shape=round"
+        "shape=round",
+        "price=0-50000.0"
       ]
     },
     "3970": {
@@ -8829,7 +9085,8 @@
         "occasion=casual",
         "stone_type=diamond",
         "style=bands",
-        "shape=round"
+        "shape=round",
+        "price=0-50000.0"
       ]
     },
     "3971": {
@@ -8863,7 +9120,8 @@
         "occasion=casual",
         "stone_type=diamond",
         "style=bands",
-        "shape=round"
+        "shape=round",
+        "price=0-50000.0"
       ]
     },
     "3972": {
@@ -8897,7 +9155,8 @@
         "occasion=casual",
         "stone_type=solitare",
         "shape=round",
-        "style=vintage"
+        "style=vintage",
+        "price=100000-200000"
       ]
     },
     "3973": {
@@ -8931,7 +9190,8 @@
         "occasion=casual",
         "stone_type=solitare",
         "shape=oval",
-        "style=vintage"
+        "style=vintage",
+        "price=100000-200000"
       ]
     },
     "3974": {
@@ -8965,7 +9225,8 @@
         "occasion=casual",
         "stone_type=solitare",
         "shape=round",
-        "style=vintage"
+        "style=vintage",
+        "price=50000.0-100000"
       ]
     },
     "3975": {
@@ -8999,7 +9260,8 @@
         "occasion=casual",
         "stone_type=solitare",
         "shape=round",
-        "style=halo"
+        "style=halo",
+        "price=50000.0-100000"
       ]
     },
     "3976": {
@@ -9033,7 +9295,8 @@
         "stone_type=solitare",
         "occasion=everyday",
         "shape=princess",
-        "style=halo"
+        "style=halo",
+        "price=50000.0-100000"
       ]
     },
     "3977": {
@@ -9067,7 +9330,8 @@
         "occasion=casual",
         "stone_type=solitare",
         "shape=round",
-        "style=halo"
+        "style=halo",
+        "price=50000.0-100000"
       ]
     },
     "3978": {
@@ -9101,7 +9365,8 @@
         "stone_type=solitare",
         "occasion=everyday",
         "shape=round",
-        "style=halo"
+        "style=halo",
+        "price=100000-200000"
       ]
     },
     "3979": {
@@ -9135,7 +9400,8 @@
         "occasion=casual",
         "stone_type=solitare",
         "shape=oval",
-        "style=halo"
+        "style=halo",
+        "price=100000-200000"
       ]
     },
     "3980": {
@@ -9169,7 +9435,8 @@
         "occasion=casual",
         "stone_type=solitare",
         "shape=cushion",
-        "style=halo"
+        "style=halo",
+        "price=100000-200000"
       ]
     },
     "3981": {
@@ -9203,7 +9470,8 @@
         "occasion=casual",
         "stone_type=solitare",
         "shape=cushion",
-        "style=halo"
+        "style=halo",
+        "price=50000.0-100000"
       ]
     },
     "3982": {
@@ -9237,7 +9505,8 @@
         "occasion=casual",
         "stone_type=solitare",
         "shape=round",
-        "style=halo"
+        "style=halo",
+        "price=100000-200000"
       ]
     },
     "3983": {
@@ -9271,7 +9540,8 @@
         "occasion=casual",
         "stone_type=solitare",
         "shape=emerald",
-        "style=halo"
+        "style=halo",
+        "price=100000-200000"
       ]
     },
     "3984": {
@@ -9305,7 +9575,8 @@
         "occasion=casual",
         "stone_type=solitare",
         "shape=cushion",
-        "style=halo"
+        "style=halo",
+        "price=100000-200000"
       ]
     },
     "4196": {
@@ -9339,8 +9610,8 @@
         "stone_type=solitare",
         "occasion=engagement",
         "shape=pear",
-        "topengagement=yes",
-        "style=halo"
+        "style=halo",
+        "price=700000-1000000"
       ]
     },
     "4197": {
@@ -9373,7 +9644,9 @@
         "gender=women",
         "occasion=engagement",
         "shape=round",
-        "style=solitaire-with-diamond-band"
+        "topengagement=yes",
+        "style=solitaire-with-diamond-band",
+        "price=700000-1000000"
       ]
     },
     "4198": {
@@ -9407,8 +9680,9 @@
         "stone_type=solitare",
         "occasion=engagement",
         "shape=cushion",
-        "topengagement=yes",
-        "style=halo"
+        "topengagement=no",
+        "style=halo",
+        "price=500000-700000"
       ]
     },
     "4199": {
@@ -9442,7 +9716,8 @@
         "occasion=casual",
         "stone_type=solitare",
         "shape=oval",
-        "style=halo"
+        "style=halo",
+        "price=200000-500000"
       ]
     },
     "4200": {
@@ -9476,7 +9751,8 @@
         "occasion=casual",
         "stone_type=solitare",
         "shape=princess",
-        "style=three-stone"
+        "style=three-stone",
+        "price=200000-500000"
       ]
     },
     "4224": {
@@ -9510,7 +9786,8 @@
         "stone_type=solitare",
         "occasion=everyday",
         "shape=round",
-        "style=plain-solitaire"
+        "style=plain-solitaire",
+        "price=200000-500000"
       ]
     },
     "4399": {
@@ -9543,8 +9820,10 @@
         "gender=women",
         "stone_type=solitare",
         "occasion=engagement",
+        "topengagement=yes",
         "style=solitaire-with-diamond-band",
-        "shape=radiant"
+        "shape=radiant",
+        "price=200000-500000"
       ]
     },
     "4557": {
@@ -9577,8 +9856,10 @@
         "gender=women",
         "stone_type=diamond",
         "occasion=engagement",
+        "topengagement=yes",
         "shape=emerald",
-        "style=single-halo"
+        "style=single-halo",
+        "price=200000-500000"
       ]
     },
     "4758": {
@@ -9612,7 +9893,8 @@
         "stone_type=diamond",
         "occasion=everyday",
         "shape=emerald",
-        "style=eternity"
+        "style=eternity",
+        "price=200000-500000"
       ]
     },
     "4759": {
@@ -9646,7 +9928,8 @@
         "stone_type=diamond",
         "occasion=everyday",
         "shape=emerald",
-        "style=eternity"
+        "style=eternity",
+        "price=100000-200000"
       ]
     },
     "4941": {
@@ -9681,7 +9964,8 @@
         "occasion=engagement",
         "shape=round",
         "style=halo",
-        "collections=mystic"
+        "collections=mystic",
+        "price=500000-700000"
       ]
     },
     "4942": {
@@ -9716,7 +10000,8 @@
         "occasion=engagement",
         "shape=cushion",
         "style=halo",
-        "collections=mystic"
+        "collections=mystic",
+        "price=200000-500000"
       ]
     },
     "4943": {
@@ -9751,7 +10036,8 @@
         "occasion=engagement",
         "shape=princess",
         "style=halo",
-        "collections=mystic"
+        "collections=mystic",
+        "price=200000-500000"
       ]
     },
     "4944": {
@@ -9786,7 +10072,8 @@
         "occasion=engagement",
         "style=halo",
         "shape=radiant",
-        "collections=mystic"
+        "collections=mystic",
+        "price=200000-500000"
       ]
     },
     "4945": {
@@ -9821,7 +10108,8 @@
         "occasion=engagement",
         "shape=heart",
         "style=halo",
-        "collections=mystic"
+        "collections=mystic",
+        "price=200000-500000"
       ]
     },
     "5119": {
@@ -9856,7 +10144,8 @@
         "stone_type=solitare",
         "shape=round",
         "style=halo",
-        "collections=mystic"
+        "collections=mystic",
+        "price=500000-700000"
       ]
     },
     "5120": {
@@ -9891,7 +10180,8 @@
         "stone_type=solitare",
         "shape=round",
         "style=halo",
-        "collections=mystic"
+        "collections=mystic",
+        "price=200000-500000"
       ]
     },
     "5121": {
@@ -9926,7 +10216,8 @@
         "stone_type=solitare",
         "shape=oval",
         "style=halo",
-        "collections=mystic"
+        "collections=mystic",
+        "price=100000-200000"
       ]
     },
     "5123": {
@@ -9961,7 +10252,8 @@
         "stone_type=solitare",
         "shape=cushion",
         "style=halo",
-        "collections=mystic"
+        "collections=mystic",
+        "price=200000-500000"
       ]
     },
     "5124": {
@@ -9996,7 +10288,8 @@
         "occasion=engagement",
         "shape=round",
         "style=halo",
-        "collections=mystic"
+        "collections=mystic",
+        "price=500000-700000"
       ]
     },
     "5125": {
@@ -10031,7 +10324,8 @@
         "occasion=engagement",
         "shape=round",
         "style=halo",
-        "collections=mystic"
+        "collections=mystic",
+        "price=200000-500000"
       ]
     },
     "5126": {
@@ -10066,7 +10360,8 @@
         "occasion=engagement",
         "shape=oval",
         "style=halo",
-        "collections=mystic"
+        "collections=mystic",
+        "price=200000-500000"
       ]
     },
     "5127": {
@@ -10101,7 +10396,8 @@
         "occasion=engagement",
         "shape=round",
         "style=halo",
-        "collections=mystic"
+        "collections=mystic",
+        "price=500000-700000"
       ]
     },
     "5128": {
@@ -10136,7 +10432,8 @@
         "occasion=engagement",
         "shape=round",
         "style=halo",
-        "collections=mystic"
+        "collections=mystic",
+        "price=500000-700000"
       ]
     },
     "5129": {
@@ -10171,7 +10468,8 @@
         "occasion=engagement",
         "shape=round",
         "style=halo",
-        "collections=mystic"
+        "collections=mystic",
+        "price=200000-500000"
       ]
     },
     "5130": {
@@ -10206,7 +10504,8 @@
         "occasion=engagement",
         "shape=round",
         "style=halo",
-        "collections=mystic"
+        "collections=mystic",
+        "price=200000-500000"
       ]
     },
     "5131": {
@@ -10241,7 +10540,8 @@
         "occasion=engagement",
         "shape=round",
         "style=halo",
-        "collections=mystic"
+        "collections=mystic",
+        "price=500000-700000"
       ]
     },
     "5132": {
@@ -10276,7 +10576,8 @@
         "occasion=engagement",
         "shape=round",
         "style=halo",
-        "collections=mystic"
+        "collections=mystic",
+        "price=200000-500000"
       ]
     },
     "5133": {
@@ -10311,7 +10612,8 @@
         "occasion=engagement",
         "shape=round",
         "style=halo",
-        "collections=mystic"
+        "collections=mystic",
+        "price=700000-1000000"
       ]
     },
     "5134": {
@@ -10346,7 +10648,8 @@
         "occasion=engagement",
         "shape=pear",
         "style=halo",
-        "collections=mystic"
+        "collections=mystic",
+        "price=200000-500000"
       ]
     },
     "5135": {
@@ -10381,7 +10684,8 @@
         "occasion=engagement",
         "shape=pear",
         "style=halo",
-        "collections=mystic"
+        "collections=mystic",
+        "price=200000-500000"
       ]
     },
     "5136": {
@@ -10416,7 +10720,8 @@
         "occasion=engagement",
         "shape=round",
         "style=halo",
-        "collections=mystic"
+        "collections=mystic",
+        "price=500000-700000"
       ]
     },
     "5137": {
@@ -10450,8 +10755,10 @@
         "stone_type=solitare",
         "occasion=engagement",
         "shape=round",
+        "topengagement=yes",
         "style=halo",
-        "collections=mystic"
+        "collections=mystic",
+        "price=500000-700000"
       ]
     },
     "5138": {
@@ -10486,7 +10793,8 @@
         "occasion=engagement",
         "shape=princess",
         "style=halo",
-        "collections=mystic"
+        "collections=mystic",
+        "price=200000-500000"
       ]
     },
     "5140": {
@@ -10519,9 +10827,9 @@
         "gender=women",
         "stone_type=solitare",
         "occasion=engagement",
-        "topengagement=yes",
         "shape=emerald",
-        "style=halo"
+        "style=halo",
+        "price=200000-500000"
       ]
     },
     "5708": {
@@ -10555,7 +10863,8 @@
         "style=studs",
         "stone_type=solitare",
         "occasion=everyday",
-        "collections=gift"
+        "collections=gift",
+        "price=200000-500000"
       ]
     },
     "5710": {
@@ -10590,7 +10899,8 @@
         "stone_type=solitare",
         "shape=princess",
         "collections=gift",
-        "style=earrings"
+        "style=earrings",
+        "price=200000-500000"
       ]
     },
     "5711": {
@@ -10627,7 +10937,8 @@
         "stone_type=solitare",
         "occasion=everyday",
         "style=single-halo",
-        "collections=gift"
+        "collections=gift",
+        "price=200000-500000"
       ]
     },
     "5713": {
@@ -10664,7 +10975,8 @@
         "stone_type=solitare",
         "occasion=everyday",
         "collections=gift",
-        "style=necklace"
+        "style=necklace",
+        "price=200000-500000"
       ]
     },
     "5714": {
@@ -10698,7 +11010,8 @@
         "occasion=casual",
         "stone_type=solitare",
         "style=single-halo",
-        "collections=gift"
+        "collections=gift",
+        "price=200000-500000"
       ]
     },
     "5716": {
@@ -10732,7 +11045,8 @@
         "occasion=casual",
         "stone_type=solitare",
         "collections=gift",
-        "style=earrings"
+        "style=earrings",
+        "price=200000-500000"
       ]
     },
     "5717": {
@@ -10769,7 +11083,8 @@
         "stone_type=solitare",
         "occasion=everyday",
         "style=single-halo",
-        "collections=gift"
+        "collections=gift",
+        "price=200000-500000"
       ]
     },
     "5719": {
@@ -10806,7 +11121,8 @@
         "occasion=casual",
         "stone_type=solitare",
         "style=single-halo",
-        "collections=gift"
+        "collections=gift",
+        "price=200000-500000"
       ]
     },
     "5720": {
@@ -10840,7 +11156,8 @@
         "occasion=casual",
         "stone_type=solitare",
         "style=single-halo",
-        "collections=gift"
+        "collections=gift",
+        "price=200000-500000"
       ]
     },
     "5722": {
@@ -10874,7 +11191,8 @@
         "occasion=casual",
         "stone_type=solitare",
         "collections=gift",
-        "style=earrings"
+        "style=earrings",
+        "price=200000-500000"
       ]
     },
     "5723": {
@@ -10911,7 +11229,8 @@
         "occasion=casual",
         "stone_type=solitare",
         "style=single-halo",
-        "collections=gift"
+        "collections=gift",
+        "price=200000-500000"
       ]
     },
     "5725": {
@@ -10948,7 +11267,8 @@
         "stone_type=solitare",
         "occasion=everyday",
         "collections=gift",
-        "style=necklace"
+        "style=necklace",
+        "price=200000-500000"
       ]
     },
     "5732": {
@@ -10982,7 +11302,8 @@
         "occasion=casual",
         "stone_type=solitare",
         "style=single-halo",
-        "collections=gift"
+        "collections=gift",
+        "price=200000-500000"
       ]
     },
     "5734": {
@@ -11016,7 +11337,8 @@
         "occasion=casual",
         "stone_type=solitare",
         "collections=gift",
-        "style=earrings"
+        "style=earrings",
+        "price=200000-500000"
       ]
     },
     "5735": {
@@ -11053,7 +11375,8 @@
         "stone_type=solitare",
         "occasion=everyday",
         "style=single-halo",
-        "collections=gift"
+        "collections=gift",
+        "price=200000-500000"
       ]
     },
     "5737": {
@@ -11090,7 +11413,8 @@
         "stone_type=solitare",
         "occasion=everyday",
         "collections=gift",
-        "style=necklace"
+        "style=necklace",
+        "price=200000-500000"
       ]
     },
     "5738": {
@@ -11124,7 +11448,8 @@
         "occasion=casual",
         "stone_type=solitare",
         "style=single-halo",
-        "collections=gift"
+        "collections=gift",
+        "price=200000-500000"
       ]
     },
     "5740": {
@@ -11158,7 +11483,8 @@
         "occasion=casual",
         "stone_type=solitare",
         "collections=gift",
-        "style=earrings"
+        "style=earrings",
+        "price=200000-500000"
       ]
     },
     "5741": {
@@ -11195,7 +11521,8 @@
         "stone_type=solitare",
         "occasion=everyday",
         "style=single-halo",
-        "collections=gift"
+        "collections=gift",
+        "price=200000-500000"
       ]
     },
     "5743": {
@@ -11232,7 +11559,8 @@
         "stone_type=solitare",
         "occasion=everyday",
         "collections=gift",
-        "style=necklace"
+        "style=necklace",
+        "price=200000-500000"
       ]
     },
     "5744": {
@@ -11269,7 +11597,8 @@
         "occasion=casual",
         "stone_type=solitare",
         "collections=gift",
-        "style=necklace"
+        "style=necklace",
+        "price=200000-500000"
       ]
     },
     "5745": {
@@ -11306,7 +11635,8 @@
         "occasion=casual",
         "stone_type=solitare",
         "collections=gift",
-        "style=necklace"
+        "style=necklace",
+        "price=200000-500000"
       ]
     },
     "5746": {
@@ -11343,7 +11673,8 @@
         "occasion=casual",
         "stone_type=solitare",
         "style=single-halo",
-        "collections=gift"
+        "collections=gift",
+        "price=200000-500000"
       ]
     },
     "5748": {
@@ -11380,7 +11711,8 @@
         "occasion=casual",
         "stone_type=solitare",
         "collections=gift",
-        "style=necklace"
+        "style=necklace",
+        "price=200000-500000"
       ]
     },
     "5749": {
@@ -11414,7 +11746,8 @@
         "occasion=casual",
         "stone_type=solitare",
         "collections=gift",
-        "style=earrings"
+        "style=earrings",
+        "price=500000-700000"
       ]
     },
     "5751": {
@@ -11448,7 +11781,8 @@
         "occasion=casual",
         "stone_type=solitare",
         "style=single-halo",
-        "collections=gift"
+        "collections=gift",
+        "price=500000-700000"
       ]
     },
     "5752": {
@@ -11482,7 +11816,8 @@
         "occasion=casual",
         "stone_type=solitare",
         "collections=gift",
-        "style=earrings"
+        "style=earrings",
+        "price=200000-500000"
       ]
     },
     "5754": {
@@ -11516,7 +11851,8 @@
         "occasion=casual",
         "stone_type=solitare",
         "style=single-halo",
-        "collections=gift"
+        "collections=gift",
+        "price=200000-500000"
       ]
     },
     "5815": {
@@ -11550,7 +11886,8 @@
         "stone_type=solitare",
         "occasion=engagement",
         "shape=round",
-        "style=plain-solitaire"
+        "style=plain-solitaire",
+        "price=50000.0-100000"
       ]
     },
     "5816": {
@@ -11584,7 +11921,8 @@
         "occasion=casual",
         "stone_type=solitare",
         "shape=princess",
-        "style=plain-solitaire"
+        "style=plain-solitaire",
+        "price=100000-200000"
       ]
     },
     "6050": {
@@ -11618,7 +11956,8 @@
         "occasion=casual",
         "stone_type=solitare",
         "shape=princess",
-        "style=halo"
+        "style=halo",
+        "price=100000-200000"
       ]
     },
     "6144": {
@@ -11652,7 +11991,8 @@
         "occasion=casual",
         "stone_type=diamond",
         "style=bands",
-        "shape=round"
+        "shape=round",
+        "price=50000.0-100000"
       ]
     },
     "6286": {
@@ -11685,7 +12025,8 @@
         "gender=women",
         "occasion=casual",
         "stone_type=solitare",
-        "shape=princess"
+        "shape=princess",
+        "price=200000-500000"
       ]
     },
     "6288": {
@@ -11718,7 +12059,9 @@
         "gender=women",
         "occasion=casual",
         "stone_type=solitare",
-        "shape=pear"
+        "shape=pear",
+        "topengagement=yes",
+        "price=200000-500000"
       ]
     },
     "6291": {
@@ -11751,7 +12094,8 @@
         "gender=women",
         "occasion=casual",
         "stone_type=solitare",
-        "shape=emerald"
+        "shape=emerald",
+        "price=200000-500000"
       ]
     },
     "6292": {
@@ -11784,7 +12128,8 @@
         "gender=women",
         "occasion=casual",
         "stone_type=solitare",
-        "shape=emerald"
+        "shape=emerald",
+        "price=100000-200000"
       ]
     },
     "6293": {
@@ -11817,7 +12162,8 @@
         "gender=women",
         "occasion=casual",
         "stone_type=solitare",
-        "shape=emerald"
+        "shape=emerald",
+        "price=200000-500000"
       ]
     },
     "6294": {
@@ -11850,7 +12196,8 @@
         "gender=women",
         "occasion=casual",
         "stone_type=solitare",
-        "shape=radiant"
+        "shape=radiant",
+        "price=200000-500000"
       ]
     },
     "6295": {
@@ -11883,7 +12230,9 @@
         "gender=women",
         "occasion=casual",
         "stone_type=solitare",
-        "shape=cushion"
+        "shape=cushion",
+        "topengagement=yes",
+        "price=200000-500000"
       ]
     },
     "6296": {
@@ -11916,7 +12265,8 @@
         "gender=women",
         "occasion=casual",
         "stone_type=solitare",
-        "shape=cushion"
+        "shape=cushion",
+        "price=200000-500000"
       ]
     },
     "6297": {
@@ -11949,7 +12299,8 @@
         "gender=men",
         "occasion=casual",
         "stone_type=solitare",
-        "shape=emerald"
+        "shape=emerald",
+        "price=100000-200000"
       ]
     },
     "6298": {
@@ -11982,7 +12333,8 @@
         "gender=men",
         "occasion=casual",
         "stone_type=solitare",
-        "shape=princess"
+        "shape=princess",
+        "price=200000-500000"
       ]
     },
     "6299": {
@@ -12015,7 +12367,8 @@
         "gender=men",
         "occasion=casual",
         "stone_type=solitare",
-        "shape=round"
+        "shape=round",
+        "price=200000-500000"
       ]
     },
     "6320": {
@@ -12048,7 +12401,8 @@
         "gender=women",
         "occasion=casual",
         "stone_type=solitare",
-        "shape=princess"
+        "shape=princess",
+        "price=200000-500000"
       ]
     },
     "6330": {
@@ -12081,7 +12435,8 @@
         "gender=men",
         "occasion=casual",
         "stone_type=solitare",
-        "shape=radiant"
+        "shape=radiant",
+        "price=100000-200000"
       ]
     },
     "6331": {
@@ -12114,7 +12469,8 @@
         "gender=women",
         "occasion=casual",
         "stone_type=diamond",
-        "shape=round"
+        "shape=round",
+        "price=50000.0-100000"
       ]
     },
     "6332": {
@@ -12147,7 +12503,8 @@
         "gender=women",
         "occasion=casual",
         "stone_type=solitare",
-        "shape=radiant"
+        "shape=radiant",
+        "price=100000-200000"
       ]
     },
     "6333": {
@@ -12180,7 +12537,8 @@
         "gender=women",
         "occasion=casual",
         "stone_type=solitare",
-        "shape=oval"
+        "shape=oval",
+        "price=200000-500000"
       ]
     },
     "6342": {
@@ -12213,7 +12571,8 @@
         "gender=women",
         "occasion=casual",
         "stone_type=solitare",
-        "shape=round"
+        "shape=round",
+        "price=200000-500000"
       ]
     },
     "6415": {
@@ -12248,7 +12607,8 @@
         "stone_type=diamond",
         "shape=round",
         "collections=gift",
-        "style=stackable-bands"
+        "style=stackable-bands",
+        "price=0-50000.0"
       ]
     },
     "6416": {
@@ -12283,7 +12643,8 @@
         "stone_type=diamond",
         "shape=marquise",
         "collections=gift",
-        "style=stackable-bands"
+        "style=stackable-bands",
+        "price=0-50000.0"
       ]
     },
     "6417": {
@@ -12318,7 +12679,8 @@
         "stone_type=diamond",
         "shape=round",
         "collections=gift",
-        "style=stackable-bands"
+        "style=stackable-bands",
+        "price=0-50000.0"
       ]
     },
     "6418": {
@@ -12353,7 +12715,8 @@
         "stone_type=diamond",
         "shape=round",
         "collections=gift",
-        "style=stackable-bands"
+        "style=stackable-bands",
+        "price=50000.0-100000"
       ]
     },
     "6419": {
@@ -12388,7 +12751,8 @@
         "stone_type=diamond",
         "shape=round",
         "collections=gift",
-        "style=stackable-bands"
+        "style=stackable-bands",
+        "price=0-50000.0"
       ]
     },
     "6420": {
@@ -12423,7 +12787,8 @@
         "stone_type=diamond",
         "shape=round",
         "collections=gift",
-        "style=stackable-bands"
+        "style=stackable-bands",
+        "price=0-50000.0"
       ]
     },
     "6421": {
@@ -12458,7 +12823,8 @@
         "stone_type=diamond",
         "shape=round",
         "collections=gift",
-        "style=stackable-bands"
+        "style=stackable-bands",
+        "price=0-50000.0"
       ]
     },
     "6422": {
@@ -12493,7 +12859,8 @@
         "stone_type=diamond",
         "shape=round",
         "collections=gift",
-        "style=stackable-bands"
+        "style=stackable-bands",
+        "price=50000.0-100000"
       ]
     },
     "6423": {
@@ -12528,7 +12895,8 @@
         "stone_type=diamond",
         "shape=round",
         "collections=gift",
-        "style=stackable-bands"
+        "style=stackable-bands",
+        "price=50000.0-100000"
       ]
     },
     "6424": {
@@ -12563,7 +12931,8 @@
         "stone_type=diamond",
         "shape=emerald",
         "collections=gift",
-        "style=stackable-bands"
+        "style=stackable-bands",
+        "price=50000.0-100000"
       ]
     },
     "6425": {
@@ -12598,7 +12967,8 @@
         "stone_type=diamond",
         "shape=round",
         "collections=gift",
-        "style=stackable-bands"
+        "style=stackable-bands",
+        "price=0-50000.0"
       ]
     },
     "6426": {
@@ -12633,7 +13003,8 @@
         "stone_type=diamond",
         "shape=round",
         "collections=gift",
-        "style=stackable-bands"
+        "style=stackable-bands",
+        "price=0-50000.0"
       ]
     },
     "6427": {
@@ -12668,7 +13039,8 @@
         "stone_type=diamond",
         "shape=round",
         "collections=gift",
-        "style=stackable-bands"
+        "style=stackable-bands",
+        "price=0-50000.0"
       ]
     },
     "6428": {
@@ -12703,7 +13075,8 @@
         "stone_type=diamond",
         "shape=round",
         "collections=gift",
-        "style=stackable-bands"
+        "style=stackable-bands",
+        "price=0-50000.0"
       ]
     },
     "6429": {
@@ -12738,7 +13111,8 @@
         "stone_type=diamond",
         "shape=round",
         "collections=gift",
-        "style=stackable-bands"
+        "style=stackable-bands",
+        "price=0-50000.0"
       ]
     },
     "6430": {
@@ -12773,7 +13147,8 @@
         "stone_type=diamond",
         "shape=round",
         "collections=gift",
-        "style=stackable-bands"
+        "style=stackable-bands",
+        "price=0-50000.0"
       ]
     },
     "6431": {
@@ -12808,7 +13183,8 @@
         "stone_type=diamond",
         "shape=round",
         "collections=gift",
-        "style=stackable-bands"
+        "style=stackable-bands",
+        "price=0-50000.0"
       ]
     },
     "6432": {
@@ -12843,7 +13219,8 @@
         "stone_type=diamond",
         "shape=round",
         "collections=gift",
-        "style=stackable-bands"
+        "style=stackable-bands",
+        "price=0-50000.0"
       ]
     },
     "6433": {
@@ -12878,7 +13255,8 @@
         "stone_type=diamond",
         "shape=round",
         "collections=gift",
-        "style=stackable-bands"
+        "style=stackable-bands",
+        "price=0-50000.0"
       ]
     },
     "6434": {
@@ -12913,7 +13291,8 @@
         "stone_type=diamond",
         "shape=round",
         "collections=gift",
-        "style=stackable-bands"
+        "style=stackable-bands",
+        "price=0-50000.0"
       ]
     },
     "6544": {
@@ -12950,7 +13329,8 @@
         "occasion=casual",
         "stone_type=solitare",
         "style=single-halo",
-        "collections=gift"
+        "collections=gift",
+        "price=50000.0-100000"
       ]
     },
     "6545": {
@@ -12987,7 +13367,8 @@
         "occasion=casual",
         "stone_type=solitare",
         "style=single-halo",
-        "collections=gift"
+        "collections=gift",
+        "price=50000.0-100000"
       ]
     },
     "6546": {
@@ -13023,7 +13404,8 @@
         "gender=women",
         "stone_type=solitare",
         "style=single-halo",
-        "collections=gift"
+        "collections=gift",
+        "price=50000.0-100000"
       ]
     },
     "6547": {
@@ -13060,7 +13442,8 @@
         "occasion=casual",
         "stone_type=solitare",
         "style=single-halo",
-        "collections=gift"
+        "collections=gift",
+        "price=50000.0-100000"
       ]
     },
     "6548": {
@@ -13097,7 +13480,8 @@
         "occasion=casual",
         "stone_type=solitare",
         "style=single-halo",
-        "collections=gift"
+        "collections=gift",
+        "price=50000.0-100000"
       ]
     },
     "6549": {
@@ -13134,7 +13518,8 @@
         "occasion=casual",
         "stone_type=solitare",
         "collections=gift",
-        "style=necklace"
+        "style=necklace",
+        "price=100000-200000"
       ]
     },
     "6550": {
@@ -13171,7 +13556,8 @@
         "occasion=casual",
         "stone_type=solitare",
         "collections=gift",
-        "style=necklace"
+        "style=necklace",
+        "price=100000-200000"
       ]
     },
     "6551": {
@@ -13208,7 +13594,8 @@
         "occasion=casual",
         "stone_type=solitare",
         "collections=gift",
-        "style=necklace"
+        "style=necklace",
+        "price=100000-200000"
       ]
     },
     "6552": {
@@ -13245,7 +13632,8 @@
         "occasion=casual",
         "stone_type=solitare",
         "collections=gift",
-        "style=necklace"
+        "style=necklace",
+        "price=100000-200000"
       ]
     },
     "6553": {
@@ -13282,7 +13670,8 @@
         "occasion=casual",
         "stone_type=solitare",
         "collections=gift",
-        "style=necklace"
+        "style=necklace",
+        "price=100000-200000"
       ]
     },
     "6554": {
@@ -13316,7 +13705,8 @@
         "occasion=casual",
         "stone_type=solitare",
         "style=single-halo",
-        "collections=gift"
+        "collections=gift",
+        "price=100000-200000"
       ]
     },
     "6555": {
@@ -13350,7 +13740,8 @@
         "occasion=casual",
         "stone_type=solitare",
         "style=single-halo",
-        "collections=gift"
+        "collections=gift",
+        "price=50000.0-100000"
       ]
     },
     "6556": {
@@ -13384,7 +13775,8 @@
         "occasion=casual",
         "stone_type=solitare",
         "style=single-halo",
-        "collections=gift"
+        "collections=gift",
+        "price=50000.0-100000"
       ]
     },
     "6557": {
@@ -13418,7 +13810,8 @@
         "occasion=casual",
         "stone_type=solitare",
         "style=single-halo",
-        "collections=gift"
+        "collections=gift",
+        "price=50000.0-100000"
       ]
     },
     "6558": {
@@ -13452,7 +13845,8 @@
         "occasion=casual",
         "stone_type=solitare",
         "style=single-halo",
-        "collections=gift"
+        "collections=gift",
+        "price=50000.0-100000"
       ]
     },
     "6559": {
@@ -13486,7 +13880,8 @@
         "occasion=casual",
         "stone_type=solitare",
         "collections=gift",
-        "style=earrings"
+        "style=earrings",
+        "price=200000-500000"
       ]
     },
     "6560": {
@@ -13520,7 +13915,8 @@
         "occasion=casual",
         "stone_type=solitare",
         "collections=gift",
-        "style=earrings"
+        "style=earrings",
+        "price=200000-500000"
       ]
     },
     "6561": {
@@ -13554,7 +13950,8 @@
         "occasion=casual",
         "stone_type=solitare",
         "collections=gift",
-        "style=earrings"
+        "style=earrings",
+        "price=200000-500000"
       ]
     },
     "6562": {
@@ -13588,7 +13985,8 @@
         "occasion=casual",
         "stone_type=solitare",
         "collections=gift",
-        "style=earrings"
+        "style=earrings",
+        "price=200000-500000"
       ]
     },
     "6563": {
@@ -13622,7 +14020,8 @@
         "occasion=casual",
         "stone_type=solitare",
         "collections=gift",
-        "style=earrings"
+        "style=earrings",
+        "price=200000-500000"
       ]
     },
     "6580": {
@@ -13656,7 +14055,8 @@
         "occasion=casual",
         "stone_type=solitare",
         "style=single-halo",
-        "collections=gift"
+        "collections=gift",
+        "price=100000-200000"
       ]
     },
     "6581": {
@@ -13690,7 +14090,8 @@
         "occasion=casual",
         "stone_type=solitare",
         "style=single-halo",
-        "collections=gift"
+        "collections=gift",
+        "price=100000-200000"
       ]
     },
     "6582": {
@@ -13724,7 +14125,8 @@
         "occasion=casual",
         "stone_type=solitare",
         "collections=gift",
-        "style=earrings"
+        "style=earrings",
+        "price=50000.0-100000"
       ]
     },
     "6583": {
@@ -13758,7 +14160,8 @@
         "occasion=casual",
         "stone_type=solitare",
         "style=single-halo",
-        "collections=gift"
+        "collections=gift",
+        "price=50000.0-100000"
       ]
     },
     "6584": {
@@ -13792,7 +14195,8 @@
         "occasion=casual",
         "stone_type=solitare",
         "collections=gift",
-        "style=earrings"
+        "style=earrings",
+        "price=200000-500000"
       ]
     },
     "6585": {
@@ -13826,7 +14230,8 @@
         "occasion=casual",
         "stone_type=solitare",
         "style=single-halo",
-        "collections=gift"
+        "collections=gift",
+        "price=50000.0-100000"
       ]
     },
     "6688": {
@@ -13863,7 +14268,8 @@
         "occasion=casual",
         "stone_type=solitare",
         "collections=gift",
-        "style=necklace"
+        "style=necklace",
+        "price=100000-200000"
       ]
     },
     "6689": {
@@ -13900,7 +14306,8 @@
         "occasion=casual",
         "stone_type=solitare",
         "style=single-halo",
-        "collections=gift"
+        "collections=gift",
+        "price=50000.0-100000"
       ]
     },
     "6690": {
@@ -13937,7 +14344,8 @@
         "occasion=casual",
         "stone_type=solitare",
         "collections=gift",
-        "style=necklace"
+        "style=necklace",
+        "price=100000-200000"
       ]
     },
     "6691": {
@@ -13974,7 +14382,8 @@
         "occasion=casual",
         "stone_type=solitare",
         "style=single-halo",
-        "collections=gift"
+        "collections=gift",
+        "price=0-50000.0"
       ]
     },
     "7170": {
@@ -14008,7 +14417,9 @@
         "stone_type=solitare",
         "occasion=engagement",
         "shape=princess",
-        "style=three-stone"
+        "style=three-stone",
+        "topengagement=yes",
+        "price=700000-1000000"
       ]
     }
   },
@@ -14400,5 +14811,6 @@
       "video": {},
       "url": ""
     }
-  }
+  },
+  "price_slabs": [50000, 100000, 200000, 500000, 700000, 1000000, 10000000]
 }

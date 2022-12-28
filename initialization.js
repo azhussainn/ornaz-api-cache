@@ -16,6 +16,7 @@ function setCatlogDataInCache({
   attributes,
   keywordsFinal,
   attribute_icons,
+  topBanners
 }) {
 
   console.log("===setting catlog data in cache===");
@@ -30,6 +31,7 @@ function setCatlogDataInCache({
     keywordsFinal,
     attribute_icons,
   };
+  global.topBannerDict = topBanners
 }
 
 function restructureCatlogData(catlogData) {
@@ -96,6 +98,7 @@ function restructureCatlogData(catlogData) {
     attributes: catlogData.new_attributes,
     keywordsFinal,
     attribute_icons: catlogData.attribute_icons,
+    topBanners: catlogData.top_banners,
   });
 }
 

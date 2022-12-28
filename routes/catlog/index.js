@@ -22,11 +22,13 @@ router.get("/:baseCategory?", async (req, res) => {
   const pageNo = allFilters["page"];
   const sortBy = allFilters["sort_by"];
 
+  //getting filters from request query params
   const appliedFilters = getActualFilters(allFilters);
 
   //getting filters, base category, names from search query
-  const { finalFilters, searchBaseCategory, potentialNamesArr } =
-    getSearchableFilters({ appliedFilters, searchQuery, baseCategory });
+  const { 
+    finalFilters, searchBaseCategory, potentialNamesArr 
+  } = getSearchableFilters({ appliedFilters, searchQuery, baseCategory });
 
   //filtering the products using baseCategory and finalFilters
   const filteredProducts = applyFilters({
@@ -58,9 +60,7 @@ router.get("/:baseCategory?", async (req, res) => {
     pageNo,
   });
 
-  const endTime = performance.now()
-
-  console.log(`Func took ${Math.round(endTime - startTime)} milliseconds`)
+  console.log(`Func took ${Math.round(performance.now() - startTime)} milliseconds`)
 
   //returning all the required data
   return res.status(200).json({
