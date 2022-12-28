@@ -62,7 +62,6 @@ const applyFilters = ({ baseCategory, appliedFilters }) => {
     const temp = [...filterArr.map((filter) => products[filter] || []).flat()];
     if (temp.length > 0) filteredProducts.push(temp);
   });
-
   if (filteredProducts.length === 0) return global.catlogDataSecondary[baseCategory]["all"];
   return filteredProducts.reduce((a, b) => a.filter((c) => b.includes(c)));
 };
@@ -196,8 +195,11 @@ const getSearchableFilters = ({ appliedFilters, searchQuery, baseCategory }) => 
       potentialNamesArr: [],
     };
   let searchQueryArr = [...new Set(removeStopwords(searchQuery.toLowerCase().split(" ")))];
-  const searchBaseCategory = !baseCategory ? getBaseCategoryInSearchQuery(searchQueryArr) : baseCategory;
-  if (searchBaseCategory.result) {
+  
+  const searchBaseCategory = !baseCategory ? getBaseCategoryInSearchQuery(
+    searchQueryArr) : { result : baseCategory };
+
+  if (searchBaseCategory.query) {
     searchQueryArr = searchQueryArr.filter(
       (ele) => ele != searchBaseCategory.query
     );
@@ -208,7 +210,7 @@ const getSearchableFilters = ({ appliedFilters, searchQuery, baseCategory }) => 
 
   return {
     finalFilters,
-    searchBaseCategory: searchBaseCategory?.result,
+    searchBaseCategory: searchBaseCategory.result,
     potentialNamesArr,
   };
 };
