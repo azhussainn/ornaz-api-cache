@@ -219,15 +219,17 @@ const getProductAttributes = ({ searchedProducts }) => {
       .map((product) => global.attributesData.keywordsFinal[product.pk])
       .flat()
   );
+
   const new_attributes = {};
   data.forEach((ele) => {
     const temp = ele.split("=");
     new_attributes[temp[0]] = [ ...new_attributes[temp[0]] || [] ];
-    global.attributesData.attributes[temp[0]].forEach((attr) => {
+    global.attributesData.attributes[temp[0]]?.forEach((attr) => {
       if (attr.attrib_value_slug === temp[1]) {
         new_attributes[temp[0]].push(attr);
       }
     });
+    if(new_attributes[temp[0]].length === 0) delete new_attributes[temp[0]]
   });
   return new_attributes;
 };

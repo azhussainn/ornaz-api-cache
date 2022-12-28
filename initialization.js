@@ -17,6 +17,7 @@ function setCatlogDataInCache({
   keywordsFinal,
   attribute_icons,
 }) {
+
   console.log("===setting catlog data in cache===");
   global.catlogDataPrimary = cachedDataPrimary;
   global.catlogDataSecondary = cachedDataSecondary;

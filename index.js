@@ -1,4 +1,5 @@
 const express = require("express");
+const compression = require('compression')
 const { initCatlogData } = require("./initialization.js");
 const catlogRoute = require("./routes/catlog");
 
@@ -13,6 +14,7 @@ global.catlogkeywordsDictReverse = null;
 global.sortDict = null;
 global.attributesData = null;
 
+app.use(compression());
 app.use("/jewellery", catlogRoute);
 
 app.listen(port, () => {

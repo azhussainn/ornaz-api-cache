@@ -9,15 +9,19 @@ const {
   getPaginatedProducts,
   getProductAttributes,
 } = require("./utils");
+// const moize = require('moize');
+
 
 router.get("/:baseCategory?", async (req, res) => {
+
+  const startTime = performance.now()
+
   const baseCategory = req.params.baseCategory;
   const allFilters = req.query;
   const searchQuery = allFilters["q"];
   const pageNo = allFilters["page"];
   const sortBy = allFilters["sort_by"];
 
-  //getting all filters that can be applied on the data
   const appliedFilters = getActualFilters(allFilters);
 
   //getting filters, base category, names from search query
@@ -54,12 +58,9 @@ router.get("/:baseCategory?", async (req, res) => {
     pageNo,
   });
 
-  // console.log(
-  //   "======================================================\n",
-  //   baseCategory || searchBaseCategory, "<-===base category\n",
-  //   finalFilters, "<====final filters\n",
-  //   "======================================================",
-  // )
+  const endTime = performance.now()
+
+  console.log(`Func took ${Math.round(endTime - startTime)} milliseconds`)
 
   //returning all the required data
   return res.status(200).json({
