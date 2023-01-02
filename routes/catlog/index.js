@@ -8,6 +8,9 @@ const {
   sortProducts,
   getPaginatedProducts,
   getProductAttributes,
+  checkProductNameMapping,
+  getTopBanners,
+  getSearchQuery
 } = require("./utils");
 // const moize = require('moize');
 
@@ -18,23 +21,40 @@ router.get("/:baseCategory?", async (req, res) => {
 
   const baseCategory = req.params.baseCategory;
   const allFilters = req.query;
-  const searchQuery = allFilters["q"];
+  const rawSearchQuery = allFilters["q"];
+
   const pageNo = allFilters["page"];
   const sortBy = allFilters["sort_by"];
 
   //getting filters from request query params
   const appliedFilters = getActualFilters(allFilters);
 
+  const searchQuery = getSearchQuery(rawSearchQuery) 
+
   //getting filters, base category, names from search query
   const { 
     finalFilters, searchBaseCategory, potentialNamesArr 
   } = getSearchableFilters({ appliedFilters, searchQuery, baseCategory });
 
+  // console.log(
+  //   finalFilters,
+  //   searchBaseCategory,
+  //   potentialNamesArr
+  // )
+
+  //checking for product names directly in global.productNamesDict
+  let filteredProducts = checkProductNameMapping(potentialNamesArr)
+
   //filtering the products using baseCategory and finalFilters
-  const filteredProducts = applyFilters({
-    baseCategory: baseCategory || searchBaseCategory,
-    appliedFilters: finalFilters,
-  });
+  if(!filteredProducts){
+    filteredProducts = applyFilters({
+      baseCategory: baseCategory || searchBaseCategory,
+      appliedFilters: finalFilters,
+    });
+  }
+
+  //getting top_banner
+  const top_banner = getTopBanners(finalFilters)
 
   //getting actual product data from filteredProducts
   const finalProducts = getDataFromCatlogDataPrimary(filteredProducts);
@@ -68,6 +88,7 @@ router.get("/:baseCategory?", async (req, res) => {
     new_attributes,
     attribute_icons: global.attributesData.attribute_icons,
     meta: { ...sortingMeta, ...paginationMeta },
+    top_banner
   });
 });
 

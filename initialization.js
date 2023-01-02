@@ -1,5 +1,6 @@
 const axios = require("axios");
 const fs = require("fs");
+const { removeStopwords } = require("stopword");
 
 function resetCatlogDataInCache() {
   console.log("===re-setting catlog data in cache===");
@@ -16,8 +17,12 @@ function setCatlogDataInCache({
   attributes,
   keywordsFinal,
   attribute_icons,
-  topBanners
+  topBanners,
+  productNamesDict,
+  priceSlab
 }) {
+
+  // console.log(cachedDataSecondary.rings['price=700000-1000000'])
 
   console.log("===setting catlog data in cache===");
   global.catlogDataPrimary = cachedDataPrimary;
@@ -30,8 +35,22 @@ function setCatlogDataInCache({
     attributes,
     keywordsFinal,
     attribute_icons,
+    ranking: {
+      'gender': 10,
+      'occasion': 9,
+      'metal_color': 8,
+      'shape': 7,
+      'stone_type': 6,
+      'style': 5,
+      'collections' : 4,
+      'offers': 3,
+      'topengagement': 2,
+      'price': 1
+    },
+    priceSlab
   };
   global.topBannerDict = topBanners
+  global.productNamesDict = productNamesDict
 }
 
 function restructureCatlogData(catlogData) {
@@ -42,12 +61,24 @@ function restructureCatlogData(catlogData) {
   const keywordsDictReverse = {};
   const sortDict = {};
   const keywordsFinal = {};
+  const productNamesDict = {}
 
   Object.keys(catlogData.products).forEach((primaryKey) => {
     //adding productId : productData to cachedDataPrimary
     cachedDataPrimary[primaryKey] = catlogData.products[primaryKey].data;
     sortDict[primaryKey] = catlogData.products[primaryKey].sorting_info;
     keywordsFinal[primaryKey] = catlogData.products[primaryKey].keywords;
+
+    //creating product names mapping
+    const productNamesArr = [
+      ...new Set(removeStopwords(
+        catlogData.products[primaryKey].data.name.toLowerCase().split(" ")
+      ))
+    ];
+    if(productNamesArr.length > 0){
+      const productName = productNamesArr.join(" ")
+      productNamesDict[ productName ] = [ ...productNamesDict[ productName ] || [], primaryKey ]
+    }
 
     //getting the baseCategory
     const baseCategory = catlogData.products[primaryKey].data.category.slug;
@@ -87,7 +118,6 @@ function restructureCatlogData(catlogData) {
       primaryKey,
     ];
   });
-
   setCatlogDataInCache({
     cachedDataPrimary,
     cachedDataSecondary,
@@ -99,6 +129,8 @@ function restructureCatlogData(catlogData) {
     keywordsFinal,
     attribute_icons: catlogData.attribute_icons,
     topBanners: catlogData.top_banners,
+    productNamesDict,
+    priceSlab: catlogData.price_slabs 
   });
 }
 
