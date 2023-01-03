@@ -233,11 +233,11 @@ const getCatlogDataApi = async (errorCallBack=false) => {
 const updateCatlogDataFileStorage = (data) => {
   console.log("===setting catlog data in file storage==");
   let catlogData = JSON.stringify(data);
-  fs.writeFileSync("./catlogData.json", catlogData);
+  fs.writeFileSync("./static/catlogData.json", catlogData);
 };
 
 const checkCatlogDataFileStorage = () => {
-  const data = fs.readFileSync("./catlogData.json");
+  const data = fs.readFileSync("./static/catlogData.json");
   if (data && data.length !== 0) {
     console.log("====catlog data found in file");
     const catlogData = JSON.parse(data);
