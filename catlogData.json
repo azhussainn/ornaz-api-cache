@@ -67,7 +67,7 @@
         "occasion=engagement",
         "shape=round",
         "style=halo",
-        "price=50000-100000"
+        "price=50000.0-100000"
       ]
     },
     "1165": {
@@ -137,7 +137,7 @@
         "occasion=engagement",
         "shape=round",
         "style=halo",
-        "price=50000-100000"
+        "price=50000.0-100000"
       ]
     },
     "1167": {
@@ -172,7 +172,7 @@
         "occasion=engagement",
         "shape=round",
         "style=solitaire-with-diamond-band",
-        "price=50000-100000"
+        "price=50000.0-100000"
       ]
     },
     "1168": {
@@ -207,7 +207,7 @@
         "occasion=engagement",
         "shape=round",
         "style=solitaire-with-diamond-band",
-        "price=50000-100000"
+        "price=50000.0-100000"
       ]
     },
     "1169": {
@@ -767,7 +767,7 @@
         "occasion=engagement",
         "shape=round",
         "style=plain-solitaire",
-        "price=50000-100000"
+        "price=50000.0-100000"
       ]
     },
     "1188": {
@@ -802,7 +802,7 @@
         "occasion=engagement",
         "shape=round",
         "style=plain-solitaire",
-        "price=50000-100000"
+        "price=50000.0-100000"
       ]
     },
     "1189": {
@@ -1082,7 +1082,7 @@
         "occasion=engagement",
         "shape=round",
         "style=solitaire-with-diamond-band",
-        "price=50000-100000"
+        "price=50000.0-100000"
       ]
     },
     "1197": {
@@ -1152,7 +1152,7 @@
         "occasion=engagement",
         "shape=pear",
         "style=halo",
-        "price=50000-100000"
+        "price=50000.0-100000"
       ]
     },
     "1199": {
@@ -1187,7 +1187,7 @@
         "occasion=engagement",
         "shape=emerald",
         "style=halo",
-        "price=50000-100000"
+        "price=50000.0-100000"
       ]
     },
     "1200": {
@@ -1222,7 +1222,7 @@
         "occasion=engagement",
         "shape=oval",
         "style=halo",
-        "price=50000-100000"
+        "price=50000.0-100000"
       ]
     },
     "1201": {
@@ -1257,7 +1257,7 @@
         "occasion=engagement",
         "shape=round",
         "style=halo",
-        "price=50000-100000"
+        "price=50000.0-100000"
       ]
     },
     "1202": {
@@ -1292,7 +1292,7 @@
         "occasion=engagement",
         "shape=round",
         "style=side-diamond",
-        "price=50000-100000"
+        "price=50000.0-100000"
       ]
     },
     "1204": {
@@ -1362,7 +1362,7 @@
         "occasion=engagement",
         "shape=princess",
         "style=halo",
-        "price=50000-100000"
+        "price=50000.0-100000"
       ]
     },
     "1206": {
@@ -1397,7 +1397,7 @@
         "occasion=engagement",
         "shape=cushion",
         "style=halo",
-        "price=50000-100000"
+        "price=50000.0-100000"
       ]
     },
     "1207": {
@@ -1432,7 +1432,7 @@
         "occasion=engagement",
         "shape=cushion",
         "style=halo",
-        "price=50000-100000"
+        "price=50000.0-100000"
       ]
     },
     "1208": {
@@ -1642,7 +1642,7 @@
         "occasion=engagement",
         "shape=heart",
         "style=halo",
-        "price=50000-100000"
+        "price=50000.0-100000"
       ]
     },
     "1214": {
@@ -1677,7 +1677,7 @@
         "occasion=engagement",
         "shape=round",
         "style=plain-solitaire",
-        "price=50000-100000"
+        "price=50000.0-100000"
       ]
     },
     "1215": {
@@ -1712,7 +1712,7 @@
         "occasion=engagement",
         "shape=heart",
         "style=halo",
-        "price=50000-100000"
+        "price=50000.0-100000"
       ]
     },
     "1216": {
@@ -1747,7 +1747,7 @@
         "occasion=engagement",
         "shape=round",
         "style=plain-solitaire",
-        "price=0-50000"
+        "price=0-50000.0"
       ]
     },
     "1217": {
@@ -1782,7 +1782,7 @@
         "occasion=engagement",
         "shape=cushion",
         "style=halo",
-        "price=50000-100000"
+        "price=50000.0-100000"
       ]
     },
     "1219": {
@@ -1852,7 +1852,7 @@
         "occasion=engagement",
         "shape=round",
         "style=halo",
-        "price=50000-100000"
+        "price=50000.0-100000"
       ]
     },
     "1221": {
@@ -1922,7 +1922,7 @@
         "occasion=engagement",
         "shape=princess",
         "style=solitaire-with-diamond-band",
-        "price=50000-100000"
+        "price=50000.0-100000"
       ]
     },
     "1223": {
@@ -1957,7 +1957,7 @@
         "occasion=engagement",
         "shape=oval",
         "style=solitaire-with-diamond-band",
-        "price=50000-100000"
+        "price=50000.0-100000"
       ]
     },
     "1224": {
@@ -2342,7 +2342,7 @@
         "occasion=engagement",
         "shape=round",
         "style=plain-solitaire",
-        "price=50000-100000"
+        "price=50000.0-100000"
       ]
     },
     "1236": {
@@ -2377,7 +2377,7 @@
         "occasion=engagement",
         "shape=round",
         "style=plain-solitaire",
-        "price=50000-100000"
+        "price=50000.0-100000"
       ]
     },
     "1237": {
@@ -2412,7 +2412,7 @@
         "occasion=engagement",
         "shape=princess",
         "style=plain-solitaire",
-        "price=50000-100000"
+        "price=50000.0-100000"
       ]
     },
     "1238": {
@@ -2517,7 +2517,7 @@
         "occasion=engagement",
         "shape=princess",
         "style=plain-solitaire",
-        "price=50000-100000"
+        "price=50000.0-100000"
       ]
     },
     "1241": {
@@ -2552,7 +2552,7 @@
         "occasion=engagement",
         "shape=cushion",
         "style=plain-solitaire",
-        "price=50000-100000"
+        "price=50000.0-100000"
       ]
     },
     "1242": {
@@ -2692,7 +2692,7 @@
         "occasion=engagement",
         "shape=oval",
         "style=plain-solitaire",
-        "price=50000-100000"
+        "price=50000.0-100000"
       ]
     },
     "1247": {
@@ -2727,7 +2727,7 @@
         "occasion=engagement",
         "shape=princess",
         "style=plain-solitaire",
-        "price=50000-100000"
+        "price=50000.0-100000"
       ]
     },
     "1248": {
@@ -2762,7 +2762,7 @@
         "occasion=engagement",
         "shape=cushion",
         "style=plain-solitaire",
-        "price=50000-100000"
+        "price=50000.0-100000"
       ]
     },
     "1249": {
@@ -2797,7 +2797,7 @@
         "occasion=engagement",
         "shape=round",
         "style=vintage",
-        "price=50000-100000"
+        "price=50000.0-100000"
       ]
     },
     "1250": {
@@ -3357,7 +3357,7 @@
         "occasion=everyday",
         "style=bands",
         "shape=round",
-        "price=50000-100000"
+        "price=50000.0-100000"
       ]
     },
     "1267": {
@@ -3392,7 +3392,7 @@
         "occasion=engagement",
         "shape=round",
         "style=plain-solitaire",
-        "price=50000-100000"
+        "price=50000.0-100000"
       ]
     },
     "1268": {
@@ -3427,7 +3427,7 @@
         "occasion=everyday",
         "style=bands",
         "shape=round",
-        "price=0-50000"
+        "price=0-50000.0"
       ]
     },
     "1269": {
@@ -3497,7 +3497,7 @@
         "occasion=everyday",
         "style=bands",
         "shape=round",
-        "price=50000-100000"
+        "price=50000.0-100000"
       ]
     },
     "1271": {
@@ -3532,7 +3532,7 @@
         "occasion=everyday",
         "style=bands",
         "shape=round",
-        "price=50000-100000"
+        "price=50000.0-100000"
       ]
     },
     "1272": {
@@ -3567,7 +3567,7 @@
         "occasion=everyday",
         "style=bands",
         "shape=round",
-        "price=50000-100000"
+        "price=50000.0-100000"
       ]
     },
     "1273": {
@@ -3602,7 +3602,7 @@
         "occasion=everyday",
         "style=bands",
         "shape=round",
-        "price=0-50000"
+        "price=0-50000.0"
       ]
     },
     "1275": {
@@ -3636,7 +3636,7 @@
         "stone_type=diamond",
         "occasion=everyday",
         "style=bands",
-        "price=0-50000"
+        "price=0-50000.0"
       ]
     },
     "1277": {
@@ -3671,7 +3671,7 @@
         "occasion=everyday",
         "style=bands",
         "shape=round",
-        "price=0-50000"
+        "price=0-50000.0"
       ]
     },
     "1278": {
@@ -3706,7 +3706,7 @@
         "occasion=everyday",
         "style=bands",
         "shape=round",
-        "price=0-50000"
+        "price=0-50000.0"
       ]
     },
     "1279": {
@@ -3810,7 +3810,7 @@
         "stone_type=diamond",
         "occasion=engagement",
         "shape=round",
-        "price=0-50000"
+        "price=0-50000.0"
       ]
     },
     "1286": {
@@ -3845,7 +3845,7 @@
         "occasion=everyday",
         "shape=round",
         "style=eternity",
-        "price=50000-100000"
+        "price=50000.0-100000"
       ]
     },
     "1291": {
@@ -4090,7 +4090,7 @@
         "occasion=engagement",
         "shape=princess",
         "style=halo",
-        "price=50000-100000"
+        "price=50000.0-100000"
       ]
     },
     "1299": {
@@ -5175,7 +5175,7 @@
         "occasion=everyday",
         "shape=princess",
         "style=eternity",
-        "price=50000-100000"
+        "price=50000.0-100000"
       ]
     },
     "1336": {
@@ -5210,7 +5210,7 @@
         "occasion=everyday",
         "shape=round",
         "style=eternity",
-        "price=50000-100000"
+        "price=50000.0-100000"
       ]
     },
     "1337": {
@@ -5524,7 +5524,7 @@
         "occasion=everyday",
         "shape=round",
         "style=eternity",
-        "price=50000-100000"
+        "price=50000.0-100000"
       ]
     },
     "1347": {
@@ -5592,7 +5592,7 @@
         "occasion=everyday",
         "shape=oval",
         "style=eternity",
-        "price=50000-100000"
+        "price=50000.0-100000"
       ]
     },
     "1349": {
@@ -5661,7 +5661,7 @@
         "occasion=everyday",
         "shape=round",
         "style=eternity",
-        "price=50000-100000"
+        "price=50000.0-100000"
       ]
     },
     "1361": {
@@ -5871,7 +5871,7 @@
         "occasion=everyday",
         "shape=round",
         "style=eternity",
-        "price=0-50000"
+        "price=0-50000.0"
       ]
     },
     "1368": {
@@ -5906,7 +5906,7 @@
         "occasion=everyday",
         "shape=round",
         "style=eternity",
-        "price=0-50000"
+        "price=0-50000.0"
       ]
     },
     "1369": {
@@ -5941,7 +5941,7 @@
         "occasion=everyday",
         "shape=round",
         "style=eternity",
-        "price=50000-100000"
+        "price=50000.0-100000"
       ]
     },
     "1370": {
@@ -6397,7 +6397,7 @@
         "occasion=engagement",
         "shape=princess",
         "style=halo",
-        "price=50000-100000"
+        "price=50000.0-100000"
       ]
     },
     "1383": {
@@ -6432,7 +6432,7 @@
         "occasion=everyday",
         "style=bands",
         "shape=round",
-        "price=50000-100000"
+        "price=50000.0-100000"
       ]
     },
     "1384": {
@@ -6467,7 +6467,7 @@
         "occasion=everyday",
         "style=bands",
         "shape=round",
-        "price=0-50000"
+        "price=0-50000.0"
       ]
     },
     "1413": {
@@ -6852,7 +6852,7 @@
         "occasion=everyday",
         "style=bands",
         "shape=princess",
-        "price=50000-100000"
+        "price=50000.0-100000"
       ]
     },
     "1473": {
@@ -7027,7 +7027,7 @@
         "occasion=everyday",
         "shape=round",
         "style=eternity",
-        "price=0-50000"
+        "price=0-50000.0"
       ]
     },
     "1512": {
@@ -7062,7 +7062,7 @@
         "occasion=everyday",
         "style=bands",
         "shape=round",
-        "price=50000-100000"
+        "price=50000.0-100000"
       ]
     },
     "1724": {
@@ -7132,7 +7132,7 @@
         "occasion=everyday",
         "shape=round",
         "style=vintage",
-        "price=50000-100000"
+        "price=50000.0-100000"
       ]
     },
     "1731": {
@@ -7237,7 +7237,7 @@
         "stone_type=solitare",
         "shape=round",
         "style=halo",
-        "price=50000-100000"
+        "price=50000.0-100000"
       ]
     },
     "1734": {
@@ -7272,7 +7272,7 @@
         "stone_type=solitare",
         "shape=princess",
         "style=cluster",
-        "price=50000-100000"
+        "price=50000.0-100000"
       ]
     },
     "1736": {
@@ -7342,7 +7342,7 @@
         "stone_type=diamond",
         "shape=round",
         "style=cluster",
-        "price=50000-100000"
+        "price=50000.0-100000"
       ]
     },
     "1738": {
@@ -7377,7 +7377,7 @@
         "stone_type=solitare",
         "shape=round",
         "style=three-stone",
-        "price=50000-100000"
+        "price=50000.0-100000"
       ]
     },
     "1739": {
@@ -7412,7 +7412,7 @@
         "stone_type=solitare",
         "shape=round",
         "style=plain-solitaire",
-        "price=50000-100000"
+        "price=50000.0-100000"
       ]
     },
     "1741": {
@@ -7447,7 +7447,7 @@
         "occasion=everyday",
         "shape=round",
         "style=vintage",
-        "price=50000-100000"
+        "price=50000.0-100000"
       ]
     },
     "1810": {
@@ -7482,7 +7482,7 @@
         "stone_type=solitare",
         "shape=round",
         "style=cluster",
-        "price=50000-100000"
+        "price=50000.0-100000"
       ]
     },
     "1811": {
@@ -7517,7 +7517,7 @@
         "stone_type=solitare",
         "shape=round",
         "style=plain-solitaire",
-        "price=50000-100000"
+        "price=50000.0-100000"
       ]
     },
     "1813": {
@@ -7552,7 +7552,7 @@
         "stone_type=solitare",
         "shape=round",
         "style=halo",
-        "price=50000-100000"
+        "price=50000.0-100000"
       ]
     },
     "1838": {
@@ -7587,7 +7587,7 @@
         "stone_type=solitare",
         "shape=round",
         "style=side-diamond",
-        "price=50000-100000"
+        "price=50000.0-100000"
       ]
     },
     "1839": {
@@ -7622,7 +7622,7 @@
         "stone_type=solitare",
         "shape=round",
         "style=halo",
-        "price=50000-100000"
+        "price=50000.0-100000"
       ]
     },
     "1843": {
@@ -7657,7 +7657,7 @@
         "stone_type=solitare",
         "shape=round",
         "style=vintage",
-        "price=50000-100000"
+        "price=50000.0-100000"
       ]
     },
     "1844": {
@@ -8148,7 +8148,7 @@
         "stone_type=diamond",
         "shape=round",
         "style=cluster",
-        "price=50000-100000"
+        "price=50000.0-100000"
       ]
     },
     "2135": {
@@ -8218,7 +8218,7 @@
         "occasion=engagement",
         "shape=round",
         "style=cluster",
-        "price=50000-100000"
+        "price=50000.0-100000"
       ]
     },
     "2145": {
@@ -8246,7 +8246,7 @@
         "price": 83747,
         "new": 2145
       },
-      "keywords": ["price=50000-100000"]
+      "keywords": ["price=50000.0-100000"]
     },
     "2173": {
       "data": {
@@ -8350,7 +8350,7 @@
         "stone_type=solitare",
         "shape=cushion",
         "style=side-diamond",
-        "price=50000-100000"
+        "price=50000.0-100000"
       ]
     },
     "2250": {
@@ -8489,7 +8489,7 @@
         "stone_type=diamond",
         "style=bands",
         "shape=round",
-        "price=50000-100000"
+        "price=50000.0-100000"
       ]
     },
     "2531": {
@@ -9051,7 +9051,7 @@
         "stone_type=diamond",
         "style=bands",
         "shape=round",
-        "price=0-50000"
+        "price=0-50000.0"
       ]
     },
     "3970": {
@@ -9086,7 +9086,7 @@
         "stone_type=diamond",
         "style=bands",
         "shape=round",
-        "price=0-50000"
+        "price=0-50000.0"
       ]
     },
     "3971": {
@@ -9121,7 +9121,7 @@
         "stone_type=diamond",
         "style=bands",
         "shape=round",
-        "price=0-50000"
+        "price=0-50000.0"
       ]
     },
     "3972": {
@@ -9226,7 +9226,7 @@
         "stone_type=solitare",
         "shape=round",
         "style=vintage",
-        "price=50000-100000"
+        "price=50000.0-100000"
       ]
     },
     "3975": {
@@ -9261,7 +9261,7 @@
         "stone_type=solitare",
         "shape=round",
         "style=halo",
-        "price=50000-100000"
+        "price=50000.0-100000"
       ]
     },
     "3976": {
@@ -9296,7 +9296,7 @@
         "occasion=everyday",
         "shape=princess",
         "style=halo",
-        "price=50000-100000"
+        "price=50000.0-100000"
       ]
     },
     "3977": {
@@ -9331,7 +9331,7 @@
         "stone_type=solitare",
         "shape=round",
         "style=halo",
-        "price=50000-100000"
+        "price=50000.0-100000"
       ]
     },
     "3978": {
@@ -9471,7 +9471,7 @@
         "stone_type=solitare",
         "shape=cushion",
         "style=halo",
-        "price=50000-100000"
+        "price=50000.0-100000"
       ]
     },
     "3982": {
@@ -11887,7 +11887,7 @@
         "occasion=engagement",
         "shape=round",
         "style=plain-solitaire",
-        "price=50000-100000"
+        "price=50000.0-100000"
       ]
     },
     "5816": {
@@ -11992,7 +11992,7 @@
         "stone_type=diamond",
         "style=bands",
         "shape=round",
-        "price=50000-100000"
+        "price=50000.0-100000"
       ]
     },
     "6286": {
@@ -12470,7 +12470,7 @@
         "occasion=casual",
         "stone_type=diamond",
         "shape=round",
-        "price=50000-100000"
+        "price=50000.0-100000"
       ]
     },
     "6332": {
@@ -12608,7 +12608,7 @@
         "shape=round",
         "collections=gift",
         "style=stackable-bands",
-        "price=0-50000"
+        "price=0-50000.0"
       ]
     },
     "6416": {
@@ -12644,7 +12644,7 @@
         "shape=marquise",
         "collections=gift",
         "style=stackable-bands",
-        "price=0-50000"
+        "price=0-50000.0"
       ]
     },
     "6417": {
@@ -12680,7 +12680,7 @@
         "shape=round",
         "collections=gift",
         "style=stackable-bands",
-        "price=0-50000"
+        "price=0-50000.0"
       ]
     },
     "6418": {
@@ -12716,7 +12716,7 @@
         "shape=round",
         "collections=gift",
         "style=stackable-bands",
-        "price=50000-100000"
+        "price=50000.0-100000"
       ]
     },
     "6419": {
@@ -12752,7 +12752,7 @@
         "shape=round",
         "collections=gift",
         "style=stackable-bands",
-        "price=0-50000"
+        "price=0-50000.0"
       ]
     },
     "6420": {
@@ -12788,7 +12788,7 @@
         "shape=round",
         "collections=gift",
         "style=stackable-bands",
-        "price=0-50000"
+        "price=0-50000.0"
       ]
     },
     "6421": {
@@ -12824,7 +12824,7 @@
         "shape=round",
         "collections=gift",
         "style=stackable-bands",
-        "price=0-50000"
+        "price=0-50000.0"
       ]
     },
     "6422": {
@@ -12860,7 +12860,7 @@
         "shape=round",
         "collections=gift",
         "style=stackable-bands",
-        "price=50000-100000"
+        "price=50000.0-100000"
       ]
     },
     "6423": {
@@ -12896,7 +12896,7 @@
         "shape=round",
         "collections=gift",
         "style=stackable-bands",
-        "price=50000-100000"
+        "price=50000.0-100000"
       ]
     },
     "6424": {
@@ -12932,7 +12932,7 @@
         "shape=emerald",
         "collections=gift",
         "style=stackable-bands",
-        "price=50000-100000"
+        "price=50000.0-100000"
       ]
     },
     "6425": {
@@ -12968,7 +12968,7 @@
         "shape=round",
         "collections=gift",
         "style=stackable-bands",
-        "price=0-50000"
+        "price=0-50000.0"
       ]
     },
     "6426": {
@@ -13004,7 +13004,7 @@
         "shape=round",
         "collections=gift",
         "style=stackable-bands",
-        "price=0-50000"
+        "price=0-50000.0"
       ]
     },
     "6427": {
@@ -13040,7 +13040,7 @@
         "shape=round",
         "collections=gift",
         "style=stackable-bands",
-        "price=0-50000"
+        "price=0-50000.0"
       ]
     },
     "6428": {
@@ -13076,7 +13076,7 @@
         "shape=round",
         "collections=gift",
         "style=stackable-bands",
-        "price=0-50000"
+        "price=0-50000.0"
       ]
     },
     "6429": {
@@ -13112,7 +13112,7 @@
         "shape=round",
         "collections=gift",
         "style=stackable-bands",
-        "price=0-50000"
+        "price=0-50000.0"
       ]
     },
     "6430": {
@@ -13148,7 +13148,7 @@
         "shape=round",
         "collections=gift",
         "style=stackable-bands",
-        "price=0-50000"
+        "price=0-50000.0"
       ]
     },
     "6431": {
@@ -13184,7 +13184,7 @@
         "shape=round",
         "collections=gift",
         "style=stackable-bands",
-        "price=0-50000"
+        "price=0-50000.0"
       ]
     },
     "6432": {
@@ -13220,7 +13220,7 @@
         "shape=round",
         "collections=gift",
         "style=stackable-bands",
-        "price=0-50000"
+        "price=0-50000.0"
       ]
     },
     "6433": {
@@ -13256,7 +13256,7 @@
         "shape=round",
         "collections=gift",
         "style=stackable-bands",
-        "price=0-50000"
+        "price=0-50000.0"
       ]
     },
     "6434": {
@@ -13292,7 +13292,7 @@
         "shape=round",
         "collections=gift",
         "style=stackable-bands",
-        "price=0-50000"
+        "price=0-50000.0"
       ]
     },
     "6544": {
@@ -13330,7 +13330,7 @@
         "stone_type=solitare",
         "style=single-halo",
         "collections=gift",
-        "price=50000-100000"
+        "price=50000.0-100000"
       ]
     },
     "6545": {
@@ -13368,7 +13368,7 @@
         "stone_type=solitare",
         "style=single-halo",
         "collections=gift",
-        "price=50000-100000"
+        "price=50000.0-100000"
       ]
     },
     "6546": {
@@ -13405,7 +13405,7 @@
         "stone_type=solitare",
         "style=single-halo",
         "collections=gift",
-        "price=50000-100000"
+        "price=50000.0-100000"
       ]
     },
     "6547": {
@@ -13443,7 +13443,7 @@
         "stone_type=solitare",
         "style=single-halo",
         "collections=gift",
-        "price=50000-100000"
+        "price=50000.0-100000"
       ]
     },
     "6548": {
@@ -13481,7 +13481,7 @@
         "stone_type=solitare",
         "style=single-halo",
         "collections=gift",
-        "price=50000-100000"
+        "price=50000.0-100000"
       ]
     },
     "6549": {
@@ -13741,7 +13741,7 @@
         "stone_type=solitare",
         "style=single-halo",
         "collections=gift",
-        "price=50000-100000"
+        "price=50000.0-100000"
       ]
     },
     "6556": {
@@ -13776,7 +13776,7 @@
         "stone_type=solitare",
         "style=single-halo",
         "collections=gift",
-        "price=50000-100000"
+        "price=50000.0-100000"
       ]
     },
     "6557": {
@@ -13811,7 +13811,7 @@
         "stone_type=solitare",
         "style=single-halo",
         "collections=gift",
-        "price=50000-100000"
+        "price=50000.0-100000"
       ]
     },
     "6558": {
@@ -13846,7 +13846,7 @@
         "stone_type=solitare",
         "style=single-halo",
         "collections=gift",
-        "price=50000-100000"
+        "price=50000.0-100000"
       ]
     },
     "6559": {
@@ -14126,7 +14126,7 @@
         "stone_type=solitare",
         "collections=gift",
         "style=earrings",
-        "price=50000-100000"
+        "price=50000.0-100000"
       ]
     },
     "6583": {
@@ -14161,7 +14161,7 @@
         "stone_type=solitare",
         "style=single-halo",
         "collections=gift",
-        "price=50000-100000"
+        "price=50000.0-100000"
       ]
     },
     "6584": {
@@ -14231,7 +14231,7 @@
         "stone_type=solitare",
         "style=single-halo",
         "collections=gift",
-        "price=50000-100000"
+        "price=50000.0-100000"
       ]
     },
     "6688": {
@@ -14307,7 +14307,7 @@
         "stone_type=solitare",
         "style=single-halo",
         "collections=gift",
-        "price=50000-100000"
+        "price=50000.0-100000"
       ]
     },
     "6690": {
@@ -14383,7 +14383,7 @@
         "stone_type=solitare",
         "style=single-halo",
         "collections=gift",
-        "price=0-50000"
+        "price=0-50000.0"
       ]
     },
     "7170": {
