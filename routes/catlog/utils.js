@@ -8,8 +8,7 @@ const getActualFilters = (allFilters) => {
     if (typeof allFilters[filterKey] === "string") {
       const key = `${filterKey}=${allFilters[filterKey]}`;
       if (global.catlogkeywordsDict[key]) filters.push([key]);
-    } 
-    else {
+    } else {
       const tempArr = [];
       allFilters[filterKey].forEach((innerVal) => {
         const key = `${filterKey}=${innerVal}`;
@@ -29,88 +28,84 @@ const getFiltersWithoutBase = (appliedFilters) => {
     appliedFilters.every((filterArr) => {
 
       //filtering available filters for the current base category
-      const availFilter = filterArr.filter((filter) =>
+      const availFilter = filterArr.filter((filter) => 
         global.catlogkeywordsDictReverse[baseCategory].has(filter)
       );
 
-      //if base category has given filters save availFilter
+      //stop if availFilter is empty --> baseCategory doesnt contain intersection filters
       if (availFilter.length > 0) {
         temp.push(availFilter);
         return true;
       }
-      //otherwise break
       return false;
+
     });
 
     //if all intersections are fullfilled, save base category with filters
     if (temp.length === appliedFilters.length)
       applicablefilters[baseCategory] = temp;
-
   });
-  // data format if found eg: 
+  // data format if found eg:
   // {rings: [ [ 'gender=women' ], [ 'shape=heart' ], [ 'stone_type=diamond' ] ]}
   return applicablefilters;
 };
 
 const rankFilters = (appliedFilters) => {
-  const filterRanking = global.attributesData.ranking
+  const filterRanking = global.attributesData.ranking;
   return appliedFilters.sort((a, b) => {
-    const key1 = a[0].split("=")[0]
-    const key2 = b[0].split("=")[0]
-    return filterRanking[key2] - filterRanking[key1]
+    const key1 = a[0].split("=")[0];
+    const key2 = b[0].split("=")[0];
+    return filterRanking[key2] - filterRanking[key1];
   });
-}
+};
 
-const applyFilters = ({ baseCategory, appliedFilters }) => { 
-  if(!baseCategory){
-
+const applyFilters = ({ baseCategory, appliedFilters }) => {
+  if (!baseCategory) {
     //no baseCategory and no filters
-    if (!appliedFilters || appliedFilters.length === 0) return []
+    if (!appliedFilters || appliedFilters.length === 0) return [];
 
     //getting applicable base categories and respective filters for appliedFilters
-    const applicableFilters = getFiltersWithoutBase(appliedFilters)
+    const filtersWithBase = getFiltersWithoutBase(appliedFilters);
 
-    //applying applicableFilters for each baseCategory and storing them 
-    const allFilteredProducts = Object.keys(applicableFilters).map(
-      baseCategory => applyFilters({
-        baseCategory, 
-        appliedFilters: applicableFilters[baseCategory],
-      })
-    );
+    //applying filtersWithBase for each baseCategory and storing them recursively
+    const allFilteredProducts = Object.keys(filtersWithBase).map(
+      baseCategory => applyFilters({ baseCategory, appliedFilters: filtersWithBase[baseCategory] }
+    ));
     //returning all the unique products for each base category
     return [...new Set(allFilteredProducts.flat())];
   }
-  
+
   const allProductsForBase = global.catlogDataSecondary[baseCategory]["all"];
-  if (!appliedFilters || appliedFilters.length === 0) return allProductsForBase
+  if (!appliedFilters || appliedFilters.length === 0) return allProductsForBase;
 
   const products = global.catlogDataSecondary[baseCategory];
   const filteredProducts = [];
 
   //handling union of filters
   appliedFilters.forEach((filterArr) => {
-    const temp = [...filterArr.map((filter) => products[filter] || []).flat()];
-    if (temp.length > 0) filteredProducts.push(temp)
+    const temp = filterArr.map(filter => products[filter] || []).flat()
+    if (temp.length > 0) filteredProducts.push(temp);
   });
 
-  if(filteredProducts.length === 0) return allProductsForBase
+  if (filteredProducts.length === 0) return allProductsForBase;
 
   //handling intersection of filters
-  let stopIntersection = false
-  return filteredProducts.reduce( (arr1, arr2) => {
-    if(stopIntersection) return arr1
-    const uniqueProducts = arr1.filter(product => arr2.includes(product));
-    if(uniqueProducts.length === 0){ 
-      stopIntersection = true
-      return arr1
+  let stopIntersection = false;
+  return filteredProducts.reduce((arr1, arr2) => {
+    if (stopIntersection) return arr1;
+    const uniqueProducts = arr1.filter((product) => arr2.includes(product));
+    if (uniqueProducts.length === 0) {
+      stopIntersection = true;
+      return arr1;
     }
-    return uniqueProducts
-  })
+    return uniqueProducts;
+  });
 };
 
 const getDataFromCatlogDataPrimary = (filteredProducts) => {
   if (filteredProducts.length === 0)
     return Object.values(global.catlogDataPrimary);
+    
   // getting the final products from catlog Primary data
   return filteredProducts.map(
     (productId) => global.catlogDataPrimary[productId]
@@ -174,20 +169,22 @@ const getAppliedfiltersInSearchQuery = (searchQueryArr) => {
   //matching searchQueryArr againist global.catlogkeywordsDict
   const appliedFilters = {};
   const potentialNamesArr = [];
-  const allKeywordsArr = Object.keys(global.catlogkeywordsDict)
+  const allKeywordsArr = Object.keys(global.catlogkeywordsDict);
 
   searchQueryArr.filter((query) => {
     const result = matchSorter(allKeywordsArr, query, {
       threshold: matchSorter.rankings.CONTAINS,
-      keys: [item => item.split("=")[1]]
+      keys: [(item) => item.split("=")[1]],
     });
     if (result.length > 0) {
-
       //taking the highest ranking match
       const resultArr = result[0].split("=");
-      
+
       //keeping unions and intersections seperate
-      appliedFilters[resultArr[0]] = [...(appliedFilters[resultArr[0]] || []), resultArr[1]];
+      appliedFilters[resultArr[0]] = [
+        ...(appliedFilters[resultArr[0]] || []),
+        resultArr[1],
+      ];
     } else {
       //not found query goes in potentialNamesArr
       potentialNamesArr.push(query);
@@ -204,7 +201,6 @@ const getAppliedfiltersInSearchQuery = (searchQueryArr) => {
 };
 
 const mergeFilters = ({ appliedFilters, searchFilters }) => {
-
   if (!appliedFilters || appliedFilters.length === 0) return searchFilters;
 
   //removing duplicates
@@ -220,21 +216,21 @@ const mergeFilters = ({ appliedFilters, searchFilters }) => {
     const filter = ele.split("=");
     temp[filter[0]] = [...(temp[filter[0]] || []), filter[1]];
   });
-  return Object.keys(temp).map(
-    (key) => temp[key].map((ele) => `${key}=${ele}`));
+  return Object.keys(temp).map((key) =>
+    temp[key].map((ele) => `${key}=${ele}`)
+  );
 };
 
 const searchProductNames = ({ finalProducts, potentialNamesArr }) => {
-  if (!potentialNamesArr || potentialNamesArr.length === 0)
-    return finalProducts;
+  if (!potentialNamesArr || potentialNamesArr.length === 0) return finalProducts;
 
   let searchedData = [];
-  //matching potentialNamesArr aganist product names 
+  //matching potentialNamesArr aganist product names
   potentialNamesArr.forEach((name) => {
     const matchResult = matchSorter(finalProducts, name, {
       keys: [{ threshold: matchSorter.rankings.CONTAINS, key: "name" }],
-    })
-    if(matchResult.length !== 0) searchedData.push(matchResult);
+    });
+    if (matchResult.length !== 0) searchedData.push(matchResult);
   });
 
   if (searchedData.length === 0) return finalProducts;
@@ -247,28 +243,31 @@ const searchProductNames = ({ finalProducts, potentialNamesArr }) => {
       return product;
     }
   });
-
+  
   if (searchedData.length === 0) return finalProducts;
   return searchedData;
 };
 
-const getSearchableFilters = ({ appliedFilters, searchQuery, baseCategory }) => {
+const getSearchableFilters = ({
+  appliedFilters,
+  searchQuery,
+  baseCategory,
+}) => {
   if (searchQuery.length === 0)
     return {
       finalFilters: rankFilters(appliedFilters),
       searchBaseCategory: baseCategory,
       potentialNamesArr: [],
-  };
+    };
 
-  //getting the base category searchQueryArr 
-  const searchBaseCategory = !baseCategory ? getBaseCategoryInSearchQuery(
-    searchQuery) : { result : baseCategory };
+  //getting the base category searchQueryArr
+  const searchBaseCategory = !baseCategory
+    ? getBaseCategoryInSearchQuery(searchQuery)
+    : { result: baseCategory };
 
   //removing base category from searchQueryArr if found
   if (searchBaseCategory.query) {
-    searchQuery = searchQuery.filter(
-      (ele) => ele != searchBaseCategory.query
-    );
+    searchQuery = searchQuery.filter((ele) => ele != searchBaseCategory.query);
   }
 
   //getting filters and potential names from searchQueryArr
@@ -277,7 +276,9 @@ const getSearchableFilters = ({ appliedFilters, searchQuery, baseCategory }) => 
   } = getAppliedfiltersInSearchQuery(searchQuery);
 
   //merging applied and search filters
-  const finalFilters = rankFilters(mergeFilters({ appliedFilters, searchFilters }));
+  const finalFilters = rankFilters(
+    mergeFilters({ appliedFilters, searchFilters })
+  );
 
   return {
     finalFilters,
@@ -286,103 +287,94 @@ const getSearchableFilters = ({ appliedFilters, searchQuery, baseCategory }) => 
   };
 };
 
-const getPriceSlug = () => {
-
-}
-
 const getProductAttributes = ({ searchedProducts }) => {
   //getting all keywords for searchedProducts
-  const prices = new Set()
-  const data = new Set(
+  const keywords = new Set(
     searchedProducts
-      .map(product => {
-        prices.add(product.price)
-        return global.attributesData.keywordsFinal[product.pk]
-      })
+      .map((product) => global.attributesData.keywordsFinal[product.pk])
       .flat()
   );
+
   //for given keywords getting all attrib_data from global.attributesData.attributes
   const new_attributes = {};
-  data.forEach((ele) => {
-    const temp = ele.split("=");
-    // console.log(global.attributesData.attributes[temp[0]])
-    new_attributes[temp[0]] = [ ...new_attributes[temp[0]] || [] ];
-
+  keywords.forEach((ele) => {
+    const keywordsArr = ele.split("=");
+    new_attributes[keywordsArr[0]] = [...(new_attributes[keywordsArr[0]] || [])];
     //handling price attributes
-    if(temp[0] === 'price' ){
-      return new_attributes[temp[0]].push({
-        attrib_name: 'Price',
-        attrib_slug: 'price',
-        attrib_value_id: temp[1],
-        attrib_value_name: temp[1],
-        attrib_value_slug: temp[1]
-      })
+    if (keywordsArr[0] === "price") {
+      return new_attributes[keywordsArr[0]].push({
+        attrib_name: "Price",
+        attrib_slug: "price",
+        attrib_value_id: keywordsArr[1],
+        attrib_value_name: keywordsArr[1],
+        attrib_value_slug: keywordsArr[1],
+      });
     }
     //handling other attributes
-    global.attributesData.attributes[temp[0]]?.forEach((attr) => {
-      if (attr.attrib_value_slug === temp[1]) {
-        new_attributes[temp[0]].push(attr);
+    global.attributesData.attributes[keywordsArr[0]]?.forEach((attr) => {
+      if (attr.attrib_value_slug === keywordsArr[1]) {
+        new_attributes[keywordsArr[0]].push(attr);
       }
     });
-    
+
     //removing empty attributes
-    if(new_attributes[temp[0]].length === 0) delete new_attributes[temp[0]]
+    if (new_attributes[keywordsArr[0]].length === 0) delete new_attributes[keywordsArr[0]];
   });
 
   //sorting the price attributes
-  new_attributes['price'] = new_attributes.price.sort(
-    (a, b) => 
-    Number(a.attrib_value_slug.split("-")[0]) - 
-    Number(b.attrib_value_slug.split("-")[0])
-  )
+  new_attributes["price"] = new_attributes.price.sort(
+    (a, b) =>
+      Number(a.attrib_value_slug.split("-")[0]) -
+      Number(b.attrib_value_slug.split("-")[0])
+  );
 
   return new_attributes;
 };
 
-const checkProductNameMapping = (nameArr) => {  
-  if(nameArr.length === 0) return null
+const checkProductNameMapping = (nameArr) => {
+  if (nameArr.length === 0) return null;
   //getting the product key using nameArr if it exists
-  return global.productNamesDict[ nameArr.join(" ") ]
-}
+  return global.productNamesDict[nameArr.join(" ")];
+};
 
 const getTopBanners = (filters) => {
-  for(let filterArr of filters){
-    let data
-    filterArr.every(filter => {
-      data = global.topBannerDict[filter]
-      return !data
-    })
-    if(data) return data
+  for (let filterArr of filters) {
+    let data;
+    filterArr.every((filter) => {
+      data = global.topBannerDict[filter];
+      return !data;
+    });
+    if (data) return data;
   }
-  return null
-}
+  return null;
+};
 
 const getSearchQuery = (rawSearchQuery) => {
-  if(!rawSearchQuery) return []
-  return [...new Set(
-    removeStopwords(rawSearchQuery.toLowerCase().split(" "))
-  )].filter(item => item.match(/[a-zA-Z]+/g))
-}
+  if (!rawSearchQuery) return [];
+  //removing stop words, only numbers, duplicate words
+  return [
+    ...new Set(removeStopwords(rawSearchQuery.toLowerCase().split(" "))),
+  ].filter((item) => item.match(/[a-zA-Z]+/g));
+};
 
 const getHeadData = (filters) => {
-  for(let filterArr of filters){
-    for(let filter of filterArr){
-      if(global.headData[filter]) return global.headData[filter]
+  for (let filterArr of filters) {
+    for (let filter of filterArr) {
+      if (global.headData[filter]) return global.headData[filter];
     }
   }
-  return global.headData['default']
-}
+  return global.headData["default"];
+};
 
-const processCatalog = (baseCategory, allFilters) =>  {
+const processCatalog = (baseCategory, allFilters) => {
   const rawSearchQuery = allFilters["q"];
-
   const pageNo = allFilters["page"];
   const sortBy = allFilters["sort_by"];
 
   //getting filters from request query params
   const appliedFilters = getActualFilters(allFilters);
 
-  const searchQuery = getSearchQuery(rawSearchQuery) 
+  const searchQuery = getSearchQuery(rawSearchQuery);
 
   //getting filters, base category, names from search query
   const { 
@@ -390,24 +382,24 @@ const processCatalog = (baseCategory, allFilters) =>  {
   } = getSearchableFilters({ appliedFilters, searchQuery, baseCategory });
 
   //checking for product names directly in global.productNamesDict
-  let filteredProducts = checkProductNameMapping(potentialNamesArr)
+  let filteredProducts = checkProductNameMapping(potentialNamesArr);
 
   //filtering the products using baseCategory and finalFilters
-  if(!filteredProducts){
+  if (!filteredProducts) {
     filteredProducts = applyFilters({
       baseCategory: baseCategory || searchBaseCategory,
       appliedFilters: finalFilters,
     });
-  }else{
+  } else {
     //removing potential names if direct mapping found
-    potentialNamesArr = []
+    potentialNamesArr = [];
   }
 
   //getting top_banner
-  const top_banner = getTopBanners(finalFilters)
+  const top_banner = getTopBanners(finalFilters);
 
   //getting head data
-  const head = getHeadData(finalFilters)
+  const head = getHeadData(finalFilters);
 
   //getting actual product data from filteredProducts
   const finalProducts = getDataFromCatlogDataPrimary(filteredProducts);
@@ -443,9 +435,9 @@ const processCatalog = (baseCategory, allFilters) =>  {
     meta: { ...sortingMeta, ...paginationMeta },
     top_banner,
     head,
-  }
-}
+  };
+};
 
 module.exports = {
-  processCatalog
+  processCatalog,
 };

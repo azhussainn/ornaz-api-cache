@@ -1,7 +1,5 @@
 const router = require("express").Router();
-const {
-  processCatalog
-} = require("./utils");
+const { processCatalog } = require("./utils");
 
 
 router.get("/:baseCategory?", async (req, res) => {
