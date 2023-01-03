@@ -1,7 +1,10 @@
 const express = require("express");
+require('dotenv').config()
+
 const compression = require('compression')
 const { initCatlogData } = require("./initialization");
 const catlogRoute = require("./routes/catlog");
+const invalidationRoute = require("./routes/invalidation");
 
 const app = express();
 const port = process.env.PORT || 5000;
@@ -18,7 +21,10 @@ global.productNamesDict = null;
 global.headData = null;
 
 app.use(compression());
+app.use(express.json())
+
 app.use("/jewellery", catlogRoute);
+app.use("/invalidate", invalidationRoute);
 
 app.listen(port, () => {
   console.log(`App listening on port ${process.env.PORT}`);

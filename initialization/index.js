@@ -3,6 +3,7 @@ const fs = require("fs");
 const { removeStopwords } = require("stopword");
 const { staticHeadData } = require("../static");
 
+
 const getHeadData = (headResponseObj) => {
   const headDataDict = {};
   for (let key in headResponseObj) {
@@ -83,6 +84,8 @@ const setCatlogDataInCache = ({
 };
 
 const restructureCatlogData = (catlogData) => {
+
+  console.log("====restructuring Catlog api data====")
   const cachedDataPrimary = {};
   const cachedDataSecondary = {};
   const baseCategories = [];
@@ -212,7 +215,7 @@ const restructureCatlogData = (catlogData) => {
   });
 };
 
-const getCatlogDataApi = async () => {
+const getCatlogDataApi = async (errorCallBack=false) => {
   console.log("====get catlog data from ornaz main server api===");
 
   try {
@@ -223,8 +226,7 @@ const getCatlogDataApi = async () => {
     restructureCatlogData(apiResponse.data);
     updateCatlogDataFileStorage(apiResponse.data);
   } catch (error) {
-    console.log(error);
-    console.log("===Something went wrong fetching catlog data===");
+    if(errorCallBack) return { error };
   }
 };
 
@@ -253,4 +255,5 @@ const initCatlogData = () => {
 
 module.exports = {
   initCatlogData,
+  getCatlogDataApi
 };
