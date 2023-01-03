@@ -10,7 +10,8 @@ const {
   getProductAttributes,
   checkProductNameMapping,
   getTopBanners,
-  getSearchQuery
+  getSearchQuery,
+  getHeadData
 } = require("./utils");
 // const moize = require('moize');
 
@@ -51,10 +52,16 @@ router.get("/:baseCategory?", async (req, res) => {
       baseCategory: baseCategory || searchBaseCategory,
       appliedFilters: finalFilters,
     });
+  }else{
+    //removing potential names if direct mapping found
+    potentialNamesArr = []
   }
 
   //getting top_banner
   const top_banner = getTopBanners(finalFilters)
+
+  //getting head data
+  const head = getHeadData(finalFilters)
 
   //getting actual product data from filteredProducts
   const finalProducts = getDataFromCatlogDataPrimary(filteredProducts);
@@ -88,7 +95,8 @@ router.get("/:baseCategory?", async (req, res) => {
     new_attributes,
     attribute_icons: global.attributesData.attribute_icons,
     meta: { ...sortingMeta, ...paginationMeta },
-    top_banner
+    top_banner,
+    head,
   });
 });
 

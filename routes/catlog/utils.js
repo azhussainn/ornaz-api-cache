@@ -8,7 +8,8 @@ const getActualFilters = (allFilters) => {
     if (typeof allFilters[filterKey] === "string") {
       const key = `${filterKey}=${allFilters[filterKey]}`;
       if (global.catlogkeywordsDict[key]) filters.push([key]);
-    } else {
+    } 
+    else {
       const tempArr = [];
       allFilters[filterKey].forEach((innerVal) => {
         const key = `${filterKey}=${innerVal}`;
@@ -51,47 +52,6 @@ const getFiltersWithoutBase = (appliedFilters) => {
   return applicablefilters;
 };
 
-const applyFiltersOld = ({ baseCategory, appliedFilters }) => {
-
-  // const attributesRanking = Object.keys(global.attributesData.attributes)
-  // console.log( attributesRanking )
-
-  if (!baseCategory || !global.catlogbaseCategories.includes(baseCategory)) {
-
-    //no filters => []
-    if (!appliedFilters || appliedFilters.length === 0) return [];
-
-    //getting all filters along with base category
-    const applicablefilters = getFiltersWithoutBase(appliedFilters);
-
-    const allFilteredProducts = Object.keys(applicablefilters).map(
-      (baseCategory) =>
-        applyFilters({
-          baseCategory,
-          appliedFilters: applicablefilters[baseCategory],
-        })
-    );
-    return [...new Set(allFilteredProducts.flat())];
-  }
-  
-  if (!appliedFilters || appliedFilters.length === 0)
-    return global.catlogDataSecondary[baseCategory]["all"];
-  
-  //getting product ids for each filter
-  const products = global.catlogDataSecondary[baseCategory];
-  const filteredProducts = [];
-  appliedFilters.forEach((filterArr) => {
-    //handling union filters
-    const temp = [...filterArr.map((filter) => products[filter] || []).flat()];
-    if (temp.length > 0) filteredProducts.push(temp);
-  });
-
-  if (filteredProducts.length === 0) return global.catlogDataSecondary[baseCategory]["all"];
-
-  //returning intersection of filteredProducts
-  return filteredProducts.reduce((a, b) => a.filter((c) => b.includes(c)));
-};
-
 const rankFilters = (appliedFilters) => {
   const filterRanking = global.attributesData.ranking
   return appliedFilters.sort((a, b) => {
@@ -120,12 +80,14 @@ const applyFilters = ({ baseCategory, appliedFilters }) => {
     //returning all the unique products for each base category
     return [...new Set(allFilteredProducts.flat())];
   }
+  
   const allProductsForBase = global.catlogDataSecondary[baseCategory]["all"];
   if (!appliedFilters || appliedFilters.length === 0) return allProductsForBase
 
   const products = global.catlogDataSecondary[baseCategory];
   const filteredProducts = [];
 
+  //handling union of filters
   appliedFilters.forEach((filterArr) => {
     const temp = [...filterArr.map((filter) => products[filter] || []).flat()];
     if (temp.length > 0) filteredProducts.push(temp)
@@ -133,6 +95,7 @@ const applyFilters = ({ baseCategory, appliedFilters }) => {
 
   if(filteredProducts.length === 0) return allProductsForBase
 
+  //handling intersection of filters
   let stopIntersection = false
   return filteredProducts.reduce( (arr1, arr2) => {
     if(stopIntersection) return arr1
@@ -208,21 +171,25 @@ const getBaseCategoryInSearchQuery = (searchQueryArr) => {
 };
 
 const getAppliedfiltersInSearchQuery = (searchQueryArr) => {
-  //matching searchQueryArr againist global.catlogkeywordsDic
+  //matching searchQueryArr againist global.catlogkeywordsDict
   const appliedFilters = {};
   const potentialNamesArr = [];
+  const allKeywordsArr = Object.keys(global.catlogkeywordsDict)
+
   searchQueryArr.filter((query) => {
-    const result = matchSorter(Object.keys(global.catlogkeywordsDict), query, {
+    const result = matchSorter(allKeywordsArr, query, {
       threshold: matchSorter.rankings.CONTAINS,
       keys: [item => item.split("=")[1]]
     });
-   
     if (result.length > 0) {
+
+      //taking the highest ranking match
       const resultArr = result[0].split("=");
+      
       //keeping unions and intersections seperate
       appliedFilters[resultArr[0]] = [...(appliedFilters[resultArr[0]] || []), resultArr[1]];
     } else {
-      //not found query go in potentialNamesArr
+      //not found query goes in potentialNamesArr
       potentialNamesArr.push(query);
     }
   });
@@ -351,23 +318,31 @@ const getProductAttributes = ({ searchedProducts }) => {
         attrib_value_slug: temp[1]
       })
     }
-
+    //handling other attributes
     global.attributesData.attributes[temp[0]]?.forEach((attr) => {
       if (attr.attrib_value_slug === temp[1]) {
         new_attributes[temp[0]].push(attr);
       }
     });
+    
+    //removing empty attributes
     if(new_attributes[temp[0]].length === 0) delete new_attributes[temp[0]]
   });
+
+  //sorting the price attributes
   new_attributes['price'] = new_attributes.price.sort(
-    (a, b) => Number(a.attrib_value_slug.split("-")[0]) - Number(b.attrib_value_slug.split("-")[0])
+    (a, b) => 
+    Number(a.attrib_value_slug.split("-")[0]) - 
+    Number(b.attrib_value_slug.split("-")[0])
   )
+
   return new_attributes;
 };
 
-const checkProductNameMapping = (names) => {
-  if(names.length === 0) return
-  return global.productNamesDict[names.join(" ") ]
+const checkProductNameMapping = (nameArr) => {  
+  if(nameArr.length === 0) return null
+  //getting the product key using nameArr if it exists
+  return global.productNamesDict[ nameArr.join(" ") ]
 }
 
 const getTopBanners = (filters) => {
@@ -389,6 +364,15 @@ const getSearchQuery = (rawSearchQuery) => {
   )].filter(item => item.match(/[a-zA-Z]+/g))
 }
 
+const getHeadData = (filters) => {
+  for(let filterArr of filters){
+    for(let filter of filterArr){
+      return global.headData[filter]
+    }
+  }
+  return global.headData['default']
+}
+
 module.exports = {
   getActualFilters,
   applyFilters,
@@ -400,5 +384,6 @@ module.exports = {
   getProductAttributes,
   checkProductNameMapping,
   getTopBanners,
-  getSearchQuery
+  getSearchQuery,
+  getHeadData
 };
