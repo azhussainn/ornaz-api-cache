@@ -7,12 +7,12 @@ const getActualFilters = (allFilters) => {
   Object.keys(allFilters).forEach((filterKey) => {
     if (typeof allFilters[filterKey] === "string") {
       const key = `${filterKey}=${allFilters[filterKey]}`;
-      if (global.catlogkeywordsDict[key]) filters.push([key]);
+      if (global.catlogMain.catlogkeywordsDict[key]) filters.push([key]);
     } else {
       const tempArr = [];
       allFilters[filterKey].forEach((innerVal) => {
         const key = `${filterKey}=${innerVal}`;
-        if (global.catlogkeywordsDict[key]) tempArr.push(key);
+        if (global.catlogMain.catlogkeywordsDict[key]) tempArr.push(key);
       });
       if (tempArr.length > 0) filters.push(tempArr);
     }
@@ -23,13 +23,13 @@ const getActualFilters = (allFilters) => {
 const getFiltersWithoutBase = (appliedFilters) => {
   const applicablefilters = {};
 
-  Object.keys(global.catlogkeywordsDictReverse).forEach((baseCategory) => {
+  Object.keys(global.catlogMain.catlogkeywordsDictReverse).forEach((baseCategory) => {
     const temp = [];
     appliedFilters.every((filterArr) => {
 
       //filtering available filters for the current base category
       const availFilter = filterArr.filter((filter) => 
-        global.catlogkeywordsDictReverse[baseCategory].has(filter)
+        global.catlogMain.catlogkeywordsDictReverse[baseCategory].includes(filter)
       );
 
       //stop if availFilter is empty --> baseCategory doesnt contain intersection filters
@@ -51,7 +51,7 @@ const getFiltersWithoutBase = (appliedFilters) => {
 };
 
 const rankFilters = (appliedFilters) => {
-  const filterRanking = global.attributesData.ranking;
+  const filterRanking = global.catlogMain.attributesData.ranking;
   return appliedFilters.sort((a, b) => {
     const key1 = a[0].split("=")[0];
     const key2 = b[0].split("=")[0];
@@ -75,10 +75,10 @@ const applyFilters = ({ baseCategory, appliedFilters }) => {
     return [...new Set(allFilteredProducts.flat())];
   }
 
-  const allProductsForBase = global.catlogDataSecondary[baseCategory]["all"];
+  const allProductsForBase = global.catlogMain.catlogDataSecondary[baseCategory]["all"];
   if (!appliedFilters || appliedFilters.length === 0) return allProductsForBase;
 
-  const products = global.catlogDataSecondary[baseCategory];
+  const products = global.catlogMain.catlogDataSecondary[baseCategory];
   const filteredProducts = [];
 
   //handling union of filters
@@ -104,16 +104,16 @@ const applyFilters = ({ baseCategory, appliedFilters }) => {
 
 const getDataFromCatlogDataPrimary = (filteredProducts) => {
   if (filteredProducts.length === 0)
-    return Object.values(global.catlogDataPrimary);
+    return Object.values(global.catlogMain.catlogDataPrimary);
     
   // getting the final products from catlog Primary data
   return filteredProducts.map(
-    (productId) => global.catlogDataPrimary[productId]
+    (productId) => global.catlogMain.catlogDataPrimary[productId]
   );
 };
 
 const sortProducts = (productData, sortByKey = "popularity") => {
-  //sorting productData using global.sortDict
+  //sorting productData using global.catlogMain.sortDict
   const sortedProducts = productData.sort((a, b) => {
     let k1 = b.pk;
     let k2 = a.pk;
@@ -123,7 +123,7 @@ const sortProducts = (productData, sortByKey = "popularity") => {
       k2 = b.pk;
       key = sortByKey.slice(1);
     }
-    return global.sortDict[k1][key] - global.sortDict[k2][key];
+    return global.catlogMain.sortDict[k1][key] - global.catlogMain.sortDict[k2][key];
   });
   return {
     sortedProducts,
@@ -155,9 +155,9 @@ const getPaginatedProducts = ({ sortedProducts, pageNo = 1 }) => {
 };
 
 const getBaseCategoryInSearchQuery = (searchQueryArr) => {
-  //matching searchQueryArr againist global.catlogbaseCategories
+  //matching searchQueryArr againist global.catlogMain.catlogbaseCategories
   for (let query of searchQueryArr) {
-    const result = matchSorter(global.catlogbaseCategories, query, {
+    const result = matchSorter(global.catlogMain.catlogbaseCategories, query, {
       threshold: matchSorter.rankings.STARTS_WITH,
     });
     if (result.length > 0) return { result: result[0], query };
@@ -166,10 +166,10 @@ const getBaseCategoryInSearchQuery = (searchQueryArr) => {
 };
 
 const getAppliedfiltersInSearchQuery = (searchQueryArr) => {
-  //matching searchQueryArr againist global.catlogkeywordsDict
+  //matching searchQueryArr againist global.catlogMain.catlogkeywordsDict
   const appliedFilters = {};
   const potentialNamesArr = [];
-  const allKeywordsArr = Object.keys(global.catlogkeywordsDict);
+  const allKeywordsArr = Object.keys(global.catlogMain.catlogkeywordsDict);
 
   searchQueryArr.filter((query) => {
     const result = matchSorter(allKeywordsArr, query, {
@@ -291,11 +291,11 @@ const getProductAttributes = ({ searchedProducts }) => {
   //getting all keywords for searchedProducts
   const keywords = new Set(
     searchedProducts
-      .map((product) => global.attributesData.keywordsFinal[product.pk])
+      .map((product) => global.catlogMain.attributesData.keywordsFinal[product.pk])
       .flat()
   );
 
-  //for given keywords getting all attrib_data from global.attributesData.attributes
+  //for given keywords getting all attrib_data from global.catlogMain.attributesData.attributes
   const new_attributes = {};
   keywords.forEach((ele) => {
     const keywordsArr = ele.split("=");
@@ -311,7 +311,7 @@ const getProductAttributes = ({ searchedProducts }) => {
       });
     }
     //handling other attributes
-    global.attributesData.attributes[keywordsArr[0]]?.forEach((attr) => {
+    global.catlogMain.attributesData.attributes[keywordsArr[0]]?.forEach((attr) => {
       if (attr.attrib_value_slug === keywordsArr[1]) {
         new_attributes[keywordsArr[0]].push(attr);
       }
@@ -334,14 +334,14 @@ const getProductAttributes = ({ searchedProducts }) => {
 const checkProductNameMapping = (nameArr) => {
   if (nameArr.length === 0) return null;
   //getting the product key using nameArr if it exists
-  return global.productNamesDict[nameArr.join(" ")];
+  return global.catlogMain.productNamesDict[nameArr.join(" ")];
 };
 
 const getTopBanners = (filters) => {
   for (let filterArr of filters) {
     let data;
     filterArr.every((filter) => {
-      data = global.topBannerDict[filter];
+      data = global.catlogMain.topBannerDict[filter];
       return !data;
     });
     if (data) return data;
@@ -360,13 +360,21 @@ const getSearchQuery = (rawSearchQuery) => {
 const getHeadData = (filters) => {
   for (let filterArr of filters) {
     for (let filter of filterArr) {
-      if (global.headData[filter]) return global.headData[filter];
+      if (global.catlogMain.headData[filter]) return global.catlogMain.headData[filter];
     }
   }
-  return global.headData["default"];
+  return global.catlogMain.headData["default"];
 };
 
+// const catlogCache = {}
+
 const processCatalog = (baseCategory, allFilters) => {
+
+  // const key = baseCategory ? `${baseCategory}-${JSON.stringify(allFilters)}` : JSON.stringify(allFilters)
+  // const cacheData = catlogCache[key]
+  // if(!cacheData) console.log(process.pid)
+  // if(cacheData) return cacheData
+
   const rawSearchQuery = allFilters["q"];
   const pageNo = allFilters["page"];
   const sortBy = allFilters["sort_by"];
@@ -377,11 +385,11 @@ const processCatalog = (baseCategory, allFilters) => {
   const searchQuery = getSearchQuery(rawSearchQuery);
 
   //getting filters, base category, names from search query
-  const { 
+  let { 
     finalFilters, searchBaseCategory, potentialNamesArr 
   } = getSearchableFilters({ appliedFilters, searchQuery, baseCategory });
 
-  //checking for product names directly in global.productNamesDict
+  //checking for product names directly in global.catlogMain.productNamesDict
   let filteredProducts = checkProductNameMapping(potentialNamesArr);
 
   //filtering the products using baseCategory and finalFilters
@@ -431,11 +439,13 @@ const processCatalog = (baseCategory, allFilters) => {
   return {
     products: paginatedProducts,
     new_attributes,
-    attribute_icons: global.attributesData.attribute_icons,
+    attribute_icons: global.catlogMain.attributesData.attribute_icons,
     meta: { ...sortingMeta, ...paginationMeta },
     top_banner,
     head,
   };
+  // catlogCache[key] = res
+  // return res
 };
 
 module.exports = {

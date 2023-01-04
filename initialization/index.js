@@ -52,35 +52,35 @@ const setCatlogDataInCache = ({
   productNamesDict,
   headDataDict,
 }) => {
-  // console.log(cachedDataSecondary.rings['price=700000-1000000'])
 
-  console.log("===setting catlog data in cache===");
-  global.catlogDataPrimary = cachedDataPrimary;
-  global.catlogDataSecondary = cachedDataSecondary;
-  global.catlogbaseCategories = baseCategories;
-  global.catlogkeywordsDict = keywordsDict;
-  global.catlogkeywordsDictReverse = keywordsDictReverse;
-  global.sortDict = sortDict;
-  global.attributesData = {
-    attributes,
-    keywordsFinal,
-    attribute_icons,
-    ranking: {
-      gender: 10,
-      occasion: 9,
-      metal_color: 8,
-      shape: 7,
-      stone_type: 6,
-      style: 5,
-      collections: 4,
-      offers: 3,
-      topengagement: 2,
-      price: 1,
+  global.catlogMain = {
+    catlogDataPrimary : cachedDataPrimary,
+    catlogDataSecondary : cachedDataSecondary,
+    catlogbaseCategories : baseCategories,
+    catlogkeywordsDict : keywordsDict,
+    catlogkeywordsDictReverse : keywordsDictReverse,
+    sortDict : sortDict,
+    attributesData : {
+      attributes,
+      keywordsFinal,
+      attribute_icons,
+      ranking: {
+        gender: 10,
+        occasion: 9,
+        metal_color: 8,
+        shape: 7,
+        stone_type: 6,
+        style: 5,
+        collections: 4,
+        offers: 3,
+        topengagement: 2,
+        price: 1,
+      },
     },
-  };
-  global.topBannerDict = topBanners;
-  global.productNamesDict = productNamesDict;
-  global.headData = headDataDict;
+    topBannerDict : topBanners,
+    productNamesDict : productNamesDict,
+    headData : headDataDict,
+  }
 };
 
 const restructureCatlogData = (catlogData) => {
@@ -143,10 +143,7 @@ const restructureCatlogData = (catlogData) => {
     if (!keywordsDictReverse[baseCategory]) {
       keywordsDictReverse[baseCategory] = keywords;
     } else {
-      keywordsDictReverse[baseCategory] = new Set([
-        ...keywords,
-        ...keywordsDictReverse[baseCategory],
-      ]);
+      keywordsDictReverse[baseCategory] = [...new Set([...keywords, ...keywordsDictReverse[baseCategory] ])];
     }
 
     //adding all: [ productId ] to baseCategory in cachedDataSecondary
