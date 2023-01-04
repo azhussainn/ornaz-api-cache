@@ -384,6 +384,11 @@ const processCatalog = (baseCategory, allFilters) => {
 
   const searchQuery = getSearchQuery(rawSearchQuery);
 
+  //validating base category
+  if (!global.catlogMain.catlogbaseCategories.includes(baseCategory)) {
+    baseCategory = null;
+  }
+
   //getting filters, base category, names from search query
   let { 
     finalFilters, searchBaseCategory, potentialNamesArr 
